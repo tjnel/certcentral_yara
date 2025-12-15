@@ -37,8 +37,8 @@ jobs:
       - name: Download and check CSV
         id: check
         run: |
-          uv run cert-central-yara download
-          if uv run cert-central-yara check-changed || [ "${{ inputs.force_update }}" == "true" ]; then
+          uv run cert-graveyard-yara download
+          if uv run cert-graveyard-yara check-changed || [ "${{ inputs.force_update }}" == "true" ]; then
             echo "changed=true" >> $GITHUB_OUTPUT
           else
             echo "changed=false" >> $GITHUB_OUTPUT
@@ -46,15 +46,15 @@ jobs:
 
       - name: Generate YARA rules
         if: steps.check.outputs.changed == 'true'
-        run: uv run cert-central-yara generate
+        run: uv run cert-graveyard-yara generate
 
       - name: Validate rules with YARA
         if: steps.check.outputs.changed == 'true'
-        run: uv run cert-central-yara validate --engine yara
+        run: uv run cert-graveyard-yara validate --engine yara
 
       - name: Update changelog
         if: steps.check.outputs.changed == 'true'
-        run: uv run cert-central-yara changelog
+        run: uv run cert-graveyard-yara changelog
 
       - name: Commit changes
         if: steps.check.outputs.changed == 'true'

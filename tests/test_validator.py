@@ -4,8 +4,8 @@ import subprocess
 from pathlib import Path
 from unittest.mock import MagicMock, patch
 
-from cert_central_yara.models import ValidationResult
-from cert_central_yara.validator import (
+from cert_graveyard_yara.models import ValidationResult
+from cert_graveyard_yara.validator import (
     ValidationEngine,
     format_validation_errors,
     get_validation_summary,
@@ -42,7 +42,7 @@ class TestValidateWithYara:
 
         with (
             patch.dict("sys.modules", {"yara": None}),
-            patch("cert_central_yara.validator.validate_with_yara") as mock_validate,
+            patch("cert_graveyard_yara.validator.validate_with_yara") as mock_validate,
         ):
                 mock_validate.return_value = ValidationResult(
                     file_path=str(rule_file),

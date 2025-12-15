@@ -7,7 +7,7 @@ from unittest.mock import AsyncMock, patch
 import httpx
 import pytest
 
-from cert_central_yara.downloader import (
+from cert_graveyard_yara.downloader import (
     DownloadError,
     calculate_hash,
     download_csv,

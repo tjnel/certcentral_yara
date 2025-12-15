@@ -26,8 +26,8 @@ jobs:
 
       - name: Generate release artifacts
         run: |
-          uv run cert-central-yara combine
-          uv run cert-central-yara package
+          uv run cert-graveyard-yara combine
+          uv run cert-graveyard-yara package
 
       - name: Get version
         id: version

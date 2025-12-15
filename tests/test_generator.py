@@ -2,7 +2,7 @@
 
 from pathlib import Path
 
-from cert_central_yara.generator import (
+from cert_graveyard_yara.generator import (
     combine_rules,
     create_zip_archive,
     escape_yara_string,
@@ -14,7 +14,7 @@ from cert_central_yara.generator import (
     generate_single_rule,
     sanitize_name,
 )
-from cert_central_yara.models import CertificateRecord
+from cert_graveyard_yara.models import CertificateRecord
 
 
 class TestSanitizeName:

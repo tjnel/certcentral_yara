@@ -31,23 +31,23 @@ uv sync --all-extras
 
 ```bash
 # Download latest CSV from CertGraveyard
-cert-central-yara download
+cert-graveyard-yara download
 
 # Check if CSV has changed
-cert-central-yara check-changed
+cert-graveyard-yara check-changed
 
 # Generate YARA rules
-cert-central-yara generate
+cert-graveyard-yara generate
 
 # Validate rules
-cert-central-yara validate --engine yara
+cert-graveyard-yara validate --engine yara
 
 # Create combined file and ZIP archive
-cert-central-yara combine
-cert-central-yara package
+cert-graveyard-yara combine
+cert-graveyard-yara package
 
 # Run full pipeline
-cert-central-yara run --all
+cert-graveyard-yara run --all
 ```
 
 ### Using the Generated Rules
@@ -65,12 +65,12 @@ yara rules/individual/*.yara /path/to/scan
 ## Project Structure
 
 ```
-cert-central-yara/
+cert-graveyard-yara/
 ├── .github/workflows/      # GitHub Actions
 │   ├── daily-update.yml    # Daily CSV check and rule generation
 │   ├── ci.yml              # PR validation and testing
 │   └── release.yml         # Release creation
-├── src/cert_central_yara/  # Source code
+├── src/cert_graveyard_yara/  # Source code
 │   ├── __init__.py
 │   ├── downloader.py       # CSV download and caching
 │   ├── parser.py           # CSV parsing

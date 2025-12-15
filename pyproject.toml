@@ -1,5 +1,5 @@
 [project]
-name = "cert-central-yara"
+name = "cert-graveyard-yara"
 version = "1.0.0"
 description = "Automated YARA rule generation from CertGraveyard compromised certificate database"
 readme = "README.md"
@@ -29,14 +29,14 @@ dev = [
 ]
 
 [project.scripts]
-cert-central-yara = "cert_central_yara.cli:app"
+cert-graveyard-yara = "cert_graveyard_yara.cli:app"
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/cert_central_yara"]
+packages = ["src/cert_graveyard_yara"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -46,7 +46,7 @@ asyncio_mode = "auto"
 asyncio_default_fixture_loop_scope = "function"
 addopts = [
     "-v",
-    "--cov=src/cert_central_yara",
+    "--cov=src/cert_graveyard_yara",
     "--cov-report=term-missing",
     "--cov-report=xml",
     "--cov-fail-under=65"

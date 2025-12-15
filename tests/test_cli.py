@@ -5,7 +5,7 @@ from unittest.mock import patch
 
 from typer.testing import CliRunner
 
-from cert_central_yara.cli import app
+from cert_graveyard_yara.cli import app
 
 runner = CliRunner()
 
@@ -21,7 +21,7 @@ class TestCLI:
 
     def test_download_file_not_found_url(self, temp_dir: Path) -> None:
         """Test download with invalid URL."""
-        with patch("cert_central_yara.cli.download_csv_sync") as mock_download:
+        with patch("cert_graveyard_yara.cli.download_csv_sync") as mock_download:
             mock_download.side_effect = Exception("Connection failed")
             result = runner.invoke(
                 app,

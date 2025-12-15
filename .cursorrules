@@ -20,7 +20,7 @@ It uses UV for package management, pytest for testing, and validates rules with 
 - Maintain 80%+ code coverage
 
 ## File Organization
-- Source code goes in src/cert_central_yara/
+- Source code goes in src/cert_graveyard_yara/
 - Tests mirror source structure in tests/
 - YARA rules go in rules/individual/ and rules/combined/
 - CSV data goes in data/
@@ -42,8 +42,8 @@ It uses UV for package management, pytest for testing, and validates rules with 
 - Update uv.lock on dependency changes
 
 ## Key Files
-- src/cert_central_yara/cli.py - Main CLI entry point
-- src/cert_central_yara/generator.py - YARA rule generation
-- src/cert_central_yara/validator.py - Rule validation
+- src/cert_graveyard_yara/cli.py - Main CLI entry point
+- src/cert_graveyard_yara/generator.py - YARA rule generation
+- src/cert_graveyard_yara/validator.py - Rule validation
 - templates/yara_rule.template - Jinja2 template for rules
 

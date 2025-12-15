@@ -2,12 +2,12 @@
 
 from pathlib import Path
 
-from cert_central_yara.changelog import detect_changes, update_changelog
-from cert_central_yara.downloader import calculate_hash, has_csv_changed, save_hash
-from cert_central_yara.generator import combine_rules, create_zip_archive, generate_all_rules
-from cert_central_yara.models import CertificateRecord
-from cert_central_yara.parser import parse_csv
-from cert_central_yara.validator import ValidationEngine, validate_all_rules
+from cert_graveyard_yara.changelog import detect_changes, update_changelog
+from cert_graveyard_yara.downloader import calculate_hash, has_csv_changed, save_hash
+from cert_graveyard_yara.generator import combine_rules, create_zip_archive, generate_all_rules
+from cert_graveyard_yara.models import CertificateRecord
+from cert_graveyard_yara.parser import parse_csv
+from cert_graveyard_yara.validator import ValidationEngine, validate_all_rules
 
 
 class TestFullPipeline:

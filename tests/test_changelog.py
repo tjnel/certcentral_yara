@@ -3,7 +3,7 @@
 from datetime import datetime
 from pathlib import Path
 
-from cert_central_yara.changelog import (
+from cert_graveyard_yara.changelog import (
     CHANGELOG_HEADER,
     detect_changes,
     format_changelog_entries,
@@ -12,7 +12,7 @@ from cert_central_yara.changelog import (
     read_changelog,
     update_changelog,
 )
-from cert_central_yara.models import CertificateRecord, ChangelogEntry, ChangeType
+from cert_graveyard_yara.models import CertificateRecord, ChangelogEntry, ChangeType
 
 
 class TestGenerateChangelogEntry:

@@ -4,8 +4,8 @@ from pathlib import Path
 
 import pytest
 
-from cert_central_yara.models import CertificateRecord
-from cert_central_yara.parser import (
+from cert_graveyard_yara.models import CertificateRecord
+from cert_graveyard_yara.parser import (
     ParseError,
     compare_records,
     parse_csv,
