@@ -1,7 +1,7 @@
 # CertCentral YARA Rules Generator
 
-[![CI](https://github.com/YOUR_USERNAME/cert-central-yara/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/cert-central-yara/actions/workflows/ci.yml)
-[![Daily Update](https://github.com/YOUR_USERNAME/cert-central-yara/actions/workflows/daily-update.yml/badge.svg)](https://github.com/YOUR_USERNAME/cert-central-yara/actions/workflows/daily-update.yml)
+[![CI](https://github.com/tjnel/cert-central-yara/actions/workflows/ci.yml/badge.svg)](https://github.com/tjnel/cert-central-yara/actions/workflows/ci.yml)
+[![Daily Update](https://github.com/tjnel/cert-central-yara/actions/workflows/daily-update.yml/badge.svg)](https://github.com/tjnel/cert-central-yara/actions/workflows/daily-update.yml)
 
 Automated YARA rule generation from the [CertCentral](https://certcentral.org) compromised certificate database.
 
@@ -19,7 +19,7 @@ Automated YARA rule generation from the [CertCentral](https://certcentral.org) c
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/cert-central-yara.git
+git clone https://github.com/tjnel/cert-central-yara.git
 cd cert-central-yara
 
 # Install with UV
