@@ -13,6 +13,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   update:
@@ -65,9 +66,13 @@ jobs:
           git commit -m "chore: update YARA rules from CertGraveyard $(date +%Y-%m-%d)" || exit 0
           git push
 
-      - name: Trigger release
-        if: steps.check.outputs.changed == 'true'
-        run: gh workflow run release.yml
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    outputs:
+      changed: ${{ steps.check.outputs.changed }}
+
+  release:
+    needs: update
+    if: needs.update.outputs.changed == 'true'
+    uses: ./.github/workflows/release.yml
+    permissions:
+      contents: write
 
