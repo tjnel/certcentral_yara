@@ -1,0 +1,36 @@
+import "pe"
+
+rule MAL_Compromised_Cert_Cert_Only_GlobalSign_5D3422FD4AFCF7D012D60C25 {
+   meta:
+      description         = "Detects Cert Only with compromised cert (GlobalSign)"
+      author              = "CertGraveyard-YARA-Generator"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-01-22"
+      version             = "1.0"
+
+      hash                = "3161e2bd9012ba97b1fa22a316cf0472f70fff35b6b3ea13bdf878a385daec71"
+      malware             = "Cert Only"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "SOFTWARE BYTES LTD"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "5d:34:22:fd:4a:fc:f7:d0:12:d6:0c:25"
+      cert_thumbprint     = "DC656AF416A78304F08264E379DA8AB1DF6C4432"
+      cert_valid_from     = "2024-01-22"
+      cert_valid_to       = "2025-01-22"
+
+      country             = "GB"
+      state               = "Wales"
+      locality            = "Cardiff"
+      email               = "admin@softwarebytes.uk"
+      rdn_serial_number   = "12315026"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "5d:34:22:fd:4a:fc:f7:d0:12:d6:0c:25"
+      )
+}
