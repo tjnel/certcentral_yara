@@ -35,6 +35,32 @@ jobs:
       - name: Install dependencies
         run: uv sync --all-extras
 
+      - name: Check for template changes
+        id: template_check
+        run: |
+          # Check if template or generator has changed in recent commits
+          TEMPLATE_HASH_FILE="data/.template_hash"
+          CURRENT_HASH=$(sha256sum templates/yara_rule.template src/cert_graveyard_yara/generator.py | sha256sum | cut -d' ' -f1)
+          
+          if [ -f "$TEMPLATE_HASH_FILE" ]; then
+            STORED_HASH=$(cat "$TEMPLATE_HASH_FILE")
+            if [ "$CURRENT_HASH" != "$STORED_HASH" ]; then
+              echo "Template changed! Regenerating all rules..."
+              echo "template_changed=true" >> $GITHUB_OUTPUT
+              # Delete all existing individual rules to force regeneration
+              rm -f rules/individual/*.yara
+            else
+              echo "Template unchanged"
+              echo "template_changed=false" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "No template hash found (first run)"
+            echo "template_changed=false" >> $GITHUB_OUTPUT
+          fi
+          
+          # Save current hash
+          echo "$CURRENT_HASH" > "$TEMPLATE_HASH_FILE"
+
       - name: Backup previous CSV for comparison
         run: |
           if [ -f data/cert_graveyard_database.csv ]; then
@@ -48,7 +74,8 @@ jobs:
         id: check
         run: |
           uv run cert-graveyard-yara download
-          if uv run cert-graveyard-yara check-changed || [ "${{ inputs.force_update }}" == "true" ]; then
+          # Regenerate if: CSV changed, force update requested, or template changed
+          if uv run cert-graveyard-yara check-changed || [ "${{ inputs.force_update }}" == "true" ] || [ "${{ steps.template_check.outputs.template_changed }}" == "true" ]; then
             echo "changed=true" >> $GITHUB_OUTPUT
           else
             echo "changed=false" >> $GITHUB_OUTPUT
