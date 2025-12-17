@@ -71,6 +71,12 @@ jobs:
             echo "No previous CSV - skipping changelog (first run)"
           fi
 
+      - name: Clean up old combined rules
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          rm -f rules/combined/MAL_Compromised_Cert_*.yara
+          rm -f rules/cert_graveyard_yara_rules.zip
+
       - name: Combine rules
         if: steps.check.outputs.changed == 'true'
         run: uv run cert-graveyard-yara combine

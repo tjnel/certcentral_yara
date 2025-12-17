@@ -30,6 +30,11 @@ jobs:
       - name: Install dependencies
         run: uv sync
 
+      - name: Clean up old combined rules
+        run: |
+          rm -f rules/combined/MAL_Compromised_Cert_*.yara
+          rm -f rules/cert_graveyard_yara_rules.zip
+
       - name: Generate release artifacts
         run: |
           uv run cert-graveyard-yara combine
