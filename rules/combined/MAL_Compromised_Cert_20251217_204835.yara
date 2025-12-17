@@ -37065,6 +37065,111 @@ rule MAL_Compromised_Cert_RUS_51_GlobalSign_4F2343D96154B941DB0A26B2 {
       )
 }
 
+rule MAL_Compromised_Cert_RUS_55_Certum_43CFEE96B948B5B672754F51A0E6E719 {
+   meta:
+      description         = "Detects RUS-55 with compromised cert (Certum)"
+      author              = "CertGraveyard-YARA-Generator"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-12"
+      version             = "1.0"
+
+      hash                = "c85a23cddbc9979c0c9c8040218c41b0a0008fee9e60cf8a885f94594eff04ea"
+      malware             = "RUS-55"
+      malware_type        = "Remote access tool"
+      malware_notes       = "File was distributed as a trojanized RVTools installer. See analysis here https://tria.ge/251217-ny7gksen6v/behavioral1"
+
+      signer              = "Taiyuan Tataomi Technology Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "43:cf:ee:96:b9:48:b5:b6:72:75:4f:51:a0:e6:e7:19"
+      cert_thumbprint     = "0C707864C9FF609E40497A7C6920C0B2A01CF174"
+      cert_valid_from     = "2025-11-12"
+      cert_valid_to       = "2026-11-12"
+
+      country             = "CN"
+      state               = "Shanxi"
+      locality            = "Taiyuan"
+      email               = "???"
+      rdn_serial_number   = "91140105MADC8HF4XN"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "43:cf:ee:96:b9:48:b5:b6:72:75:4f:51:a0:e6:e7:19"
+      )
+}
+
+rule MAL_Compromised_Cert_RUS_55_GlobalSign_5A076B593C5E7DCA24430353 {
+   meta:
+      description         = "Detects RUS-55 with compromised cert (GlobalSign)"
+      author              = "CertGraveyard-YARA-Generator"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-02"
+      version             = "1.0"
+
+      hash                = "75485847e431dddea1d9aee4cbc49066defc4fa8347cda67835009ca7d95b799"
+      malware             = "RUS-55"
+      malware_type        = "Remote access tool"
+      malware_notes       = "This malware was distributed as a trojanized RVTools installer: https://app.any.run/tasks/4e6d41c8-08d6-4f2c-9eb5-3fd29ee5900b"
+
+      signer              = "WEGUN (THAILAND) CO., LTD."
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "5a:07:6b:59:3c:5e:7d:ca:24:43:03:53"
+      cert_thumbprint     = "81162039094342A54A726E98C4DECB147152D193"
+      cert_valid_from     = "2025-12-02"
+      cert_valid_to       = "2026-11-21"
+
+      country             = "TH"
+      state               = "Chonburi"
+      locality            = "Bang Lamung"
+      email               = "???"
+      rdn_serial_number   = "0205567025431"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "5a:07:6b:59:3c:5e:7d:ca:24:43:03:53"
+      )
+}
+
+rule MAL_Compromised_Cert_RUS_55_GlobalSign_65E6B4B9104AFCF9BEE6F984 {
+   meta:
+      description         = "Detects RUS-55 with compromised cert (GlobalSign)"
+      author              = "CertGraveyard-YARA-Generator"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-03-11"
+      version             = "1.0"
+
+      hash                = "65a1d8ca5284d70df6a0a5cbd9a69c11c87e8cf7c17483aa213c31fe544c9c9f"
+      malware             = "RUS-55"
+      malware_type        = "Remote access tool"
+      malware_notes       = "Uses a python script to prepare a .NET binary to be compiled and executed: https://tria.ge/251129-pycsmsht2e/behavioral2"
+
+      signer              = "WILD LLC"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "65:e6:b4:b9:10:4a:fc:f9:be:e6:f9:84"
+      cert_thumbprint     = "83FDE682DB8C8C8D039F21D2ECB5F6AC9FA38E4B"
+      cert_valid_from     = "2025-03-11"
+      cert_valid_to       = "2026-03-12"
+
+      country             = "RU"
+      state               = "Moscow"
+      locality            = "Moscow"
+      email               = "???"
+      rdn_serial_number   = "1247700481423"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "65:e6:b4:b9:10:4a:fc:f9:be:e6:f9:84"
+      )
+}
+
 rule MAL_Compromised_Cert_RaccoonStealer_DigiCert_0F0ED5318848703405D40F7C62D0F39A {
    meta:
       description         = "Detects RaccoonStealer with compromised cert (DigiCert)"
@@ -41647,6 +41752,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_4E3DC08BA3B230C5968A4C8B6B
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "4e:3d:c0:8b:a3:b2:30:c5:96:8a:4c:8b:6b:1b:3c:64"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_5886E0F4BAA836E9231BA6F8F965E51D {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (Sectigo)"
+      author              = "CertGraveyard-YARA-Generator"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-08-22"
+      version             = "1.0"
+
+      hash                = "ddfd45fd76607ba94debe6255019c8ceaaa1417ff3af3ca15cec029cc065750b"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Remote access tool"
+      malware_notes       = "The malware executes powershell to send information about the infection to Telegram and then drops and executes an installer for ScreenConnect https://tria.ge/251217-nz5dlswqhr/behavioral1"
+
+      signer              = "Taiyuan Tataomi Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "58:86:e0:f4:ba:a8:36:e9:23:1b:a6:f8:f9:65:e5:1d"
+      cert_thumbprint     = "A4BD88661CF293FBC29B6648C0EC1AC5FC32DB37"
+      cert_valid_from     = "2025-08-22"
+      cert_valid_to       = "2026-08-22"
+
+      country             = "CN"
+      state               = "Shanxi Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91140105MADC8HF4XN"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "58:86:e0:f4:ba:a8:36:e9:23:1b:a6:f8:f9:65:e5:1d"
       )
 }
 
@@ -50712,6 +50852,41 @@ rule MAL_Compromised_Cert_UNK_50_Microsoft_330006B17881564C863F9CFE9900000006B17
       for any sig in pe.signatures : (
          sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
          sig.serial == "33:00:06:b1:78:81:56:4c:86:3f:9c:fe:99:00:00:00:06:b1:78"
+      )
+}
+
+rule MAL_Compromised_Cert_UNK_50_Microsoft_330006BD17074683368C2F606300000006BD17 {
+   meta:
+      description         = "Detects UNK-50 with compromised cert (Microsoft)"
+      author              = "CertGraveyard-YARA-Generator"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-16"
+      version             = "1.0"
+
+      hash                = "6fd3424fda119628855ed5f1efc14fc619e5eff3e229d483185e114da4c2509f"
+      malware             = "UNK-50"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Next-Gen Supplements Inc."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:06:bd:17:07:46:83:36:8c:2f:60:63:00:00:00:06:bd:17"
+      cert_thumbprint     = "B1DFF48E7E45813C31857538E171803893D1F377"
+      cert_valid_from     = "2025-12-16"
+      cert_valid_to       = "2025-12-19"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:06:bd:17:07:46:83:36:8c:2f:60:63:00:00:00:06:bd:17"
       )
 }
 
@@ -62531,11 +62706,11 @@ rule MAL_Compromised_Cert_ZhongStealer_Sectigo_22705DBF157ED535146911BAADB3B64A 
       cert_valid_from     = "2025-11-27"
       cert_valid_to       = "2026-11-27"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Shandong Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91371000MA3WAC7627"
 
    condition:
       uint16(0) == 0x5a4d and
