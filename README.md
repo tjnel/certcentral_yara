@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.png" alt="CertGraveyard YARA - YARA Rules for Certificate Analysis" width="100%">
+</p>
+
 # CertGraveyard YARA Rules Generator
 
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
