@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_UNK_50_Microsoft_330006BD17074683368C2F606300000006BD17 {
    meta:
       description         = "Detects UNK-50 with compromised cert (Microsoft)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-12-16"
       version             = "1.0"

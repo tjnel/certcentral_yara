@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_TurboFixPDF_Sectigo_00AF1989410F0529DD265B60481F4A1405 {
    meta:
       description         = "Detects TurboFixPDF with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-07-19"
       version             = "1.0"

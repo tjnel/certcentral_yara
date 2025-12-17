@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_ChromeLoader_SSL_com_66A963E7EEFCA707FAA4F6C068E33F67 {
    meta:
       description         = "Detects ChromeLoader with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2023-02-10"
       version             = "1.0"

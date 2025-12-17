@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Byakugan_Stealer_Sectigo_25070F0FE83DFE736FC2C895DD7B4656 {
    meta:
       description         = "Detects Byakugan Stealer with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-09-05"
       version             = "1.0"

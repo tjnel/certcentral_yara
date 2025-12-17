@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_D3F_ckLoader_SSL_com_78A5FDD08C94E7D6BFF0A1B882E88087 {
    meta:
       description         = "Detects D3F@ckLoader with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-07-25"
       version             = "1.0"

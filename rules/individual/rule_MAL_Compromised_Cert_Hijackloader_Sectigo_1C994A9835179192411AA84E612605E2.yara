@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Hijackloader_Sectigo_1C994A9835179192411AA84E612605E2 {
    meta:
       description         = "Detects Hijackloader with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-09-10"
       version             = "1.0"

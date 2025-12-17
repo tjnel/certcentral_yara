@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Amadey_SSL_com_3BC667FDD38FC44F09451D379221BA59 {
    meta:
       description         = "Detects Amadey with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-05-07"
       version             = "1.0"

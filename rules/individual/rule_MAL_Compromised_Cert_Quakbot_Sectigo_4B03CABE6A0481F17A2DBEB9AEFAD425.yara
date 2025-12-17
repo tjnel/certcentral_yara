@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Quakbot_Sectigo_4B03CABE6A0481F17A2DBEB9AEFAD425 {
    meta:
       description         = "Detects Quakbot with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2020-10-10"
       version             = "1.0"

@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Zhong_Stealer_GlobalSign_07CD057EFB53D6F2C5C839FC {
    meta:
       description         = "Detects Zhong Stealer with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-05-28"
       version             = "1.0"

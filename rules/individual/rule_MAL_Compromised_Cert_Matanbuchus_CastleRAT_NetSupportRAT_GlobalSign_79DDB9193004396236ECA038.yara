@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Matanbuchus_CastleRAT_NetSupportRAT_GlobalSign_79DDB9193004396236ECA038 {
    meta:
       description         = "Detects Matanbuchus,CastleRAT,NetSupportRAT with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-07-11"
       version             = "1.0"

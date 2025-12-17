@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_IcedID_Sectigo_00CA7D54577243934F665FD1D443855A3D {
    meta:
       description         = "Detects IcedID with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2020-10-12"
       version             = "1.0"

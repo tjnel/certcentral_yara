@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_AsyncRAT_SSL_com_668C68DB859DBAE5DCE71BFB867F5B93 {
    meta:
       description         = "Detects AsyncRAT with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-06-05"
       version             = "1.0"

@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_TrojanNetExtender_Microsoft_330003D0E5F6C1943A350E542100000003D0E5 {
    meta:
       description         = "Detects TrojanNetExtender with compromised cert (Microsoft)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-07-31"
       version             = "1.0"

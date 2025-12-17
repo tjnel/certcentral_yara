@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_AirStalk_SSL_com_29AFB8D913DB84FDB362F4FD927B8553 {
    meta:
       description         = "Detects AirStalk with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-06-28"
       version             = "1.0"

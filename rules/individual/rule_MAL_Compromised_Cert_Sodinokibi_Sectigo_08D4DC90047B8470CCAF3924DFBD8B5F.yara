@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Sodinokibi_Sectigo_08D4DC90047B8470CCAF3924DFBD8B5F {
    meta:
       description         = "Detects Sodinokibi with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2021-04-23"
       version             = "1.0"

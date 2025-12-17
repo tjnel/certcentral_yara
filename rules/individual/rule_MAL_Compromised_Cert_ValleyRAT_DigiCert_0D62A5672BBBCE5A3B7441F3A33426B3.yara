@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_ValleyRAT_DigiCert_0D62A5672BBBCE5A3B7441F3A33426B3 {
    meta:
       description         = "Detects ValleyRAT with compromised cert (DigiCert)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-07-17"
       version             = "1.0"

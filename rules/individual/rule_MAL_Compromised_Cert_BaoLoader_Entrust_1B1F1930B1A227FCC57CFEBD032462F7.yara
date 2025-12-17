@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_BaoLoader_Entrust_1B1F1930B1A227FCC57CFEBD032462F7 {
    meta:
       description         = "Detects BaoLoader with compromised cert (Entrust)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2023-04-12"
       version             = "1.0"

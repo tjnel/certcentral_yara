@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Adware_Win32_Tnega_Sectigo_4B48B8FDD2B4D70D135278B06BEFFDFE {
    meta:
       description         = "Detects Adware:Win32/Tnega with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-09-02"
       version             = "1.0"

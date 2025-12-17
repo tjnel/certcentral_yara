@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Donut_SSL_com_01C535271991A4DB65FD3691E04A3512 {
    meta:
       description         = "Detects Donut with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-10-02"
       version             = "1.0"

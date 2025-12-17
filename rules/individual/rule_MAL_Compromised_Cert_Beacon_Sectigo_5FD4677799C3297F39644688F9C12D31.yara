@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Beacon_Sectigo_5FD4677799C3297F39644688F9C12D31 {
    meta:
       description         = "Detects Beacon with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-09-09"
       version             = "1.0"

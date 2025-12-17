@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_HijackLoader_GlobalSign_16607BC50DD6E4871BEEE868 {
    meta:
       description         = "Detects HijackLoader with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-08-13"
       version             = "1.0"

@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Unknown_SSL_com_02AE22BD7CE3FCFA09B3C26C12B7186A {
    meta:
       description         = "Detects Unknown with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-04-11"
       version             = "1.0"

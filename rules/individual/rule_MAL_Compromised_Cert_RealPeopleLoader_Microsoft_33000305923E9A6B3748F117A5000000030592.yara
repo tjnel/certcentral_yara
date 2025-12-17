@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_RealPeopleLoader_Microsoft_33000305923E9A6B3748F117A5000000030592 {
    meta:
       description         = "Detects RealPeopleLoader with compromised cert (Microsoft)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-05-29"
       version             = "1.0"

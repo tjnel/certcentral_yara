@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_DarkGate_Certum_6DFFAF77D8C06AF0EF1E2A88CFE4360B {
    meta:
       description         = "Detects DarkGate with compromised cert (Certum)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-10-07"
       version             = "1.0"

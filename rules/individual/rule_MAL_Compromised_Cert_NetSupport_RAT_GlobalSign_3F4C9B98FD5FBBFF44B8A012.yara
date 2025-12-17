@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_NetSupport_RAT_GlobalSign_3F4C9B98FD5FBBFF44B8A012 {
    meta:
       description         = "Detects NetSupport RAT with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-12-13"
       version             = "1.0"

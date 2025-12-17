@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_BuerLoader_Sectigo_008FE807310D98357A59382090634B93F0 {
    meta:
       description         = "Detects BuerLoader with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2021-02-16"
       version             = "1.0"

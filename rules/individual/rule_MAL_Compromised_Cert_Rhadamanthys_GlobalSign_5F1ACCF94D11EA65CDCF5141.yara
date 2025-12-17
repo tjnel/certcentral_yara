@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Rhadamanthys_GlobalSign_5F1ACCF94D11EA65CDCF5141 {
    meta:
       description         = "Detects Rhadamanthys with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-05-08"
       version             = "1.0"

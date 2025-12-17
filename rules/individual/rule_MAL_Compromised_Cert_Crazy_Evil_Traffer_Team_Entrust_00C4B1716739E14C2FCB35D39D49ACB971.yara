@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_Entrust_00C4B1716739E14C2FCB35D39D49ACB971 {
    meta:
       description         = "Detects Crazy Evil Traffer Team with compromised cert (Entrust)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-03-05"
       version             = "1.0"

@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Softwarecloud_SSL_com_1846DA228F4D8488025ACB3A9D5E99D8 {
    meta:
       description         = "Detects Softwarecloud with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-06-03"
       version             = "1.0"

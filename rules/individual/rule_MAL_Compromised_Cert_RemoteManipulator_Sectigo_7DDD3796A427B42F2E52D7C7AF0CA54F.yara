@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_RemoteManipulator_Sectigo_7DDD3796A427B42F2E52D7C7AF0CA54F {
    meta:
       description         = "Detects RemoteManipulator with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2021-02-10"
       version             = "1.0"

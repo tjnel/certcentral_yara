@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_FakeNordpass_Microsoft_33000376BA37F7CE9C7653D0880000000376BA {
    meta:
       description         = "Detects FakeNordpass with compromised cert (Microsoft)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-04-23"
       version             = "1.0"

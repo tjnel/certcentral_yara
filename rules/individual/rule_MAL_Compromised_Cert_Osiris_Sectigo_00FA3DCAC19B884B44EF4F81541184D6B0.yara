@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Osiris_Sectigo_00FA3DCAC19B884B44EF4F81541184D6B0 {
    meta:
       description         = "Detects Osiris with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2020-10-27"
       version             = "1.0"

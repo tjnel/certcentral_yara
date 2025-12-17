@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_RedLineStealer_Sectigo_17CCECC181ED65A357EDF3B01DF62CC9 {
    meta:
       description         = "Detects RedLineStealer with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2022-03-24"
       version             = "1.0"

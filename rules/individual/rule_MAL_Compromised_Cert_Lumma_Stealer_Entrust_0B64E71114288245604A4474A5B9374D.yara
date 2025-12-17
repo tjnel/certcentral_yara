@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Lumma_Stealer_Entrust_0B64E71114288245604A4474A5B9374D {
    meta:
       description         = "Detects Lumma Stealer with compromised cert (Entrust)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-07-31"
       version             = "1.0"

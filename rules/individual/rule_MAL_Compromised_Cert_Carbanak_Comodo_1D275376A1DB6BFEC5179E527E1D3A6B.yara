@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Carbanak_Comodo_1D275376A1DB6BFEC5179E527E1D3A6B {
    meta:
       description         = "Detects Carbanak with compromised cert (Comodo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2015-12-25"
       version             = "1.0"

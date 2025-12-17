@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Onyx_RMM_SSL_com_7301BD775D3E4DC6539B217A2C3CB137 {
    meta:
       description         = "Detects Onyx RMM with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-09-03"
       version             = "1.0"

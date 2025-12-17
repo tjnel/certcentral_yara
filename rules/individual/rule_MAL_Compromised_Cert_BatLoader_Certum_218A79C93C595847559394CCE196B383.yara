@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_BatLoader_Certum_218A79C93C595847559394CCE196B383 {
    meta:
       description         = "Detects BatLoader with compromised cert (Certum)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-08-07"
       version             = "1.0"

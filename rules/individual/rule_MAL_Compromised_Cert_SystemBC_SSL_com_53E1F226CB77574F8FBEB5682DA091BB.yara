@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_SystemBC_SSL_com_53E1F226CB77574F8FBEB5682DA091BB {
    meta:
       description         = "Detects SystemBC with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2022-05-31"
       version             = "1.0"

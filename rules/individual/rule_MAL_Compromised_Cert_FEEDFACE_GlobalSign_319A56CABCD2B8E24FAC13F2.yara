@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_FEEDFACE_GlobalSign_319A56CABCD2B8E24FAC13F2 {
    meta:
       description         = "Detects FEEDFACE with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-06-11"
       version             = "1.0"

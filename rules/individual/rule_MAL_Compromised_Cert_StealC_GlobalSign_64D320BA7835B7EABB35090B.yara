@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_StealC_GlobalSign_64D320BA7835B7EABB35090B {
    meta:
       description         = "Detects StealC with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-05-23"
       version             = "1.0"

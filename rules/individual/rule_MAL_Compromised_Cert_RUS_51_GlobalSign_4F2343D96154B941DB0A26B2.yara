@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_RUS_51_GlobalSign_4F2343D96154B941DB0A26B2 {
    meta:
       description         = "Detects RUS-51 with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2023-12-29"
       version             = "1.0"

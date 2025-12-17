@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_ScreenConnectLoader_SSL_com_087711DDF512753346533330D4E96B11 {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-06-10"
       version             = "1.0"

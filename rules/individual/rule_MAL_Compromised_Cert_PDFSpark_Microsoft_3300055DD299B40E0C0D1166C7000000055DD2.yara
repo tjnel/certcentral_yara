@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_PDFSpark_Microsoft_3300055DD299B40E0C0D1166C7000000055DD2 {
    meta:
       description         = "Detects PDFSpark with compromised cert (Microsoft)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-11-20"
       version             = "1.0"

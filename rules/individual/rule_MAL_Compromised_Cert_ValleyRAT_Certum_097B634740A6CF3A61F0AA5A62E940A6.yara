@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_ValleyRAT_Certum_097B634740A6CF3A61F0AA5A62E940A6 {
    meta:
       description         = "Detects ValleyRAT with compromised cert (Certum)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-11-17"
       version             = "1.0"

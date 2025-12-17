@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_RaccoonStealer_DigiCert_0F0ED5318848703405D40F7C62D0F39A {
    meta:
       description         = "Detects RaccoonStealer with compromised cert (DigiCert)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2021-03-03"
       version             = "1.0"

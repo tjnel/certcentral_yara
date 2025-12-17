@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Zhong_Stealer_Certum_5AE3A3B23CFA63ADFCED9BA9EF9A263C {
    meta:
       description         = "Detects Zhong Stealer with compromised cert (Certum)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-11-21"
       version             = "1.0"

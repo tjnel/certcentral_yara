@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_RuRAT_GlobalSign_4738770035AF376F4700929E {
    meta:
       description         = "Detects RuRAT with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-03-19"
       version             = "1.0"

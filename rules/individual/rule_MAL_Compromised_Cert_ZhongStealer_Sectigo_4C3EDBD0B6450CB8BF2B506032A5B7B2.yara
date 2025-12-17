@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_ZhongStealer_Sectigo_4C3EDBD0B6450CB8BF2B506032A5B7B2 {
    meta:
       description         = "Detects ZhongStealer with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-06-07"
       version             = "1.0"

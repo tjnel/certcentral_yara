@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_0FA27D2553F24DA79D1CC6BD8773EE9A {
    meta:
       description         = "Detects NetSupport RAT with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-07-25"
       version             = "1.0"

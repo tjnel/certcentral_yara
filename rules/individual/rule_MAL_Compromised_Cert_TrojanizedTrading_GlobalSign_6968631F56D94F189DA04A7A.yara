@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_TrojanizedTrading_GlobalSign_6968631F56D94F189DA04A7A {
    meta:
       description         = "Detects TrojanizedTrading with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-06-12"
       version             = "1.0"

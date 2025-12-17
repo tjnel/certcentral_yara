@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Gozi_Sectigo_3D3FC30099D6C7AEB806D4181992AF90 {
    meta:
       description         = "Detects Gozi with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2021-09-02"
       version             = "1.0"

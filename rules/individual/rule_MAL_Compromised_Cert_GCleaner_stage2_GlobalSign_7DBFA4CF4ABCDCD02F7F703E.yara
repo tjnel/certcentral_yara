@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_GCleaner_stage2_GlobalSign_7DBFA4CF4ABCDCD02F7F703E {
    meta:
       description         = "Detects GCleaner_stage2 with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-11-03"
       version             = "1.0"

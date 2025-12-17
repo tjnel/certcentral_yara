@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_TrueBot_Sectigo_00BE2F22C152BB218B898C4029056816A9 {
    meta:
       description         = "Detects TrueBot with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2023-02-13"
       version             = "1.0"

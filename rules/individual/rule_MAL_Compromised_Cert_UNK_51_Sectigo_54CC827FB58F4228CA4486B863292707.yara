@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_UNK_51_Sectigo_54CC827FB58F4228CA4486B863292707 {
    meta:
       description         = "Detects UNK-51 with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-10-21"
       version             = "1.0"

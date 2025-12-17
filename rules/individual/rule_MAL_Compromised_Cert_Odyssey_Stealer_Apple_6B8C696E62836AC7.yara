@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Odyssey_Stealer_Apple_6B8C696E62836AC7 {
    meta:
       description         = "Detects Odyssey Stealer with compromised cert (Apple)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-09-10"
       version             = "1.0"

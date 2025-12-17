@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_ConvertMasterBrowserHijacker_GlobalSign_5786D284BBF7E6E35C9CD11B {
    meta:
       description         = "Detects ConvertMasterBrowserHijacker with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-01-20"
       version             = "1.0"

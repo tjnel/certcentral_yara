@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_DarkGate_SSL_com_1D9D011E1B8372FF5B4ED47D1501A4AB {
    meta:
       description         = "Detects DarkGate with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-04-15"
       version             = "1.0"

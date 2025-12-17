@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Coinminer_Sectigo_009E9428089C105FE19B7EE10BC764EBF4 {
    meta:
       description         = "Detects Coinminer with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-01-26"
       version             = "1.0"

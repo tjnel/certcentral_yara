@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_CleanupLoader_GlobalSign_708737C791C878D6DD7B7C43 {
    meta:
       description         = "Detects CleanupLoader with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-09-13"
       version             = "1.0"

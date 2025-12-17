@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_SolarMarker_Sectigo_3821DCACA66A5C5176B921B4D9ED4C97 {
    meta:
       description         = "Detects SolarMarker with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2022-07-22"
       version             = "1.0"

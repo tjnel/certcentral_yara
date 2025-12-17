@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_RMMLoader_GlobalSign_7744041A0EE72E8546C37940 {
    meta:
       description         = "Detects RMMLoader with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-05-06"
       version             = "1.0"

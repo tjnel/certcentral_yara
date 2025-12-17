@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Cerber_Comodo_0090212473C706F523FE84BDB9A78A01F4 {
    meta:
       description         = "Detects Cerber with compromised cert (Comodo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2017-07-17"
       version             = "1.0"

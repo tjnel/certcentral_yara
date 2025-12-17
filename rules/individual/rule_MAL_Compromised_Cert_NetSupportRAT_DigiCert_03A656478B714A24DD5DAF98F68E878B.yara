@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_NetSupportRAT_DigiCert_03A656478B714A24DD5DAF98F68E878B {
    meta:
       description         = "Detects NetSupportRAT with compromised cert (DigiCert)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-09-12"
       version             = "1.0"

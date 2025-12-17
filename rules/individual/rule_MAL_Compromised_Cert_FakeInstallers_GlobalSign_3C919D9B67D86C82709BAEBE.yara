@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_FakeInstallers_GlobalSign_3C919D9B67D86C82709BAEBE {
    meta:
       description         = "Detects FakeInstallers with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-05-05"
       version             = "1.0"

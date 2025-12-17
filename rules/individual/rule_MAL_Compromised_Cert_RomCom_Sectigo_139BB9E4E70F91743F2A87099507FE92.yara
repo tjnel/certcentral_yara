@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_RomCom_Sectigo_139BB9E4E70F91743F2A87099507FE92 {
    meta:
       description         = "Detects RomCom with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-11-14"
       version             = "1.0"

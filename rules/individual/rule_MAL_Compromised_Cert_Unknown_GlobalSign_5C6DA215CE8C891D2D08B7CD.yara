@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Unknown_GlobalSign_5C6DA215CE8C891D2D08B7CD {
    meta:
       description         = "Detects Unknown with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-03-05"
       version             = "1.0"

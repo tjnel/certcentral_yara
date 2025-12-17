@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_CobaltStrike_DigiCert_0FA13AE98E17AE23FCFE7AE873D0C120 {
    meta:
       description         = "Detects CobaltStrike with compromised cert (DigiCert)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2020-08-13"
       version             = "1.0"

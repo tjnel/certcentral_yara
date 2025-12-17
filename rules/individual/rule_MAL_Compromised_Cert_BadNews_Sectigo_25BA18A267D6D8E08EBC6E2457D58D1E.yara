@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_BadNews_Sectigo_25BA18A267D6D8E08EBC6E2457D58D1E {
    meta:
       description         = "Detects BadNews with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2022-03-31"
       version             = "1.0"

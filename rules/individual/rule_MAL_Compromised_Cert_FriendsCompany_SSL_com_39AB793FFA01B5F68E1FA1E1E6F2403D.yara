@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_FriendsCompany_SSL_com_39AB793FFA01B5F68E1FA1E1E6F2403D {
    meta:
       description         = "Detects FriendsCompany with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-01-24"
       version             = "1.0"

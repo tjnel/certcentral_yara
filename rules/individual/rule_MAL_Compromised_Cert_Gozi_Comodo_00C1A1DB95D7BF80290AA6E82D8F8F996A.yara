@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Gozi_Comodo_00C1A1DB95D7BF80290AA6E82D8F8F996A {
    meta:
       description         = "Detects Gozi with compromised cert (Comodo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2021-03-10"
       version             = "1.0"

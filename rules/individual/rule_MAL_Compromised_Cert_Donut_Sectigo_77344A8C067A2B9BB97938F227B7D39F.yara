@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Donut_Sectigo_77344A8C067A2B9BB97938F227B7D39F {
    meta:
       description         = "Detects Donut with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-02-20"
       version             = "1.0"

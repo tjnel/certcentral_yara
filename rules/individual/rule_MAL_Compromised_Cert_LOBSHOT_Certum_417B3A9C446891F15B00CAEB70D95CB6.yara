@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_LOBSHOT_Certum_417B3A9C446891F15B00CAEB70D95CB6 {
    meta:
       description         = "Detects LOBSHOT with compromised cert (Certum)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-07-26"
       version             = "1.0"

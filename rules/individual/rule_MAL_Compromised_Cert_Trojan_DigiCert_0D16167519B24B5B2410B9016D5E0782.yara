@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Trojan_DigiCert_0D16167519B24B5B2410B9016D5E0782 {
    meta:
       description         = "Detects Trojan with compromised cert (DigiCert)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2022-05-30"
       version             = "1.0"

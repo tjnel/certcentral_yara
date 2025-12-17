@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Hive_Sectigo_00E9268ED63A7D7E9DFD40A664DDFBAF18 {
    meta:
       description         = "Detects Hive with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2022-03-15"
       version             = "1.0"

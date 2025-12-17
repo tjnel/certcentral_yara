@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_XWorm_Certum_5CB4CC8D31F6B00C0CAF09CB23945CFD {
    meta:
       description         = "Detects XWorm with compromised cert (Certum)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-10-28"
       version             = "1.0"

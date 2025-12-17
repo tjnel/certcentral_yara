@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_ParallaxRAT_Sectigo_03B27D7F4EE21A462A064A17EEF70D6C {
    meta:
       description         = "Detects ParallaxRAT with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2021-02-22"
       version             = "1.0"

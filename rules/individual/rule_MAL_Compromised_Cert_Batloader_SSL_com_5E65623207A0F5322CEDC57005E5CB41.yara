@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Batloader_SSL_com_5E65623207A0F5322CEDC57005E5CB41 {
    meta:
       description         = "Detects Batloader with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2023-02-09"
       version             = "1.0"

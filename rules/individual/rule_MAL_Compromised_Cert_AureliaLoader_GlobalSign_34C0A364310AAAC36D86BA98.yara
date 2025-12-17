@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_AureliaLoader_GlobalSign_34C0A364310AAAC36D86BA98 {
    meta:
       description         = "Detects AureliaLoader with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-06-17"
       version             = "1.0"

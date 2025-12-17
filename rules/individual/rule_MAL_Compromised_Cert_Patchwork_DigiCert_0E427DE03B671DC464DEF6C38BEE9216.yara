@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Patchwork_DigiCert_0E427DE03B671DC464DEF6C38BEE9216 {
    meta:
       description         = "Detects Patchwork with compromised cert (DigiCert)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2023-08-16"
       version             = "1.0"

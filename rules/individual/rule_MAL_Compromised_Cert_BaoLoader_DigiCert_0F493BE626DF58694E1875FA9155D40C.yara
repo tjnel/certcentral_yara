@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_BaoLoader_DigiCert_0F493BE626DF58694E1875FA9155D40C {
    meta:
       description         = "Detects BaoLoader with compromised cert (DigiCert)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2021-05-10"
       version             = "1.0"

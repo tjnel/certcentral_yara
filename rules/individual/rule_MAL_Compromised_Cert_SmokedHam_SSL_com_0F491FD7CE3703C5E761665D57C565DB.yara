@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_SmokedHam_SSL_com_0F491FD7CE3703C5E761665D57C565DB {
    meta:
       description         = "Detects SmokedHam with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-10-16"
       version             = "1.0"

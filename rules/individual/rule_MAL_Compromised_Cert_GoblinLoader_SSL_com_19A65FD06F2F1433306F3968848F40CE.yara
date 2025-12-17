@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_GoblinLoader_SSL_com_19A65FD06F2F1433306F3968848F40CE {
    meta:
       description         = "Detects GoblinLoader with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-12-13"
       version             = "1.0"

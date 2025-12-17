@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Pikabot_SSL_com_08BFA0ECA008014A726359AEE87C1828 {
    meta:
       description         = "Detects Pikabot with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-01-15"
       version             = "1.0"

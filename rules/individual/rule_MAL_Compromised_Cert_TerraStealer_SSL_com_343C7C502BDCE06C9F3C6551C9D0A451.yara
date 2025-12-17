@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_TerraStealer_SSL_com_343C7C502BDCE06C9F3C6551C9D0A451 {
    meta:
       description         = "Detects TerraStealer with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-12-23"
       version             = "1.0"

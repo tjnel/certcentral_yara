@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_FakeDocument_Sectigo_75F97FA8095F9167F552859E01DBFF77 {
    meta:
       description         = "Detects FakeDocument with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-10-16"
       version             = "1.0"

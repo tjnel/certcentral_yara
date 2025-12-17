@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_DeerStealer_GlobalSign_505F39515DA558182324C2CA {
    meta:
       description         = "Detects DeerStealer with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-12-16"
       version             = "1.0"

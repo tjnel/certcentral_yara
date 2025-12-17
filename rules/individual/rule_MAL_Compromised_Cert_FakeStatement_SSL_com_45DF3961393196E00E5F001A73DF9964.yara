@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_FakeStatement_SSL_com_45DF3961393196E00E5F001A73DF9964 {
    meta:
       description         = "Detects FakeStatement with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-08-04"
       version             = "1.0"

@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_MonsterV2_Aurotun_Microsoft_3300037399890C4DCE9776933C000000037399 {
    meta:
       description         = "Detects MonsterV2 Aurotun with compromised cert (Microsoft)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-06-28"
       version             = "1.0"

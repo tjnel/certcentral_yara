@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_NitrogenLoader_GlobalSign_55BBAE7D7C8BCC0026AADD4C {
    meta:
       description         = "Detects NitrogenLoader with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-02-17"
       version             = "1.0"

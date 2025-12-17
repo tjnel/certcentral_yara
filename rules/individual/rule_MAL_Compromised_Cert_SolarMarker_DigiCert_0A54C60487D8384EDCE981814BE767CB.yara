@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_SolarMarker_DigiCert_0A54C60487D8384EDCE981814BE767CB {
    meta:
       description         = "Detects SolarMarker with compromised cert (DigiCert)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2021-10-31"
       version             = "1.0"

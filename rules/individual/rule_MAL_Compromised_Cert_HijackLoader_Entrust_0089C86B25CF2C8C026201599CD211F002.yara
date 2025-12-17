@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_HijackLoader_Entrust_0089C86B25CF2C8C026201599CD211F002 {
    meta:
       description         = "Detects HijackLoader with compromised cert (Entrust)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-11-08"
       version             = "1.0"

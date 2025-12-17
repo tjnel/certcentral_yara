@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_SSL_com_56F6A688C743831312A4A80A6899DA37 {
    meta:
       description         = "Detects Crazy Evil Traffer Team with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-04-30"
       version             = "1.0"

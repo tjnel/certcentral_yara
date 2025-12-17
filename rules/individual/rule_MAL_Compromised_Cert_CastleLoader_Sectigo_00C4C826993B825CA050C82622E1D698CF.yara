@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_CastleLoader_Sectigo_00C4C826993B825CA050C82622E1D698CF {
    meta:
       description         = "Detects CastleLoader with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-10-23"
       version             = "1.0"

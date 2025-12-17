@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_PDFast_GlobalSign_6F967286B3DB0B954F9A84E7 {
    meta:
       description         = "Detects PDFast with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-09-30"
       version             = "1.0"

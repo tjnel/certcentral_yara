@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_CobaltStrike_Sectigo_4DEB2644A5AD1488F98F6A8D6BCA1FAB {
    meta:
       description         = "Detects CobaltStrike with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2022-10-05"
       version             = "1.0"

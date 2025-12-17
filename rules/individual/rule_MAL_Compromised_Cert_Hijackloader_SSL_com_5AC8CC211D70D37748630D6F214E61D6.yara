@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Hijackloader_SSL_com_5AC8CC211D70D37748630D6F214E61D6 {
    meta:
       description         = "Detects Hijackloader with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-05-07"
       version             = "1.0"

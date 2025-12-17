@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_MATA_Sectigo_00D8F7700C8C150FDFFBDE8AF629D3600F {
    meta:
       description         = "Detects MATA with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2022-08-22"
       version             = "1.0"

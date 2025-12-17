@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Unknown_bootkit_SSL_com_767FCD8623FB84E3D6E7CF6F8A8078A8 {
    meta:
       description         = "Detects Unknown, bootkit? with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2023-12-12"
       version             = "1.0"

@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_CoinLurker_DigiCert_08FD49B1A5ECA2283F3E0971754D2ED4 {
    meta:
       description         = "Detects CoinLurker with compromised cert (DigiCert)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2023-12-07"
       version             = "1.0"

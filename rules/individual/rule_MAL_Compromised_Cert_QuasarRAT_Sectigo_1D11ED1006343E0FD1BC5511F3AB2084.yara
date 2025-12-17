@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_QuasarRAT_Sectigo_1D11ED1006343E0FD1BC5511F3AB2084 {
    meta:
       description         = "Detects QuasarRAT with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2022-08-31"
       version             = "1.0"

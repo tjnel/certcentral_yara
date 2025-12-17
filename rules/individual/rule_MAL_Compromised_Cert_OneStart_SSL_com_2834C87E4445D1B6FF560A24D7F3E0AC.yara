@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_OneStart_SSL_com_2834C87E4445D1B6FF560A24D7F3E0AC {
    meta:
       description         = "Detects OneStart with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-03-06"
       version             = "1.0"

@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Rhadamanthys_SSL_com_60BC12FFBC578B9115527E428D8B59CA {
    meta:
       description         = "Detects Rhadamanthys with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-07-25"
       version             = "1.0"

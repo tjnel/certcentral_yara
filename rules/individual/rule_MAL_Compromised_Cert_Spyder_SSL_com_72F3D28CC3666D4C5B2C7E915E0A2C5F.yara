@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Spyder_SSL_com_72F3D28CC3666D4C5B2C7E915E0A2C5F {
    meta:
       description         = "Detects Spyder with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-02-14"
       version             = "1.0"

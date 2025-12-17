@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_FriendsCompany_GlobalSign_5781E1DF1C57601541DC6FC9 {
    meta:
       description         = "Detects FriendsCompany with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-10-03"
       version             = "1.0"

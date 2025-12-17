@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_AsyncRAT_GlobalSign_6D697B15A91B985E9398396C {
    meta:
       description         = "Detects AsyncRAT with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-01-14"
       version             = "1.0"

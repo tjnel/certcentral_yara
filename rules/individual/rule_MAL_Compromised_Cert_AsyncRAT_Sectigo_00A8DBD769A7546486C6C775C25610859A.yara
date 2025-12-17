@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_AsyncRAT_Sectigo_00A8DBD769A7546486C6C775C25610859A {
    meta:
       description         = "Detects AsyncRAT with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-09-09"
       version             = "1.0"

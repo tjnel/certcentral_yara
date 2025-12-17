@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_ScreenConnect_Phishing_GlobalSign_60D16EC97ED649E7E625BAE7 {
    meta:
       description         = "Detects ScreenConnect Phishing with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-08-04"
       version             = "1.0"

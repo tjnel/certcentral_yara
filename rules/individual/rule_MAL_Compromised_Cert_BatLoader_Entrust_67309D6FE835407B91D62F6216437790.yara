@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_BatLoader_Entrust_67309D6FE835407B91D62F6216437790 {
    meta:
       description         = "Detects BatLoader with compromised cert (Entrust)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2023-01-28"
       version             = "1.0"

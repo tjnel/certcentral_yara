@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_TA505_Sectigo_3AFE693728F8406054A613F6736F89E3 {
    meta:
       description         = "Detects TA505 with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2020-08-07"
       version             = "1.0"

@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_NW0rm_Comodo_00B1BBEF3ABA79AB2EAE5B8015F26B34F8 {
    meta:
       description         = "Detects NW0rm with compromised cert (Comodo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2016-05-13"
       version             = "1.0"

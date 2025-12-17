@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Xworm_GlobalSign_4C0354CE17E2C3642C3D064C {
    meta:
       description         = "Detects Xworm with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2023-03-29"
       version             = "1.0"

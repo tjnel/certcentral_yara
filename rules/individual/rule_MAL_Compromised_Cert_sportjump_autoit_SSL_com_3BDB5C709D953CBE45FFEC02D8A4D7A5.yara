@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_sportjump_autoit_SSL_com_3BDB5C709D953CBE45FFEC02D8A4D7A5 {
    meta:
       description         = "Detects sportjump_autoit with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-03-28"
       version             = "1.0"

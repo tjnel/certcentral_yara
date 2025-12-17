@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_XRed_DigiCert_0F550E72660DADB4E28C137E99C79C47 {
    meta:
       description         = "Detects XRed with compromised cert (DigiCert)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-05-22"
       version             = "1.0"

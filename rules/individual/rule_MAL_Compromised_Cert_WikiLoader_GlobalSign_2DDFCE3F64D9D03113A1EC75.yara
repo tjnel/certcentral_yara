@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_WikiLoader_GlobalSign_2DDFCE3F64D9D03113A1EC75 {
    meta:
       description         = "Detects WikiLoader with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-08-26"
       version             = "1.0"

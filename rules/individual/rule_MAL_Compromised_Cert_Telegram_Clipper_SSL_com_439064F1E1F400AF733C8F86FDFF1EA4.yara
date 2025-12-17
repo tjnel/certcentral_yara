@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Telegram_Clipper_SSL_com_439064F1E1F400AF733C8F86FDFF1EA4 {
    meta:
       description         = "Detects Telegram Clipper with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-10-28"
       version             = "1.0"

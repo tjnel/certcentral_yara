@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Meterpreter_DigiCert_03B50181EBBAD1AB42C7D901FB1A932A {
    meta:
       description         = "Detects Meterpreter with compromised cert (DigiCert)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2023-05-17"
       version             = "1.0"

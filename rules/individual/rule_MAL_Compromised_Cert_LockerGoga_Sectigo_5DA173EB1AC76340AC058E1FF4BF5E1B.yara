@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_LockerGoga_Sectigo_5DA173EB1AC76340AC058E1FF4BF5E1B {
    meta:
       description         = "Detects LockerGoga with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2019-02-22"
       version             = "1.0"

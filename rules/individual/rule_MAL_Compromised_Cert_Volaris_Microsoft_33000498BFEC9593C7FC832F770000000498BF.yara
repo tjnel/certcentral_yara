@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Volaris_Microsoft_33000498BFEC9593C7FC832F770000000498BF {
    meta:
       description         = "Detects Volaris with compromised cert (Microsoft)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-07-25"
       version             = "1.0"

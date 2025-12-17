@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_CleanupLoader_Certum_672237253A9B7EF9D02D7D1CB27A3FF4 {
    meta:
       description         = "Detects CleanupLoader with compromised cert (Certum)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-09-03"
       version             = "1.0"

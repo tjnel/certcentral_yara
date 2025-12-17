@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Agentb_GlobalSign_45ECCCB1DF303D4DDC25847D {
    meta:
       description         = "Detects Agentb with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-02-13"
       version             = "1.0"

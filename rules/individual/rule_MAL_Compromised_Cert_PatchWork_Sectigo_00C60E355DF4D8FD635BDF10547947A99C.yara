@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_PatchWork_Sectigo_00C60E355DF4D8FD635BDF10547947A99C {
    meta:
       description         = "Detects PatchWork with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2023-05-10"
       version             = "1.0"

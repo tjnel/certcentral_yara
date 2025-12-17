@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_QuasarRAT_SSL_com_2E0166B936533F45D5DD693122092E35 {
    meta:
       description         = "Detects QuasarRAT with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-12-30"
       version             = "1.0"

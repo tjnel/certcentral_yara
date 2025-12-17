@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Wagmi_Traffer_Team_GlobalSign_525DB6D9E035E547A81A3A8D {
    meta:
       description         = "Detects Wagmi Traffer Team with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-04-16"
       version             = "1.0"

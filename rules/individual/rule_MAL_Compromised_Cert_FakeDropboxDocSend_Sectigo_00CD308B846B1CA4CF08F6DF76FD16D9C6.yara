@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_FakeDropboxDocSend_Sectigo_00CD308B846B1CA4CF08F6DF76FD16D9C6 {
    meta:
       description         = "Detects FakeDropboxDocSend with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-08-20"
       version             = "1.0"

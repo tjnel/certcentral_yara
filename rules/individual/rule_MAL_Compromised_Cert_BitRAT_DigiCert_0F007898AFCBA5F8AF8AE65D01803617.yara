@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_BitRAT_DigiCert_0F007898AFCBA5F8AF8AE65D01803617 {
    meta:
       description         = "Detects BitRAT with compromised cert (DigiCert)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2021-04-14"
       version             = "1.0"

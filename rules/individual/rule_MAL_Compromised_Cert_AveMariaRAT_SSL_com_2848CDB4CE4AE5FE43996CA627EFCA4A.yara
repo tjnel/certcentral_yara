@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_AveMariaRAT_SSL_com_2848CDB4CE4AE5FE43996CA627EFCA4A {
    meta:
       description         = "Detects AveMariaRAT with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-04-02"
       version             = "1.0"

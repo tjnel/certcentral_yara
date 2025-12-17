@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_RecordBreaker_Sectigo_00A32F3BA229704AD400473F7479E4C3E4 {
    meta:
       description         = "Detects RecordBreaker with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2023-03-21"
       version             = "1.0"

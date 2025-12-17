@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Grandoreiro_GlobalSign_6A7918CC51CDC1F029F82A82 {
    meta:
       description         = "Detects Grandoreiro with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2023-12-05"
       version             = "1.0"

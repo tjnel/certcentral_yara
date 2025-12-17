@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Unknown_Codegic_0237DEA0A266364D1C9C842A97E5C33B067C2D33 {
    meta:
       description         = "Detects Unknown with compromised cert (Codegic)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-01-30"
       version             = "1.0"

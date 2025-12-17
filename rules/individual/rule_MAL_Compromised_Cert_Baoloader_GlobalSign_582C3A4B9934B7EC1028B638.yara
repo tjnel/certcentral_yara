@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Baoloader_GlobalSign_582C3A4B9934B7EC1028B638 {
    meta:
       description         = "Detects Baoloader with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-12-09"
       version             = "1.0"

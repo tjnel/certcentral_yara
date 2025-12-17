@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_BaoLoader_Sectigo_313CA9C838CDDB21E4E354E6DBF0216A {
    meta:
       description         = "Detects BaoLoader with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-11-28"
       version             = "1.0"

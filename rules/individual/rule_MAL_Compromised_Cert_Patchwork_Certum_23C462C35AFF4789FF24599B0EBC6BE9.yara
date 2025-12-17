@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Patchwork_Certum_23C462C35AFF4789FF24599B0EBC6BE9 {
    meta:
       description         = "Detects Patchwork with compromised cert (Certum)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-06-28"
       version             = "1.0"

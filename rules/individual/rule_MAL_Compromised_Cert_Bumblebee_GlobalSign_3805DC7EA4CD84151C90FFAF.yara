@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Bumblebee_GlobalSign_3805DC7EA4CD84151C90FFAF {
    meta:
       description         = "Detects Bumblebee with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-05-27"
       version             = "1.0"

@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_HermeticWiper_DigiCert_0C48732873AC8CCEBAF8F0E1E8329CEC {
    meta:
       description         = "Detects HermeticWiper with compromised cert (DigiCert)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2021-04-13"
       version             = "1.0"

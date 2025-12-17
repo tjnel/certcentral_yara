@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_ServHelper_Sectigo_44FE73F320AA8B7B4F5CA910AA22333A {
    meta:
       description         = "Detects ServHelper with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2021-05-04"
       version             = "1.0"

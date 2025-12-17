@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_DarkHVNC_Sectigo_49D4937BD9DFD9C8EF0DCDE761AE9F01 {
    meta:
       description         = "Detects DarkHVNC with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-08-22"
       version             = "1.0"

@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_AureliaLoader_SSL_com_2A2A94C6D41281D902DD1F8110914DF3 {
    meta:
       description         = "Detects AureliaLoader with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-08-21"
       version             = "1.0"

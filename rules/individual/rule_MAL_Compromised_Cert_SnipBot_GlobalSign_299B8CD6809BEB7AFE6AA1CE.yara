@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_SnipBot_GlobalSign_299B8CD6809BEB7AFE6AA1CE {
    meta:
       description         = "Detects SnipBot with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-03-15"
       version             = "1.0"

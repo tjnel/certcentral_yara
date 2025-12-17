@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_ModiLoader_Sectigo_0095E5793F2ABE0B4EC9BE54FD24F76AE5 {
    meta:
       description         = "Detects ModiLoader with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2020-09-16"
       version             = "1.0"

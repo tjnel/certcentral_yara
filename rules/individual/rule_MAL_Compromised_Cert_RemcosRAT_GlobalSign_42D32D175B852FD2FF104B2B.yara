@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_RemcosRAT_GlobalSign_42D32D175B852FD2FF104B2B {
    meta:
       description         = "Detects RemcosRAT with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-03-23"
       version             = "1.0"

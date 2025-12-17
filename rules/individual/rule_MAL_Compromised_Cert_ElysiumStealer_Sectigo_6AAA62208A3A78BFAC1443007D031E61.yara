@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_ElysiumStealer_Sectigo_6AAA62208A3A78BFAC1443007D031E61 {
    meta:
       description         = "Detects ElysiumStealer with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2020-12-17"
       version             = "1.0"

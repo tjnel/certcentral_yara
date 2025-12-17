@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_XWorm_SSL_com_51554DAD826DA2EE44D163AA61EA5615 {
    meta:
       description         = "Detects XWorm with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-11-28"
       version             = "1.0"

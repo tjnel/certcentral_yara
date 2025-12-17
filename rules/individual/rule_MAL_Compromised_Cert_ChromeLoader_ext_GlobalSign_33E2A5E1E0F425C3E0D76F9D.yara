@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_ChromeLoader_ext_GlobalSign_33E2A5E1E0F425C3E0D76F9D {
    meta:
       description         = "Detects ChromeLoader_ext with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2023-04-14"
       version             = "1.0"

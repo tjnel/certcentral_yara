@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_ParallaxRat_TrustOcean_00D1B8F1FE56381BEFDB2E73FFEF2A4B28 {
    meta:
       description         = "Detects ParallaxRat with compromised cert (TrustOcean)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2021-04-06"
       version             = "1.0"

@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Winos_SSL_com_2C8C8943925A595FD69F063B98D83B1D {
    meta:
       description         = "Detects Winos with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-08-08"
       version             = "1.0"

@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Oyster_SSL_com_28352420650C12A8E08A1B9909DE99FF {
    meta:
       description         = "Detects Oyster with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-08-08"
       version             = "1.0"

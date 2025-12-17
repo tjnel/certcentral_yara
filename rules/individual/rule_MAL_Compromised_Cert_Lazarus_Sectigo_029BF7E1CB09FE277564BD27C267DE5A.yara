@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Lazarus_Sectigo_029BF7E1CB09FE277564BD27C267DE5A {
    meta:
       description         = "Detects Lazarus with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2021-11-24"
       version             = "1.0"

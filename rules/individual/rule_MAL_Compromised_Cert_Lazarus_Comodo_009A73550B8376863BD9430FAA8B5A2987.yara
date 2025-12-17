@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Lazarus_Comodo_009A73550B8376863BD9430FAA8B5A2987 {
    meta:
       description         = "Detects Lazarus with compromised cert (Comodo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2018-05-21"
       version             = "1.0"

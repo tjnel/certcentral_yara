@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Hancitor_Sectigo_1E5EFA53A14599CC82F56F0790E20B17 {
    meta:
       description         = "Detects Hancitor with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2021-06-09"
       version             = "1.0"

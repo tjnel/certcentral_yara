@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Vidar_Microsoft_33000518E15B387314896695710000000518E1 {
    meta:
       description         = "Detects Vidar with compromised cert (Microsoft)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-10-29"
       version             = "1.0"

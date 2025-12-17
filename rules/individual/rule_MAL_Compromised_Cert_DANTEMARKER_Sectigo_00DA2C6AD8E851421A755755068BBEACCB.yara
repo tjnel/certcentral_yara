@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_DANTEMARKER_Sectigo_00DA2C6AD8E851421A755755068BBEACCB {
    meta:
       description         = "Detects DANTEMARKER with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-05-20"
       version             = "1.0"

@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_CastleLoader_SSL_com_63F98070213489715A8D224F58E1C1D5 {
    meta:
       description         = "Detects CastleLoader with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-05-27"
       version             = "1.0"

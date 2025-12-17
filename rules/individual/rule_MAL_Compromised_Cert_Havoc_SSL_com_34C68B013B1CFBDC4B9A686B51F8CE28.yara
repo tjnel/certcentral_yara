@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Havoc_SSL_com_34C68B013B1CFBDC4B9A686B51F8CE28 {
    meta:
       description         = "Detects Havoc with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-09-12"
       version             = "1.0"

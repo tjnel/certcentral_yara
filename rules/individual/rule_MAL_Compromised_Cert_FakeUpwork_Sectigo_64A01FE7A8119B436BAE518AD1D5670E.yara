@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_FakeUpwork_Sectigo_64A01FE7A8119B436BAE518AD1D5670E {
    meta:
       description         = "Detects FakeUpwork with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-11-12"
       version             = "1.0"

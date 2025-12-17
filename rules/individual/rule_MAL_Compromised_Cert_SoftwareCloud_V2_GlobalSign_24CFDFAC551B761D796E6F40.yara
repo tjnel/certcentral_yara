@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_SoftwareCloud_V2_GlobalSign_24CFDFAC551B761D796E6F40 {
    meta:
       description         = "Detects SoftwareCloud V2 with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-07-29"
       version             = "1.0"

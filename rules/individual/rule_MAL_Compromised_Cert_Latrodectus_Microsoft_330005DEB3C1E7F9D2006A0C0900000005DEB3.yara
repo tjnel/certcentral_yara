@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Latrodectus_Microsoft_330005DEB3C1E7F9D2006A0C0900000005DEB3 {
    meta:
       description         = "Detects Latrodectus with compromised cert (Microsoft)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-10-20"
       version             = "1.0"

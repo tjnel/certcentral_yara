@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_RaccoonStealer_Sectigo_7709D2DF39E9A4F7DB2F3CBC29B49743 {
    meta:
       description         = "Detects RaccoonStealer with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2020-10-03"
       version             = "1.0"

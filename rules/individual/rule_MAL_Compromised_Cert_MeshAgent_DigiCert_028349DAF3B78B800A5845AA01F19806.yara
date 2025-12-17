@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_MeshAgent_DigiCert_028349DAF3B78B800A5845AA01F19806 {
    meta:
       description         = "Detects MeshAgent with compromised cert (DigiCert)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-11-21"
       version             = "1.0"

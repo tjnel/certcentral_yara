@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_LummaStealer_SSL_com_4F12A0A5569392FC0B41C3D077E6586D {
    meta:
       description         = "Detects LummaStealer with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-03-06"
       version             = "1.0"

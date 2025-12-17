@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Quakbot_TrustOcean_00936BC256D2057CA9B9EC3034C3ED0EE6 {
    meta:
       description         = "Detects Quakbot with compromised cert (TrustOcean)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2021-03-28"
       version             = "1.0"

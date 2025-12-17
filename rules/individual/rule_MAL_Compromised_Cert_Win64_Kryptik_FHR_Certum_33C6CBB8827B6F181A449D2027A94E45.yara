@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Win64_Kryptik_FHR_Certum_33C6CBB8827B6F181A449D2027A94E45 {
    meta:
       description         = "Detects Win64/Kryptik.FHR with compromised cert (Certum)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-04-27"
       version             = "1.0"

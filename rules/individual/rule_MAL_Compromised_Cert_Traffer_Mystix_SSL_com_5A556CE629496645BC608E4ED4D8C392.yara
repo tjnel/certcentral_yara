@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Traffer_Mystix_SSL_com_5A556CE629496645BC608E4ED4D8C392 {
    meta:
       description         = "Detects Traffer (Mystix) with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-04-11"
       version             = "1.0"

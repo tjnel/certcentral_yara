@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_QuasarRAT_Microsoft_33000201B5D72372EE416F0D8F0000000201B5 {
    meta:
       description         = "Detects QuasarRAT with compromised cert (Microsoft)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-03-08"
       version             = "1.0"

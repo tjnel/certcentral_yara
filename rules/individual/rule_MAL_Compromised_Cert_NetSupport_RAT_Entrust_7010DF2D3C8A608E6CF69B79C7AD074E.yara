@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_NetSupport_RAT_Entrust_7010DF2D3C8A608E6CF69B79C7AD074E {
    meta:
       description         = "Detects NetSupport RAT with compromised cert (Entrust)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-04-16"
       version             = "1.0"

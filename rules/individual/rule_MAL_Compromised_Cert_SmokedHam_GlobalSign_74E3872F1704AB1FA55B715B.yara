@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_SmokedHam_GlobalSign_74E3872F1704AB1FA55B715B {
    meta:
       description         = "Detects SmokedHam with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-04-17"
       version             = "1.0"

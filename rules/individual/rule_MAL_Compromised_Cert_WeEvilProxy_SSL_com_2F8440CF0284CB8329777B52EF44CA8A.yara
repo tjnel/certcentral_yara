@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_WeEvilProxy_SSL_com_2F8440CF0284CB8329777B52EF44CA8A {
    meta:
       description         = "Detects WeEvilProxy with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-03-31"
       version             = "1.0"

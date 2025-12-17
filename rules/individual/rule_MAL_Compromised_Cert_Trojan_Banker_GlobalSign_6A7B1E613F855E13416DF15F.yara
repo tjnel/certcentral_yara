@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Trojan_Banker_GlobalSign_6A7B1E613F855E13416DF15F {
    meta:
       description         = "Detects Trojan_Banker with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-08-19"
       version             = "1.0"

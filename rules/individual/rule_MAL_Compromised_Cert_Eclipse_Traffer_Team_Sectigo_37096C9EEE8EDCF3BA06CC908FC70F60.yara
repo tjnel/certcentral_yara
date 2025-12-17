@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Eclipse_Traffer_Team_Sectigo_37096C9EEE8EDCF3BA06CC908FC70F60 {
    meta:
       description         = "Detects Eclipse Traffer Team with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-09-10"
       version             = "1.0"

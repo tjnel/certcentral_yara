@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_StormKitty_GlobalSign_0ACEC169CBF3FD565620FCB4 {
    meta:
       description         = "Detects StormKitty with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-05-19"
       version             = "1.0"

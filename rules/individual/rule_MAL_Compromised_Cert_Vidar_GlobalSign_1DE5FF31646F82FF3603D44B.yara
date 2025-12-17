@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Vidar_GlobalSign_1DE5FF31646F82FF3603D44B {
    meta:
       description         = "Detects Vidar with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-02-19"
       version             = "1.0"

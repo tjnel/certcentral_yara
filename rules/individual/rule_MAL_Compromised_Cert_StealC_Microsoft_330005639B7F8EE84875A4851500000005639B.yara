@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_StealC_Microsoft_330005639B7F8EE84875A4851500000005639B {
    meta:
       description         = "Detects StealC with compromised cert (Microsoft)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-11-22"
       version             = "1.0"

@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_SecTopRAT_ArechClient2_GlobalSign_60EE7F8ECC9BF3C102DA3677 {
    meta:
       description         = "Detects SecTopRAT,ArechClient2 with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-02-01"
       version             = "1.0"

@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Dridex_Sectigo_00E573D9C8B403C41BD59FFA0A8EFD4168 {
    meta:
       description         = "Detects Dridex with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2019-07-15"
       version             = "1.0"

@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_Microsoft_33000306F23A9C36B302A577A30000000306F2 {
    meta:
       description         = "Detects Crazy Evil Traffer Team with compromised cert (Microsoft)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-03-19"
       version             = "1.0"

@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_SearchLoader_Microsoft_33000621BC3C359A50E123AB850000000621BC {
    meta:
       description         = "Detects SearchLoader with compromised cert (Microsoft)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-11-13"
       version             = "1.0"

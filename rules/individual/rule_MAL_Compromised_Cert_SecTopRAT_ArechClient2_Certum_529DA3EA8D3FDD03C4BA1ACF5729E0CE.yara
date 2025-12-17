@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_SecTopRAT_ArechClient2_Certum_529DA3EA8D3FDD03C4BA1ACF5729E0CE {
    meta:
       description         = "Detects SecTopRAT,ArechClient2 with compromised cert (Certum)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-04-17"
       version             = "1.0"

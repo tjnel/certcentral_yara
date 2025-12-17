@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_AntiemuleLoader_Certum_451062113F2D48D7D109C713A5F4CAEB {
    meta:
       description         = "Detects AntiemuleLoader with compromised cert (Certum)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-11-14"
       version             = "1.0"

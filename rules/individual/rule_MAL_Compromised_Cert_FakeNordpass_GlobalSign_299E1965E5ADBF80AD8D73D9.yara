@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_FakeNordpass_GlobalSign_299E1965E5ADBF80AD8D73D9 {
    meta:
       description         = "Detects FakeNordpass with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-04-23"
       version             = "1.0"

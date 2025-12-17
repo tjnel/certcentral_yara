@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_NetSupportRAT_version2_Sectigo_00F99AB9FCDF58E1771827FC26FDB62B62 {
    meta:
       description         = "Detects NetSupportRAT_version2 with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2022-03-15"
       version             = "1.0"

@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_RemcosRAT_Sectigo_00FECC3B3C675F7FFD7DE22507F3FDACD7 {
    meta:
       description         = "Detects RemcosRAT with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2022-11-25"
       version             = "1.0"

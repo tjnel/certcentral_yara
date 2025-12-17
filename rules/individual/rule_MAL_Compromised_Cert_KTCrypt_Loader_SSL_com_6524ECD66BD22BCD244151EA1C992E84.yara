@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_KTCrypt_Loader_SSL_com_6524ECD66BD22BCD244151EA1C992E84 {
    meta:
       description         = "Detects KTCrypt Loader with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-05-13"
       version             = "1.0"

@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_FakeSAPConcur_Sectigo_00E399C110BDA97BA3C2635A886F55BA45 {
    meta:
       description         = "Detects FakeSAPConcur with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-07-22"
       version             = "1.0"

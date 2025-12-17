@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_TA455_SSL_com_6FC5AE16744B71647A822C46313615E8 {
    meta:
       description         = "Detects TA455 with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-03-14"
       version             = "1.0"

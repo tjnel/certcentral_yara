@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_IcedID_SSL_com_67936A84BED66EF021DBE771DE331772 {
    meta:
       description         = "Detects IcedID with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2023-05-01"
       version             = "1.0"

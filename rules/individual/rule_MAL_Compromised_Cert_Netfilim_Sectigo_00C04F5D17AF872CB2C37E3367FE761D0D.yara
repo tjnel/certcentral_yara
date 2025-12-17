@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Netfilim_Sectigo_00C04F5D17AF872CB2C37E3367FE761D0D {
    meta:
       description         = "Detects Netfilim with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2020-07-12"
       version             = "1.0"

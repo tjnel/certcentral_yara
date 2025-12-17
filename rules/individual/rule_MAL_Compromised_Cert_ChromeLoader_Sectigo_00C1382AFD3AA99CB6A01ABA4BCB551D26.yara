@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_ChromeLoader_Sectigo_00C1382AFD3AA99CB6A01ABA4BCB551D26 {
    meta:
       description         = "Detects ChromeLoader with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2023-05-10"
       version             = "1.0"

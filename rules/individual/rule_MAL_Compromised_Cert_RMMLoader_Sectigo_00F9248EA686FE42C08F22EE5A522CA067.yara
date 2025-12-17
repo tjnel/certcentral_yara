@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_RMMLoader_Sectigo_00F9248EA686FE42C08F22EE5A522CA067 {
    meta:
       description         = "Detects RMMLoader with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-09-24"
       version             = "1.0"

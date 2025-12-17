@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Amadey_Sectigo_00AC0A7B9420B369AF3DDB748385B981 {
    meta:
       description         = "Detects Amadey with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2020-11-06"
       version             = "1.0"

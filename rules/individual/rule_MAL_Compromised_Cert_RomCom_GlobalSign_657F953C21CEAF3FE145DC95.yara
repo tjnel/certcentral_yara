@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_RomCom_GlobalSign_657F953C21CEAF3FE145DC95 {
    meta:
       description         = "Detects RomCom with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-02-20"
       version             = "1.0"

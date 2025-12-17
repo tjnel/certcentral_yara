@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_ResidentialProxyInstaller_GoGetSSL_0B902CA1B6CA4C44CF6D10B8BBAD35B2 {
    meta:
       description         = "Detects ResidentialProxyInstaller with compromised cert (GoGetSSL)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-06-27"
       version             = "1.0"

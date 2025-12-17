@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Oyster_stage2_Microsoft_330004EF22BFE922309CD4C0C500000004EF22 {
    meta:
       description         = "Detects Oyster_stage2 with compromised cert (Microsoft)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-10-21"
       version             = "1.0"

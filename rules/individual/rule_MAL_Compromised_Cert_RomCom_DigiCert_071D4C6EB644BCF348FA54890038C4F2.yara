@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_RomCom_DigiCert_071D4C6EB644BCF348FA54890038C4F2 {
    meta:
       description         = "Detects RomCom with compromised cert (DigiCert)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-04-07"
       version             = "1.0"

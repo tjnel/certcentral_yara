@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_OysterLoader_GoGetSSL_0CD398F0C19E99E5A5CD1CCB63D49059 {
    meta:
       description         = "Detects OysterLoader with compromised cert (GoGetSSL)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-02-13"
       version             = "1.0"

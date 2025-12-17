@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Vidar_Sectigo_00999F34F2243AB715E122175A26DCE974 {
    meta:
       description         = "Detects Vidar with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-10-28"
       version             = "1.0"

@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_DuckTail_Entrust_1B59FEA3A77A45F4EF50215669617D38 {
    meta:
       description         = "Detects DuckTail with compromised cert (Entrust)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2023-11-06"
       version             = "1.0"

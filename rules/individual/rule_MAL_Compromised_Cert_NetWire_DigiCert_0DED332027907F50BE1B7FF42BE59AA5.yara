@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_NetWire_DigiCert_0DED332027907F50BE1B7FF42BE59AA5 {
    meta:
       description         = "Detects NetWire with compromised cert (DigiCert)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2020-11-28"
       version             = "1.0"

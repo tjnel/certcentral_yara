@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_CobaltStrike_Go_Daddy_00DBC03CA7E6AE6DB6 {
    meta:
       description         = "Detects CobaltStrike with compromised cert (Go Daddy)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2020-09-23"
       version             = "1.0"

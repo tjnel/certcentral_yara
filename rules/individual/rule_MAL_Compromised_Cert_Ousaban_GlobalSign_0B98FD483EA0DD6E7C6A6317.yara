@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Ousaban_GlobalSign_0B98FD483EA0DD6E7C6A6317 {
    meta:
       description         = "Detects Ousaban with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-12-13"
       version             = "1.0"

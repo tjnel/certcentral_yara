@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Latam_Banker_DigiCert_013FCA504BE9FC4FA8BC83F48E3588CB {
    meta:
       description         = "Detects Latam Banker with compromised cert (DigiCert)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-02-06"
       version             = "1.0"

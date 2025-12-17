@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_Sectigo_00EF5A23A24B787CDD7A1CF590238E4DED {
    meta:
       description         = "Detects Crazy Evil Traffer Team with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-02-09"
       version             = "1.0"

@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_AveMariaRAT_Sectigo_00E55BE88DDBD93C423220468D430905DD {
    meta:
       description         = "Detects AveMariaRAT with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2021-11-24"
       version             = "1.0"

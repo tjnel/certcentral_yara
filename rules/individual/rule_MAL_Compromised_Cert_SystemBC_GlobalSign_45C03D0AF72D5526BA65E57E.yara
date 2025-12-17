@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_SystemBC_GlobalSign_45C03D0AF72D5526BA65E57E {
    meta:
       description         = "Detects SystemBC with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-09-23"
       version             = "1.0"

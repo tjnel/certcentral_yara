@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_FakeNSFW_SSL_com_12916017A8B479FCBB9562F07097BE52 {
    meta:
       description         = "Detects FakeNSFW with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-06-13"
       version             = "1.0"

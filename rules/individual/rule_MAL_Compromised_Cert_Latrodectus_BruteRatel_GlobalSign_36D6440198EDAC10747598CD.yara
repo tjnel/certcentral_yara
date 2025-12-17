@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Latrodectus_BruteRatel_GlobalSign_36D6440198EDAC10747598CD {
    meta:
       description         = "Detects Latrodectus,BruteRatel with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-06-06"
       version             = "1.0"

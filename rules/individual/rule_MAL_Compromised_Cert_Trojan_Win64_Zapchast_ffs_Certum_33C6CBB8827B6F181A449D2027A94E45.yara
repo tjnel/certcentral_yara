@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Trojan_Win64_Zapchast_ffs_Certum_33C6CBB8827B6F181A449D2027A94E45 {
    meta:
       description         = "Detects Trojan.Win64.Zapchast.ffs with compromised cert (Certum)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-04-27"
       version             = "1.0"

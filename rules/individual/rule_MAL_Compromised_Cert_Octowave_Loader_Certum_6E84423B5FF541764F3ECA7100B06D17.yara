@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Octowave_Loader_Certum_6E84423B5FF541764F3ECA7100B06D17 {
    meta:
       description         = "Detects Octowave Loader with compromised cert (Certum)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-12-02"
       version             = "1.0"

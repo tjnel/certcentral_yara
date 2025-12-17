@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_AzoRult_Comodo_4BBF667B63E1962A30AED63B346D789B {
    meta:
       description         = "Detects AzoRult with compromised cert (Comodo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2018-08-15"
       version             = "1.0"

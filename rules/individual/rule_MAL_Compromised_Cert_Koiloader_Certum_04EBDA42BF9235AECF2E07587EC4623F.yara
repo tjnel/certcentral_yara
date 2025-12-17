@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Koiloader_Certum_04EBDA42BF9235AECF2E07587EC4623F {
    meta:
       description         = "Detects Koiloader with compromised cert (Certum)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-11-21"
       version             = "1.0"

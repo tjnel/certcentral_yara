@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_PatchWork_SSL_com_0C03FD84E8E8569F0253D099494690D4 {
    meta:
       description         = "Detects PatchWork with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-02-05"
       version             = "1.0"

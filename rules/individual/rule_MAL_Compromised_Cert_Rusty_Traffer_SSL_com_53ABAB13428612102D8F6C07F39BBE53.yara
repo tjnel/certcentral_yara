@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Rusty_Traffer_SSL_com_53ABAB13428612102D8F6C07F39BBE53 {
    meta:
       description         = "Detects Rusty Traffer with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-03-27"
       version             = "1.0"

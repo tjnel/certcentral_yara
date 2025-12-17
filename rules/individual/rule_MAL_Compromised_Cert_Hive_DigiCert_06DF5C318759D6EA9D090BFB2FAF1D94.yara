@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Hive_DigiCert_06DF5C318759D6EA9D090BFB2FAF1D94 {
    meta:
       description         = "Detects Hive with compromised cert (DigiCert)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2021-10-18"
       version             = "1.0"

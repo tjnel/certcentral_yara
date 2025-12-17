@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Vidar_SSL_com_0AD7C373F578C648F98330332B4F3C1A {
    meta:
       description         = "Detects Vidar with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-05-27"
       version             = "1.0"

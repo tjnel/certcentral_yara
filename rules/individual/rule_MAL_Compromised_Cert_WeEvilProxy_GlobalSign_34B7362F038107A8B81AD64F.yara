@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_WeEvilProxy_GlobalSign_34B7362F038107A8B81AD64F {
    meta:
       description         = "Detects WeEvilProxy with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-06-25"
       version             = "1.0"

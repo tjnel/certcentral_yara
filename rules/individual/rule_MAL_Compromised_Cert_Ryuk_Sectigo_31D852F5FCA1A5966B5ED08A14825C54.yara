@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Ryuk_Sectigo_31D852F5FCA1A5966B5ED08A14825C54 {
    meta:
       description         = "Detects Ryuk with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2021-02-04"
       version             = "1.0"

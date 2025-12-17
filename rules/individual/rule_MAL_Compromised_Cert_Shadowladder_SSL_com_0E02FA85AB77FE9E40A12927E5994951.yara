@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Shadowladder_SSL_com_0E02FA85AB77FE9E40A12927E5994951 {
    meta:
       description         = "Detects Shadowladder with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-05-21"
       version             = "1.0"

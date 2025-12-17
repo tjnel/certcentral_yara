@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Matanbuchus_Sectigo_00EDA0F47B3B38E781CDF6EF6BE5D3F6EE {
    meta:
       description         = "Detects Matanbuchus with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2022-04-26"
       version             = "1.0"

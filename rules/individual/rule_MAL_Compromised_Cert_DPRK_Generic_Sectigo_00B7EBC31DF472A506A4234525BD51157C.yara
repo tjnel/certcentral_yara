@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_DPRK_Generic_Sectigo_00B7EBC31DF472A506A4234525BD51157C {
    meta:
       description         = "Detects DPRK Generic with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-06-09"
       version             = "1.0"

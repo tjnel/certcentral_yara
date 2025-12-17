@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_BumbleBee_Sectigo_65CFD8419D70CE4011D97BC79D18315E {
    meta:
       description         = "Detects BumbleBee with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2022-07-08"
       version             = "1.0"

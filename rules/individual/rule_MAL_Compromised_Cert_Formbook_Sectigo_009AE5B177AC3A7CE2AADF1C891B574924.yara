@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Formbook_Sectigo_009AE5B177AC3A7CE2AADF1C891B574924 {
    meta:
       description         = "Detects Formbook with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2020-12-16"
       version             = "1.0"

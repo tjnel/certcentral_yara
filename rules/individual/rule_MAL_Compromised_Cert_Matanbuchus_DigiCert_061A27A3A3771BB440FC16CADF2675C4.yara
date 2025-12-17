@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Matanbuchus_DigiCert_061A27A3A3771BB440FC16CADF2675C4 {
    meta:
       description         = "Detects Matanbuchus with compromised cert (DigiCert)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2022-05-18"
       version             = "1.0"

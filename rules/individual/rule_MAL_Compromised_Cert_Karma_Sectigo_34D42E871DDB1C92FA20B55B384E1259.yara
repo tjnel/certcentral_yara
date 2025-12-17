@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Karma_Sectigo_34D42E871DDB1C92FA20B55B384E1259 {
    meta:
       description         = "Detects Karma with compromised cert (Sectigo)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2021-08-31"
       version             = "1.0"

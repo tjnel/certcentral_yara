@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_TrickBot_DigiCert_082023879112289BF351D297CC8EFCFC {
    meta:
       description         = "Detects TrickBot with compromised cert (DigiCert)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2019-11-11"
       version             = "1.0"

@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Lumma_Stealer_DigiCert_0C84D1A66AA31C56A7627A7B2CA71E32 {
    meta:
       description         = "Detects Lumma Stealer with compromised cert (DigiCert)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2024-10-31"
       version             = "1.0"

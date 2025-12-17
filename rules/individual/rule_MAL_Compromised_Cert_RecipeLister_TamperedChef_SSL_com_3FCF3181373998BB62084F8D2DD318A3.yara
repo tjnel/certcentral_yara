@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_RecipeLister_TamperedChef_SSL_com_3FCF3181373998BB62084F8D2DD318A3 {
    meta:
       description         = "Detects RecipeLister,TamperedChef with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-02-25"
       version             = "1.0"

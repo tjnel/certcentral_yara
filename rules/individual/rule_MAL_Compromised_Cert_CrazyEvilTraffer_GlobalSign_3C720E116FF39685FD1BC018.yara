@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_CrazyEvilTraffer_GlobalSign_3C720E116FF39685FD1BC018 {
    meta:
       description         = "Detects CrazyEvilTraffer with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-06-30"
       version             = "1.0"

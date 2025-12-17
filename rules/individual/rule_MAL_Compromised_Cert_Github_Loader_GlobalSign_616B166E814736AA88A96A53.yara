@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_Github_Loader_GlobalSign_616B166E814736AA88A96A53 {
    meta:
       description         = "Detects Github Loader with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-06-10"
       version             = "1.0"

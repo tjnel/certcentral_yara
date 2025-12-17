@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_QuirkyLoader_SSL_com_5C06E4EE4EA78E8F24B10D1238DAAB64 {
    meta:
       description         = "Detects QuirkyLoader with compromised cert (SSL.com)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-09-30"
       version             = "1.0"

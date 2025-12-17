@@ -3,7 +3,7 @@ import "pe"
 rule MAL_Compromised_Cert_MeshAgent_GlobalSign_5D35276009EC70A2818D3B24 {
    meta:
       description         = "Detects MeshAgent with compromised cert (GlobalSign)"
-      author              = "CertGraveyard-YARA-Generator"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
       date                = "2025-03-28"
       version             = "1.0"
