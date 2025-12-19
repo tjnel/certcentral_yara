@@ -1575,6 +1575,41 @@ rule MAL_Compromised_Cert_BadNews_Sectigo_25BA18A267D6D8E08EBC6E2457D58D1E {
       )
 }
 
+rule MAL_Compromised_Cert_BaoLoader_Apple_2A7318646A5E64C0 {
+   meta:
+      description         = "Detects BaoLoader with compromised cert (Apple)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-03"
+      version             = "1.0"
+
+      hash                = "9fe25221834537c56e3514460f2c42ae0415ca40449ca7b71cebd8bd0445eefd"
+      malware             = "BaoLoader"
+      malware_type        = "Trojan"
+      malware_notes       = "Certificate was identified while investigating BaoLoader malware. File was identified as a ManualFinder.pkg for MacOS."
+
+      signer              = "IENGINEERING PRIVATE LIMITED"
+      cert_issuer_short   = "Apple"
+      cert_issuer         = "Apple Inc."
+      cert_serial         = "2a:73:18:64:6a:5e:64:c0"
+      cert_thumbprint     = "9E8EABB61C444DB5C5D44C924B03AFC9670407BC"
+      cert_valid_from     = "2025-06-03"
+      cert_valid_to       = "2027-02-01"
+
+      country             = "US"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Apple Inc." and
+         sig.serial == "2a:73:18:64:6a:5e:64:c0"
+      )
+}
+
 rule MAL_Compromised_Cert_BaoLoader_DigiCert_035A3901296CAAD75132EBA7C9116DB0 {
    meta:
       description         = "Detects BaoLoader with compromised cert (DigiCert)"
@@ -13192,6 +13227,41 @@ rule MAL_Compromised_Cert_FakeDocument_Certum_64065DA5F28814E1470536854F7D0162 {
       for any sig in pe.signatures : (
          sig.issuer contains "Certum Code Signing 2021 CA" and
          sig.serial == "64:06:5d:a5:f2:88:14:e1:47:05:36:85:4f:7d:01:62"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeDocument_GlobalSign_1189B31F608EF0CFB2B2F27F {
+   meta:
+      description         = "Detects FakeDocument with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-10-28"
+      version             = "1.0"
+
+      hash                = "9993ae862e80930fc460454ed36f9811ab106eeb4731a6f319b3f9a09b284ae1"
+      malware             = "FakeDocument"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "MOUNI MEDIA PRIVATE LIMITED"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "11:89:b3:1f:60:8e:f0:cf:b2:b2:f2:7f"
+      cert_thumbprint     = "70E6A90E5AC6736029D1030E005F7A905A27C855"
+      cert_valid_from     = "2025-10-28"
+      cert_valid_to       = "2026-10-29"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "11:89:b3:1f:60:8e:f0:cf:b2:b2:f2:7f"
       )
 }
 
@@ -27437,6 +27507,41 @@ rule MAL_Compromised_Cert_Octowave_Loader_Certum_6E84423B5FF541764F3ECA7100B06D1
       for any sig in pe.signatures : (
          sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
          sig.serial == "6e:84:42:3b:5f:f5:41:76:4f:3e:ca:71:00:b0:6d:17"
+      )
+}
+
+rule MAL_Compromised_Cert_Odyssey_Stealer_Apple_2BEB4AB91970859A {
+   meta:
+      description         = "Detects Odyssey Stealer with compromised cert (Apple)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-04"
+      version             = "1.0"
+
+      hash                = "c916f3710ba7f5d8413460e0c2336cb043312cc253247a5a03926a816db58b1e"
+      malware             = "Odyssey Stealer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Augustin Brunelle"
+      cert_issuer_short   = "Apple"
+      cert_issuer         = "Apple Inc."
+      cert_serial         = "2b:eb:4a:b9:19:70:85:9a"
+      cert_thumbprint     = "F755D1D68D42294B2DD3DB8C14A14CE388D4BA57"
+      cert_valid_from     = "2025-12-04"
+      cert_valid_to       = "2027-02-01"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Apple Inc." and
+         sig.serial == "2b:eb:4a:b9:19:70:85:9a"
       )
 }
 
@@ -50876,11 +50981,11 @@ rule MAL_Compromised_Cert_UNK_50_Microsoft_330006BD17074683368C2F606300000006BD1
       cert_valid_from     = "2025-12-16"
       cert_valid_to       = "2025-12-19"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "CA"
+      state               = "Ontario"
+      locality            = "Mississauga"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -51447,6 +51552,41 @@ rule MAL_Compromised_Cert_Unknown_Apple_2A7318646A5E64C0 {
       for any sig in pe.signatures : (
          sig.issuer contains "Apple Inc." and
          sig.serial == "2a:73:18:64:6a:5e:64:c0"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_Apple_4BFB11FC55E354F5D94157764C93A9 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Apple)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-01-03"
+      version             = "1.0"
+
+      hash                = "bc4c1cd39d60c29959a4909a5ff71db566a06d62d75405a37e710daca2d4771f"
+      malware             = "Unknown"
+      malware_type        = "Trojan"
+      malware_notes       = "Identified by VirusTotal's code insights as a trojan. Discussed by L0psec regarding the cert being used by the jailbreaking community: https://x.com/L0Psec/status/1999143566883398078"
+
+      signer              = "HDFC Bank Limited"
+      cert_issuer_short   = "Apple"
+      cert_issuer         = "Apple Inc."
+      cert_serial         = "4b:fb:11:fc:55:e3:54:f5:d9:41:57:76:4c:93:a9"
+      cert_thumbprint     = "155D172238A78B4A467B686913AD5041AB9543CE"
+      cert_valid_from     = "2025-01-03"
+      cert_valid_to       = "2028-01-03"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Apple Inc." and
+         sig.serial == "4b:fb:11:fc:55:e3:54:f5:d9:41:57:76:4c:93:a9"
       )
 }
 

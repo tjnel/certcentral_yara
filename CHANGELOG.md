@@ -4,6 +4,17 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2025.12.19] - 2025-12-19
+
+### Added
+- MAL_Compromised_Cert_Unknown_Apple_4BFB11FC55E354F5D94157764C93A9 (Unknown - Apple)
+- MAL_Compromised_Cert_Odyssey_Stealer_Apple_2BEB4AB91970859A (Odyssey Stealer - Apple)
+- MAL_Compromised_Cert_FakeDocument_GlobalSign_1189B31F608EF0CFB2B2F27F (FakeDocument - GlobalSign)
+
+### Modified
+- MAL_Compromised_Cert_BaoLoader_Apple_2A7318646A5E64C0 (Updated metadata for BaoLoader)
+- MAL_Compromised_Cert_UNK_50_Microsoft_330006BD17074683368C2F606300000006BD17 (Updated metadata for UNK-50)
+
 ## [2025.12.17] - 2025-12-17
 
 ### Added

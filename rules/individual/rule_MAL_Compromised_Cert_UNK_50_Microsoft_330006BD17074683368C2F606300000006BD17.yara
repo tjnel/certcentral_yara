@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_UNK_50_Microsoft_330006BD17074683368C2F606300000006BD1
       cert_valid_from     = "2025-12-16"
       cert_valid_to       = "2025-12-19"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "CA"
+      state               = "Ontario"
+      locality            = "Mississauga"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
