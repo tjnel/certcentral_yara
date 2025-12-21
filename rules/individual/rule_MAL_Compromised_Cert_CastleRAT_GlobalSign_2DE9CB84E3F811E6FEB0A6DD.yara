@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_CastleRAT_GlobalSign_2DE9CB84E3F811E6FEB0A6DD {
       cert_valid_from     = "2025-02-27"
       cert_valid_to       = "2026-02-28"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "RU"
+      state               = "Moscow"
+      locality            = "Moscow"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "1247700674198"
 
    condition:
       uint16(0) == 0x5a4d and

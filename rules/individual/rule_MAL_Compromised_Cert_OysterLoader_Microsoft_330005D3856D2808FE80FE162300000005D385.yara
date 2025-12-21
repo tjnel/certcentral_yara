@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_OysterLoader_Microsoft_330005D3856D2808FE80FE162300000
       cert_valid_from     = "2025-12-18"
       cert_valid_to       = "2025-12-21"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "CA"
+      state               = "Québec"
+      locality            = "Saint-Lambert"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and

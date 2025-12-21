@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FakeDocument_GlobalSign_1189B31F608EF0CFB2B2F27F {
       cert_valid_from     = "2025-10-28"
       cert_valid_to       = "2026-10-29"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
-      rdn_serial_number   = ""
+      country             = "IN"
+      state               = "Rajasthan"
+      locality            = "Jaipur"
+      email               = "anjitmounimedia@gmail.com"
+      rdn_serial_number   = "U90009RJ2024PTC094381"
 
    condition:
       uint16(0) == 0x5a4d and

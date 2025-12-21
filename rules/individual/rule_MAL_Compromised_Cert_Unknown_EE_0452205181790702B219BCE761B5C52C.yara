@@ -21,7 +21,7 @@ rule MAL_Compromised_Cert_Unknown_EE_0452205181790702B219BCE761B5C52C {
       cert_valid_from     = "2025-04-08"
       cert_valid_to       = "2025-07-07"
 
-      country             = "???"
+      country             = "---"
       state               = "???"
       locality            = "???"
       email               = "???"
