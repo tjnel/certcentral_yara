@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_124DBD1A2E51CA91DFA90016 {
       cert_valid_from     = "2025-09-24"
       cert_valid_to       = "2026-09-25"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "DK"
+      state               = "Hovedstaden"
+      locality            = "Hedehusene"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "25628667"
 
    condition:
       uint16(0) == 0x5a4d and

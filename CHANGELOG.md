@@ -4,6 +4,21 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2025.12.23] - 2025-12-23
+
+### Added
+- MAL_Compromised_Cert_MacSync_Stealer_Apple_29A552D8DFF80468 (MacSync Stealer - Apple)
+- MAL_Compromised_Cert_ZhongStealer_Sectigo_4A5F625C9BACBAE47C16B016D58EF875 (ZhongStealer - Sectigo)
+- MAL_Compromised_Cert_Unknown_SSL_com_0FD30A81433B194F263FB623BE282E65 (Unknown - SSL.com)
+- MAL_Compromised_Cert_Vidar_GlobalSign_0C7587D68C99A69476474BCE (Vidar - GlobalSign)
+- MAL_Compromised_Cert_Unknown_Sectigo_00A750DC5029DD1386720DF2346B668999 (Unknown - Sectigo)
+- MAL_Compromised_Cert_Unknown_SSL_com_084C51D816E60BEBC5B0620E6561C3C9 (Unknown - SSL.com)
+- MAL_Compromised_Cert_UNK_50_Microsoft_330005E8C830651000B785A9EF00000005E8C8 (UNK-50 - Microsoft)
+- MAL_Compromised_Cert_GPUGate_GlobalSign_76DBA39518898AC66E6D1100 (GPUGate - GlobalSign)
+
+### Modified
+- MAL_Compromised_Cert_Unknown_GlobalSign_124DBD1A2E51CA91DFA90016 (Updated metadata for Unknown)
+
 ## [2025.12.22] - 2025-12-22
 
 ### Added

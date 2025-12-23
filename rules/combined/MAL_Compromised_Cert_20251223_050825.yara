@@ -16345,6 +16345,41 @@ rule MAL_Compromised_Cert_GCleaner_stage2_GlobalSign_7DBFA4CF4ABCDCD02F7F703E {
       )
 }
 
+rule MAL_Compromised_Cert_GPUGate_GlobalSign_76DBA39518898AC66E6D1100 {
+   meta:
+      description         = "Detects GPUGate with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-03"
+      version             = "1.0"
+
+      hash                = "933bee136c21e0fbe60bab51dfdffa93562517ff46c03f82ea008c8a21f51d58"
+      malware             = "GPUGate"
+      malware_type        = "Initial access tool"
+      malware_notes       = "Malware was dropped disguised as Docker Desktop. See writeup for more details: https://medium.com/@maurice.fielenbach/malvertising-leads-to-fake-dockerdesktop-exe-gpugate-dropper-a320f8bf7f89"
+
+      signer              = "BARBELL BETTIES LIMITED"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "76:db:a3:95:18:89:8a:c6:6e:6d:11:00"
+      cert_thumbprint     = "E3A575592965242098D03D9B438302D76123DBCC"
+      cert_valid_from     = "2025-12-03"
+      cert_valid_to       = "2026-12-04"
+
+      country             = "GB"
+      state               = "Durham"
+      locality            = "Stanley"
+      email               = "sewell.c@barbell-betties.uk"
+      rdn_serial_number   = "08616935"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "76:db:a3:95:18:89:8a:c6:6e:6d:11:00"
+      )
+}
+
 rule MAL_Compromised_Cert_Gh0stRAT_Certum_5F737E82330734C32297EF89B72FB607 {
    meta:
       description         = "Detects Gh0stRAT with compromised cert (Certum)"
@@ -23447,6 +23482,41 @@ rule MAL_Compromised_Cert_MATA_Sectigo_00D8F7700C8C150FDFFBDE8AF629D3600F {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA R36" and
          sig.serial == "00:d8:f7:70:0c:8c:15:0f:df:fb:de:8a:f6:29:d3:60:0f"
+      )
+}
+
+rule MAL_Compromised_Cert_MacSync_Stealer_Apple_29A552D8DFF80468 {
+   meta:
+      description         = "Detects MacSync Stealer with compromised cert (Apple)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-14"
+      version             = "1.0"
+
+      hash                = "4ae745bc0e4631f676b3d0a05d5c74e37bdfc8da3076208b24e73e5bbea9178f"
+      malware             = "MacSync Stealer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "OKAN ATAKOL"
+      cert_issuer_short   = "Apple"
+      cert_issuer         = "Apple Inc."
+      cert_serial         = "29:a5:52:d8:df:f8:04:68"
+      cert_thumbprint     = "2DBDA81B0F97D886D93223D5B1ED438885F3CDF3"
+      cert_valid_from     = "2025-11-14"
+      cert_valid_to       = "2027-02-01"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Apple Inc." and
+         sig.serial == "29:a5:52:d8:df:f8:04:68"
       )
 }
 
@@ -51485,6 +51555,41 @@ rule MAL_Compromised_Cert_UNK_50_Microsoft_330005CF0655374B893F5E81FB00000005CF0
       )
 }
 
+rule MAL_Compromised_Cert_UNK_50_Microsoft_330005E8C830651000B785A9EF00000005E8C8 {
+   meta:
+      description         = "Detects UNK-50 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-21"
+      version             = "1.0"
+
+      hash                = "8da84cd59a5f9896c8309e706105b37eed6fbd78fa006b05237f2440dfeef03a"
+      malware             = "UNK-50"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "SOFTOLIO sp. z o.o."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:05:e8:c8:30:65:10:00:b7:85:a9:ef:00:00:00:05:e8:c8"
+      cert_thumbprint     = "45A7460A9F8217E55A14FB5DC7187EF7A7BDDE32"
+      cert_valid_from     = "2025-12-21"
+      cert_valid_to       = "2025-12-24"
+
+      country             = "PL"
+      state               = "Pomorskie"
+      locality            = "GDYNIA"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:05:e8:c8:30:65:10:00:b7:85:a9:ef:00:00:00:05:e8:c8"
+      )
+}
+
 rule MAL_Compromised_Cert_UNK_50_Microsoft_330005F1729479FFB85A61F52300000005F172 {
    meta:
       description         = "Detects UNK-50 with compromised cert (Microsoft)"
@@ -54236,11 +54341,11 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_124DBD1A2E51CA91DFA90016 {
       cert_valid_from     = "2025-09-24"
       cert_valid_to       = "2026-09-25"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "DK"
+      state               = "Hovedstaden"
+      locality            = "Hedehusene"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "25628667"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -57575,6 +57680,41 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_0356033728023B0EE6F8AD545BB644BF {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_SSL_com_084C51D816E60BEBC5B0620E6561C3C9 {
+   meta:
+      description         = "Detects Unknown with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-18"
+      version             = "1.0"
+
+      hash                = "c53548839a08506275c03d0d5d21b9a85a5999fbad9dcf39a4d9556b5d18dbfb"
+      malware             = "Unknown"
+      malware_type        = "Initial access tool"
+      malware_notes       = "Malware was distributed disguised as a video. It reaches out to telegram to send information about the infection: https://app.any.run/tasks/42464132-b230-4f43-a233-bff356d8fce4?malconf=true"
+
+      signer              = "John Norman Grimsey"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com Code Signing Intermediate CA RSA R1"
+      cert_serial         = "08:4c:51:d8:16:e6:0b:eb:c5:b0:62:0e:65:61:c3:c9"
+      cert_thumbprint     = "A86E33888307FF85EE1F65AD26DC72F311A10513"
+      cert_valid_from     = "2025-11-18"
+      cert_valid_to       = "2026-11-17"
+
+      country             = "GB"
+      state               = "???"
+      locality            = "London"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com Code Signing Intermediate CA RSA R1" and
+         sig.serial == "08:4c:51:d8:16:e6:0b:eb:c5:b0:62:0e:65:61:c3:c9"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_SSL_com_096EE1A98CE34B25D283F67127F228E7 {
    meta:
       description         = "Detects Unknown with compromised cert (SSL.com)"
@@ -57642,6 +57782,41 @@ rule MAL_Compromised_Cert_Unknown_SSL_com_0A32E732ACC355D6DBBA321C449234A5 {
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "0a:32:e7:32:ac:c3:55:d6:db:ba:32:1c:44:92:34:a5"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_SSL_com_0FD30A81433B194F263FB623BE282E65 {
+   meta:
+      description         = "Detects Unknown with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-10"
+      version             = "1.0"
+
+      hash                = "88954524b8e24acad13d00e1bb66f6cd437df1039087945ff1b010f9c217c1fa"
+      malware             = "Unknown"
+      malware_type        = "Initial access tool"
+      malware_notes       = "This malware was distributed as a fake invoice."
+
+      signer              = "Contour Design Norge AS"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "0f:d3:0a:81:43:3b:19:4f:26:3f:b6:23:be:28:2e:65"
+      cert_thumbprint     = "BFA93667BFA6D1F88EFFBA68073A76866403B29A"
+      cert_valid_from     = "2025-12-10"
+      cert_valid_to       = "2026-12-10"
+
+      country             = "NO"
+      state               = "Oslo"
+      locality            = "Oslo"
+      email               = "???"
+      rdn_serial_number   = "988514241"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "0f:d3:0a:81:43:3b:19:4f:26:3f:b6:23:be:28:2e:65"
       )
 }
 
@@ -59710,6 +59885,41 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_009B2D7164E12919C93E6261A52AB49EAE {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_Sectigo_00A750DC5029DD1386720DF2346B668999 {
+   meta:
+      description         = "Detects Unknown with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-10-15"
+      version             = "1.0"
+
+      hash                = "4183ce92541a0f8408573a2eaba2beec8decf624b30d101d5e551372b3cba425"
+      malware             = "Unknown"
+      malware_type        = "Initial access tool"
+      malware_notes       = "The malware was observed being distributed through advertising for a Bit Warden installer: https://jeromesegura.com/malvertising/2025/11/11-22-2025_Bitwardenmac . The malware contains a password protected Zip which is unzipped and the contents are executed: https://app.any.run/tasks/ad50c34d-ee30-42e2-be20-0f4c5f4dfbdf/"
+
+      signer              = "LIFT AID SERVICES LIMITED"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV E36"
+      cert_serial         = "00:a7:50:dc:50:29:dd:13:86:72:0d:f2:34:6b:66:89:99"
+      cert_thumbprint     = "8A78EB44BECA59781CB91C0931AAB1087C4AC18B"
+      cert_valid_from     = "2025-10-15"
+      cert_valid_to       = "2026-10-15"
+
+      country             = "GB"
+      state               = "London, City of"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "14302945"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV E36" and
+         sig.serial == "00:a7:50:dc:50:29:dd:13:86:72:0d:f2:34:6b:66:89:99"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_Sectigo_00B1566A28378C598B0FAB2E42EC359F01 {
    meta:
       description         = "Detects Unknown with compromised cert (Sectigo)"
@@ -61422,6 +61632,41 @@ rule MAL_Compromised_Cert_VenomRat_GoGetSSL_01102CCEFAAD00D62684635B105FFC57 {
       for any sig in pe.signatures : (
          sig.issuer contains "GoGetSSL G4 CS RSA4096 SHA256 2022 CA-1" and
          sig.serial == "01:10:2c:ce:fa:ad:00:d6:26:84:63:5b:10:5f:fc:57"
+      )
+}
+
+rule MAL_Compromised_Cert_Vidar_GlobalSign_0C7587D68C99A69476474BCE {
+   meta:
+      description         = "Detects Vidar with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-12"
+      version             = "1.0"
+
+      hash                = "2a4e132a12ae88be1acc1f6b3541464138e9737b80281d5e7dc2e91e001a2132"
+      malware             = "Vidar"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "JDS RENT AND SALES SIA"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "0c:75:87:d6:8c:99:a6:94:76:47:4b:ce"
+      cert_thumbprint     = "11B769ED46CECACA421445FE91ADCDBBE606AC0B"
+      cert_valid_from     = "2025-12-12"
+      cert_valid_to       = "2026-12-13"
+
+      country             = "LV"
+      state               = "Jelgava"
+      locality            = "Jelgava"
+      email               = "???"
+      rdn_serial_number   = "40203563132"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "0c:75:87:d6:8c:99:a6:94:76:47:4b:ce"
       )
 }
 
@@ -63802,6 +64047,41 @@ rule MAL_Compromised_Cert_ZhongStealer_Sectigo_22705DBF157ED535146911BAADB3B64A 
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "22:70:5d:bf:15:7e:d5:35:14:69:11:ba:ad:b3:b6:4a"
+      )
+}
+
+rule MAL_Compromised_Cert_ZhongStealer_Sectigo_4A5F625C9BACBAE47C16B016D58EF875 {
+   meta:
+      description         = "Detects ZhongStealer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-04"
+      version             = "1.0"
+
+      hash                = "962615e17eca365d80c31dd02f2a6c757c073cb24d31d60a1c7818284bd6ca00"
+      malware             = "ZhongStealer"
+      malware_type        = "Infostealer"
+      malware_notes       = "Malware masquerades as a screenshot, pulls additional stages from legitimate CDN."
+
+      signer              = "Henan Jiyanzhong Information Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "4a:5f:62:5c:9b:ac:ba:e4:7c:16:b0:16:d5:8e:f8:75"
+      cert_thumbprint     = "25069239F52911C80E429AFFA16A7D4FCD65EE54"
+      cert_valid_from     = "2025-12-04"
+      cert_valid_to       = "2026-12-04"
+
+      country             = "CN"
+      state               = "Henan Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91410103MACL9D58X6"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "4a:5f:62:5c:9b:ac:ba:e4:7c:16:b0:16:d5:8e:f8:75"
       )
 }
 
