@@ -43071,11 +43071,11 @@ rule MAL_Compromised_Cert_SearchLoader_Microsoft_330005E8C830651000B785A9EF00000
       cert_valid_from     = "2025-12-21"
       cert_valid_to       = "2025-12-24"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "PL"
+      state               = "Pomorskie"
+      locality            = "GDYNIA"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -56756,11 +56756,11 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_66B085B30DE79CDDE2B1DDA1 {
       cert_valid_from     = "2024-09-26"
       cert_valid_to       = "2025-09-27"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "CN"
+      state               = "Hubei"
+      locality            = "Wuhan"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91420115MA4L020L06"
 
    condition:
       uint16(0) == 0x5a4d and
