@@ -4,6 +4,15 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.01.08] - 2026-01-08
+
+### Added
+- MAL_Compromised_Cert_ValleyRAT_Certum_51EC6208C20191DB2EC825969E857A68 (ValleyRAT - Certum)
+
+### Modified
+- MAL_Compromised_Cert_ZhongStealer_Sectigo_1B9C25D3C04716F1FE4A7F61DB7D1758 (Updated metadata for ZhongStealer)
+- MAL_Compromised_Cert_PureLogstealer_Xworm_SSL_com_18C1F0E7CAC9039CAFF80EADDF948EE1 (Updated metadata for PureLogstealer, Xworm)
+
 ## [2026.01.07] - 2026-01-07
 
 ### Added

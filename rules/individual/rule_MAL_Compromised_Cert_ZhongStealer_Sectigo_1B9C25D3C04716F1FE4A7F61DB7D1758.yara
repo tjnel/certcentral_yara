@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_ZhongStealer_Sectigo_1B9C25D3C04716F1FE4A7F61DB7D1758 
       cert_valid_from     = "2025-12-23"
       cert_valid_to       = "2026-12-23"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Fujian Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91350211MA32PW8L0X"
 
    condition:
       uint16(0) == 0x5a4d and

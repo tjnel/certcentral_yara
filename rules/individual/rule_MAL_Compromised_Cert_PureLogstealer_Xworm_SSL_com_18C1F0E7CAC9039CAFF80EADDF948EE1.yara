@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_PureLogstealer_Xworm_SSL_com_18C1F0E7CAC9039CAFF80EADD
       cert_valid_from     = "2025-10-13"
       cert_valid_to       = "2026-10-13"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "BR"
+      state               = "Santa Catarina"
+      locality            = "Blumenau"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "58.339.882/0001-02"
 
    condition:
       uint16(0) == 0x5a4d and
