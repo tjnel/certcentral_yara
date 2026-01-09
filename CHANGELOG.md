@@ -369,6 +369,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Checked 2026-01-09
+- No new certificates detected
+
 ### Checked 2026-01-06
 - No new certificates detected
 
