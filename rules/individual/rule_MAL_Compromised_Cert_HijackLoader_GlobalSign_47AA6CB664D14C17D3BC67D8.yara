@@ -1,29 +1,29 @@
 import "pe"
 
-rule MAL_Compromised_Cert_HijackLoader_GlobalSign_16607BC50DD6E4871BEEE868 {
+rule MAL_Compromised_Cert_HijackLoader_GlobalSign_47AA6CB664D14C17D3BC67D8 {
    meta:
       description         = "Detects HijackLoader with compromised cert (GlobalSign)"
       author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
-      date                = "2025-08-13"
+      date                = "2025-09-25"
       version             = "1.0"
 
-      hash                = "cd592cf511b18181bbc9b6cde8dc12c153e8382200ff3194f2ece1bbb328b3ab"
+      hash                = "7b108d249f03bbe74315c10f6bfe9332ede6d21d4e8814385a35a57a9118c888"
       malware             = "HijackLoader"
       malware_type        = "Loader"
       malware_notes       = ""
 
-      signer              = "OOO SID"
+      signer              = "C.E. Holding ApS"
       cert_issuer_short   = "GlobalSign"
       cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
-      cert_serial         = "16:60:7b:c5:0d:d6:e4:87:1b:ee:e8:68"
-      cert_thumbprint     = "BA6BEDE1291C76388B55A5084A73A2CBBAA3404C"
-      cert_valid_from     = "2025-08-13"
-      cert_valid_to       = "2026-08-14"
+      cert_serial         = "47:aa:6c:b6:64:d1:4c:17:d3:bc:67:d8"
+      cert_thumbprint     = "13E3C8CAF22AABBAD0A370F4B87E3AF1FB0F916A"
+      cert_valid_from     = "2025-09-25"
+      cert_valid_to       = "2026-09-26"
 
-      country             = "RU"
-      state               = "Saint Petersburg"
-      locality            = "Saint Petersburg"
+      country             = "DK"
+      state               = "Skanderborg"
+      locality            = "Skanderborg"
       email               = "???"
       rdn_serial_number   = "???"
 
@@ -31,6 +31,6 @@ rule MAL_Compromised_Cert_HijackLoader_GlobalSign_16607BC50DD6E4871BEEE868 {
       uint16(0) == 0x5a4d and
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
-         sig.serial == "16:60:7b:c5:0d:d6:e4:87:1b:ee:e8:68"
+         sig.serial == "47:aa:6c:b6:64:d1:4c:17:d3:bc:67:d8"
       )
 }

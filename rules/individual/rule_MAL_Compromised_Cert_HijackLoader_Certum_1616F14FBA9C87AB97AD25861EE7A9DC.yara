@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_HijackLoader_Certum_1616F14FBA9C87AB97AD25861EE7A9DC {
 
       hash                = "c20e98a4190f9063f9181d8d9fc01bb89e4e56cb888d4d8883c593586ff52a09"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "Hangzhou Rongyi Network Technology Co., Ltd."

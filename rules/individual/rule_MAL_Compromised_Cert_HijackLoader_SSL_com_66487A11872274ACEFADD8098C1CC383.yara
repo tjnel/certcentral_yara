@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_HijackLoader_SSL_com_66487A11872274ACEFADD8098C1CC383 
 
       hash                = "ea73818d5c96294381ea56af0bdda98a987704ee478d8ab374e53e2bafec892b"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "AR DIGITAL SP Z O O"

@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_HijackLoader_GlobalSign_5B5D9C65E0953B3F15D0D5DE {
 
       hash                = "fa63d50848b4f806abafe637f931f20bcf625366051ec148e3f5e030dd30d1fa"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "RiskGuard WinArk Software Tech Co., Ltd."

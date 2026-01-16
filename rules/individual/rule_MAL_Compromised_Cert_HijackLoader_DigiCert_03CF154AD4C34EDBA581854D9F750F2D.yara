@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_HijackLoader_DigiCert_03CF154AD4C34EDBA581854D9F750F2D
 
       hash                = "26a24d3b0206c6808615c7049859c2fe62c4dcd87e7858be40ae8112b0482616"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "Chengdu XiaoShanHu Information Technology Co.,Ltd."

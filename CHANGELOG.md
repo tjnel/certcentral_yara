@@ -4,6 +4,37 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.01.16] - 2026-01-16
+
+### Added
+- MAL_Compromised_Cert_HijackLoader_Microsoft_33000664C03F72E2A8117069970000000664C0 (HijackLoader - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_HijackLoader_GlobalSign_3DE729C7BD3B36B013DC7AF1 (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_HijackLoader_SSL_com_73E6959668279CF575807965749DCCED (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_HijackLoader_Microsoft_330003033B96D04AB9ED3A8D9F00000003033B (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_HijackLoader_SSL_com_3B5B4773444AC9CBF876FEA36838CE6F (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_HijackLoader_DigiCert_03CF154AD4C34EDBA581854D9F750F2D (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_HijackLoader_SSL_com_33D83CD7A2AC80605D8A8CA249E95BAB (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_HijackLoader_SSL_com_583EBAB435BEF414F9EE16A193F0BC50 (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_HijackLoader_Certum_1F880EA0C7617F15B8550E78C3350A29 (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_HijackLoader_Microsoft_3300050B6DF0AE2F05DF3E2D8F000000050B6D (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_HijackLoader_SSL_com_5AC8CC211D70D37748630D6F214E61D6 (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_HijackLoader_SSL_com_7E24C27599D0BCEBA3CC12B9347A86D1 (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_HijackLoader_GlobalSign_47AA6CB664D14C17D3BC67D8 (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_HijackLoader_SSL_com_66487A11872274ACEFADD8098C1CC383 (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_HijackLoader_Certum_05660A5AE889E93F13960E5E51792C90 (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_HijackLoader_Microsoft_330006CE519E7F692CF18F808100000006CE51 (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_HijackLoader_SSL_com_5BF5E37EE4A4884DE448DD9927225FD5 (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_HijackLoader_GlobalSign_536A9BBEAB40AAF25024CD8B (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_HijackLoader_Sectigo_1C994A9835179192411AA84E612605E2 (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_HijackLoader_GlobalSign_16607BC50DD6E4871BEEE868 (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_HijackLoader_Entrust_0089C86B25CF2C8C026201599CD211F002 (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_HijackLoader_Certum_1616F14FBA9C87AB97AD25861EE7A9DC (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_HijackLoader_Microsoft_3300045DC9932C64B8919CD25C000000045DC9 (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_HijackLoader_GlobalSign_0632BF3A5F5E1456FECBA3F3 (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_HijackLoader_GlobalSign_5B5D9C65E0953B3F15D0D5DE (Updated metadata for HijackLoader)
+
 ## [2026.01.15] - 2026-01-15
 
 ### Added

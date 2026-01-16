@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_HijackLoader_Microsoft_3300045DC9932C64B8919CD25C00000
 
       hash                = "38c60fd0e51b21b580552430f1ef55b7a41a1c6894ee61edc0707644d6c0b977"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "MRDUFORT VENTES/SERVICE INC."

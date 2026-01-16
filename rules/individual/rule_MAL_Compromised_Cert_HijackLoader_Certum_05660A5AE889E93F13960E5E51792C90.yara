@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_HijackLoader_Certum_05660A5AE889E93F13960E5E51792C90 {
 
       hash                = "104f8ddf10d61108a7815aa33690eff037ac6fcd7528c4c4a45a202b71d91093"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "Shenzhen Wanzhong Yunfu Technology Co., Ltd."

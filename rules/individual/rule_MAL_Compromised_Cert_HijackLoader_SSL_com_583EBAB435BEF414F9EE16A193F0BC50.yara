@@ -1,36 +1,36 @@
 import "pe"
 
-rule MAL_Compromised_Cert_HijackLoader_SSL_com_33D83CD7A2AC80605D8A8CA249E95BAB {
+rule MAL_Compromised_Cert_HijackLoader_SSL_com_583EBAB435BEF414F9EE16A193F0BC50 {
    meta:
       description         = "Detects HijackLoader with compromised cert (SSL.com)"
       author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
-      date                = "2024-11-18"
+      date                = "2025-10-07"
       version             = "1.0"
 
-      hash                = "1f79a38a04ecad2c2c27b92754f12764ea445e9c6f5346e52212cb105ce4bcbd"
+      hash                = "7154f4838553869cdddb4938ee6953284439b6d98e7285f573a35ea36982ed09"
       malware             = "HijackLoader"
       malware_type        = "Loader"
       malware_notes       = ""
 
-      signer              = "BVH CAPITAL LTD"
+      signer              = "VERIDAN"
       cert_issuer_short   = "SSL.com"
       cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
-      cert_serial         = "33:d8:3c:d7:a2:ac:80:60:5d:8a:8c:a2:49:e9:5b:ab"
-      cert_thumbprint     = "3CFB19D488672DA12A9F81F55E290C2967403EFA"
-      cert_valid_from     = "2024-11-18"
-      cert_valid_to       = "2025-11-23"
+      cert_serial         = "58:3e:ba:b4:35:be:f4:14:f9:ee:16:a1:93:f0:bc:50"
+      cert_thumbprint     = "5C9397B60D94CC8BA9ACA936B09760EC1D4AC719"
+      cert_valid_from     = "2025-10-07"
+      cert_valid_to       = "2026-10-07"
 
-      country             = "CY"
-      state               = "???"
-      locality            = "Limassol"
+      country             = "FR"
+      state               = "Île-de-France"
+      locality            = "Paris"
       email               = "???"
-      rdn_serial_number   = "HE 349945"
+      rdn_serial_number   = "???"
 
    condition:
       uint16(0) == 0x5a4d and
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
-         sig.serial == "33:d8:3c:d7:a2:ac:80:60:5d:8a:8c:a2:49:e9:5b:ab"
+         sig.serial == "58:3e:ba:b4:35:be:f4:14:f9:ee:16:a1:93:f0:bc:50"
       )
 }

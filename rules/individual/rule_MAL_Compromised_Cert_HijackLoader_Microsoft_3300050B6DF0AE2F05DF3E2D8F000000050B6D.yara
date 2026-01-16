@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_HijackLoader_Microsoft_3300050B6DF0AE2F05DF3E2D8F00000
 
       hash                = "a442eb87e36814f33635c971290576586980f77523d223174da0719ca35aa2e9"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "THROGGS NECK PETS INCORPORATED"

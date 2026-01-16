@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_HijackLoader_GlobalSign_536A9BBEAB40AAF25024CD8B {
 
       hash                = "7dc2ddaac0f6c54d774f6b336fa15a249fd0d5e74a903e7ada07cc00772c8341"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "LLC GrandStroy"

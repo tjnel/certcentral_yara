@@ -17755,7 +17755,7 @@ rule MAL_Compromised_Cert_HijackLoader_Certum_05660A5AE889E93F13960E5E51792C90 {
 
       hash                = "104f8ddf10d61108a7815aa33690eff037ac6fcd7528c4c4a45a202b71d91093"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "Shenzhen Wanzhong Yunfu Technology Co., Ltd."
@@ -17790,7 +17790,7 @@ rule MAL_Compromised_Cert_HijackLoader_Certum_1616F14FBA9C87AB97AD25861EE7A9DC {
 
       hash                = "c20e98a4190f9063f9181d8d9fc01bb89e4e56cb888d4d8883c593586ff52a09"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "Hangzhou Rongyi Network Technology Co., Ltd."
@@ -17825,7 +17825,7 @@ rule MAL_Compromised_Cert_HijackLoader_Certum_1F880EA0C7617F15B8550E78C3350A29 {
 
       hash                = "ede6d11f1c8e2613674de05d20ec52a9931d33dfc04d8b5c0f1ff0243fc982a8"
       malware             = "HijackLoader"
-      malware_type        = "Initial access tool"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "Jinan Lu'an Information Technology Co., Ltd."
@@ -17860,7 +17860,7 @@ rule MAL_Compromised_Cert_HijackLoader_DigiCert_03CF154AD4C34EDBA581854D9F750F2D
 
       hash                = "26a24d3b0206c6808615c7049859c2fe62c4dcd87e7858be40ae8112b0482616"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "Chengdu XiaoShanHu Information Technology Co.,Ltd."
@@ -17895,7 +17895,7 @@ rule MAL_Compromised_Cert_HijackLoader_Entrust_0089C86B25CF2C8C026201599CD211F00
 
       hash                = "5c1917c63fc09983d5f31cb7278122405f28364b93956a96cf635e52f7381f2a"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "Software Support ApS"
@@ -17930,7 +17930,7 @@ rule MAL_Compromised_Cert_HijackLoader_GlobalSign_0632BF3A5F5E1456FECBA3F3 {
 
       hash                = "60972229523eb137860bae114a667ace6d6109ebeec4f219628cdfe00e88d145"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "LLC Stroy-Klining"
@@ -17965,7 +17965,7 @@ rule MAL_Compromised_Cert_HijackLoader_GlobalSign_16607BC50DD6E4871BEEE868 {
 
       hash                = "cd592cf511b18181bbc9b6cde8dc12c153e8382200ff3194f2ece1bbb328b3ab"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "OOO SID"
@@ -17990,6 +17990,76 @@ rule MAL_Compromised_Cert_HijackLoader_GlobalSign_16607BC50DD6E4871BEEE868 {
       )
 }
 
+rule MAL_Compromised_Cert_HijackLoader_GlobalSign_3DE729C7BD3B36B013DC7AF1 {
+   meta:
+      description         = "Detects HijackLoader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-05-30"
+      version             = "1.0"
+
+      hash                = "42840d9af32e3fa50208aed35792195d2094d7c9126b90152df2cb76e296f272"
+      malware             = "HijackLoader"
+      malware_type        = "Loader"
+      malware_notes       = ""
+
+      signer              = "LLC Exit"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "3d:e7:29:c7:bd:3b:36:b0:13:dc:7a:f1"
+      cert_thumbprint     = "468FCFCD44141432A60927AAC4ABEFBB4312C6A6"
+      cert_valid_from     = "2025-05-30"
+      cert_valid_to       = "2026-05-31"
+
+      country             = "RU"
+      state               = "Novosibirsk Oblast"
+      locality            = "Novosibirsk"
+      email               = "???"
+      rdn_serial_number   = "1185476007133"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "3d:e7:29:c7:bd:3b:36:b0:13:dc:7a:f1"
+      )
+}
+
+rule MAL_Compromised_Cert_HijackLoader_GlobalSign_47AA6CB664D14C17D3BC67D8 {
+   meta:
+      description         = "Detects HijackLoader with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-09-25"
+      version             = "1.0"
+
+      hash                = "7b108d249f03bbe74315c10f6bfe9332ede6d21d4e8814385a35a57a9118c888"
+      malware             = "HijackLoader"
+      malware_type        = "Loader"
+      malware_notes       = ""
+
+      signer              = "C.E. Holding ApS"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "47:aa:6c:b6:64:d1:4c:17:d3:bc:67:d8"
+      cert_thumbprint     = "13E3C8CAF22AABBAD0A370F4B87E3AF1FB0F916A"
+      cert_valid_from     = "2025-09-25"
+      cert_valid_to       = "2026-09-26"
+
+      country             = "DK"
+      state               = "Skanderborg"
+      locality            = "Skanderborg"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "47:aa:6c:b6:64:d1:4c:17:d3:bc:67:d8"
+      )
+}
+
 rule MAL_Compromised_Cert_HijackLoader_GlobalSign_536A9BBEAB40AAF25024CD8B {
    meta:
       description         = "Detects HijackLoader with compromised cert (GlobalSign)"
@@ -18000,7 +18070,7 @@ rule MAL_Compromised_Cert_HijackLoader_GlobalSign_536A9BBEAB40AAF25024CD8B {
 
       hash                = "7dc2ddaac0f6c54d774f6b336fa15a249fd0d5e74a903e7ada07cc00772c8341"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "LLC GrandStroy"
@@ -18035,7 +18105,7 @@ rule MAL_Compromised_Cert_HijackLoader_GlobalSign_5B5D9C65E0953B3F15D0D5DE {
 
       hash                = "fa63d50848b4f806abafe637f931f20bcf625366051ec148e3f5e030dd30d1fa"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "RiskGuard WinArk Software Tech Co., Ltd."
@@ -18070,7 +18140,7 @@ rule MAL_Compromised_Cert_HijackLoader_Microsoft_330003033B96D04AB9ED3A8D9F00000
 
       hash                = "1da6fb17f4c9d8b5e5fa54cc2f17ef038cd2be1fae73d16b6805567f952d0312"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "NIGHT OWL CREATIVE INC."
@@ -18105,7 +18175,7 @@ rule MAL_Compromised_Cert_HijackLoader_Microsoft_3300045DC9932C64B8919CD25C00000
 
       hash                = "38c60fd0e51b21b580552430f1ef55b7a41a1c6894ee61edc0707644d6c0b977"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "MRDUFORT VENTES/SERVICE INC."
@@ -18140,7 +18210,7 @@ rule MAL_Compromised_Cert_HijackLoader_Microsoft_3300050B6DF0AE2F05DF3E2D8F00000
 
       hash                = "a442eb87e36814f33635c971290576586980f77523d223174da0719ca35aa2e9"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "THROGGS NECK PETS INCORPORATED"
@@ -18165,6 +18235,76 @@ rule MAL_Compromised_Cert_HijackLoader_Microsoft_3300050B6DF0AE2F05DF3E2D8F00000
       )
 }
 
+rule MAL_Compromised_Cert_HijackLoader_Microsoft_33000664C03F72E2A8117069970000000664C0 {
+   meta:
+      description         = "Detects HijackLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-14"
+      version             = "1.0"
+
+      hash                = "c04722211255de54faafc17886be1a4bd3fb78dda3854f43d17047689a1d9a32"
+      malware             = "HijackLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "FOCUS DIGITAL AGENCY SP Z O O"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:06:64:c0:3f:72:e2:a8:11:70:69:97:00:00:00:06:64:c0"
+      cert_thumbprint     = "9A32D9BFBB9D39045195D692411292111ACDD221"
+      cert_valid_from     = "2026-01-14"
+      cert_valid_to       = "2026-01-17"
+
+      country             = "PL"
+      state               = "Mazowieckie"
+      locality            = "Warszawa"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:06:64:c0:3f:72:e2:a8:11:70:69:97:00:00:00:06:64:c0"
+      )
+}
+
+rule MAL_Compromised_Cert_HijackLoader_Microsoft_330006CE519E7F692CF18F808100000006CE51 {
+   meta:
+      description         = "Detects HijackLoader with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-06"
+      version             = "1.0"
+
+      hash                = "94307191dba3962e5dc121fa2a984a784a951af0c0fc9229571898667e320578"
+      malware             = "HijackLoader"
+      malware_type        = "Loader"
+      malware_notes       = "The malware was distributed as a keypass installer: https://jeromesegura.com/malvertising/2026/01/01-11-2026_KeePass"
+
+      signer              = "FOCUS DIGITAL AGENCY SP Z O O"
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 02"
+      cert_serial         = "33:00:06:ce:51:9e:7f:69:2c:f1:8f:80:81:00:00:00:06:ce:51"
+      cert_thumbprint     = "2276CF17FC2E11B61EA9DE89F757DA0ADA0CB35C"
+      cert_valid_from     = "2026-01-06"
+      cert_valid_to       = "2026-01-09"
+
+      country             = "PL"
+      state               = "Mazowieckie"
+      locality            = "Warszawa"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
+         sig.serial == "33:00:06:ce:51:9e:7f:69:2c:f1:8f:80:81:00:00:00:06:ce:51"
+      )
+}
+
 rule MAL_Compromised_Cert_HijackLoader_SSL_com_33D83CD7A2AC80605D8A8CA249E95BAB {
    meta:
       description         = "Detects HijackLoader with compromised cert (SSL.com)"
@@ -18175,7 +18315,7 @@ rule MAL_Compromised_Cert_HijackLoader_SSL_com_33D83CD7A2AC80605D8A8CA249E95BAB 
 
       hash                = "1f79a38a04ecad2c2c27b92754f12764ea445e9c6f5346e52212cb105ce4bcbd"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "BVH CAPITAL LTD"
@@ -18200,6 +18340,111 @@ rule MAL_Compromised_Cert_HijackLoader_SSL_com_33D83CD7A2AC80605D8A8CA249E95BAB 
       )
 }
 
+rule MAL_Compromised_Cert_HijackLoader_SSL_com_3B5B4773444AC9CBF876FEA36838CE6F {
+   meta:
+      description         = "Detects HijackLoader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-07-23"
+      version             = "1.0"
+
+      hash                = "a153dd1ca451bdb9c83ed29aba2582195b42dae721aac78515eea97b7e4fe267"
+      malware             = "HijackLoader"
+      malware_type        = "Loader"
+      malware_notes       = ""
+
+      signer              = "A.I.D. Advanced Internet Design Oy"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "3b:5b:47:73:44:4a:c9:cb:f8:76:fe:a3:68:38:ce:6f"
+      cert_thumbprint     = "50124B91181735FBC49E728CA9AD127EE32A17BD"
+      cert_valid_from     = "2025-07-23"
+      cert_valid_to       = "2026-07-23"
+
+      country             = "FI"
+      state               = "Uusimaa"
+      locality            = "Kerava"
+      email               = "???"
+      rdn_serial_number   = "1504972-0"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "3b:5b:47:73:44:4a:c9:cb:f8:76:fe:a3:68:38:ce:6f"
+      )
+}
+
+rule MAL_Compromised_Cert_HijackLoader_SSL_com_583EBAB435BEF414F9EE16A193F0BC50 {
+   meta:
+      description         = "Detects HijackLoader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-10-07"
+      version             = "1.0"
+
+      hash                = "7154f4838553869cdddb4938ee6953284439b6d98e7285f573a35ea36982ed09"
+      malware             = "HijackLoader"
+      malware_type        = "Loader"
+      malware_notes       = ""
+
+      signer              = "VERIDAN"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "58:3e:ba:b4:35:be:f4:14:f9:ee:16:a1:93:f0:bc:50"
+      cert_thumbprint     = "5C9397B60D94CC8BA9ACA936B09760EC1D4AC719"
+      cert_valid_from     = "2025-10-07"
+      cert_valid_to       = "2026-10-07"
+
+      country             = "FR"
+      state               = "Île-de-France"
+      locality            = "Paris"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "58:3e:ba:b4:35:be:f4:14:f9:ee:16:a1:93:f0:bc:50"
+      )
+}
+
+rule MAL_Compromised_Cert_HijackLoader_SSL_com_5AC8CC211D70D37748630D6F214E61D6 {
+   meta:
+      description         = "Detects HijackLoader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-05-07"
+      version             = "1.0"
+
+      hash                = "d7e5be8aa67b33d9cd681c126c5523c919692ef44af69b470def0863d2f28120"
+      malware             = "HijackLoader"
+      malware_type        = "Loader"
+      malware_notes       = ""
+
+      signer              = "KTNF Co., Ltd."
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "5a:c8:cc:21:1d:70:d3:77:48:63:0d:6f:21:4e:61:d6"
+      cert_thumbprint     = "6193FB8FE7540E0C3BF341B76B0A834A83A03A57"
+      cert_valid_from     = "2025-05-07"
+      cert_valid_to       = "2026-05-07"
+
+      country             = "KR"
+      state               = "???"
+      locality            = "Seoul"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "5a:c8:cc:21:1d:70:d3:77:48:63:0d:6f:21:4e:61:d6"
+      )
+}
+
 rule MAL_Compromised_Cert_HijackLoader_SSL_com_5BF5E37EE4A4884DE448DD9927225FD5 {
    meta:
       description         = "Detects HijackLoader with compromised cert (SSL.com)"
@@ -18210,7 +18455,7 @@ rule MAL_Compromised_Cert_HijackLoader_SSL_com_5BF5E37EE4A4884DE448DD9927225FD5 
 
       hash                = "7e490768afc996d5735cc98b502896aface074564f81b3dc450665c4cf72446d"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "Ebire Software Oy"
@@ -18245,7 +18490,7 @@ rule MAL_Compromised_Cert_HijackLoader_SSL_com_66487A11872274ACEFADD8098C1CC383 
 
       hash                = "ea73818d5c96294381ea56af0bdda98a987704ee478d8ab374e53e2bafec892b"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "AR DIGITAL SP Z O O"
@@ -18280,7 +18525,7 @@ rule MAL_Compromised_Cert_HijackLoader_SSL_com_73E6959668279CF575807965749DCCED 
 
       hash                = "230f4de7b92166c695ad4f8bc469e2a39a31d0640ceb994d4f46f1afdabea90b"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "BNY Holding Aps"
@@ -18302,6 +18547,76 @@ rule MAL_Compromised_Cert_HijackLoader_SSL_com_73E6959668279CF575807965749DCCED 
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "73:e6:95:96:68:27:9c:f5:75:80:79:65:74:9d:cc:ed"
+      )
+}
+
+rule MAL_Compromised_Cert_HijackLoader_SSL_com_7E24C27599D0BCEBA3CC12B9347A86D1 {
+   meta:
+      description         = "Detects HijackLoader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-28"
+      version             = "1.0"
+
+      hash                = "5fe9e516f35fff47564762f9bcb9804f73df817ebe12f8fc4d85e586f4542b6b"
+      malware             = "HijackLoader"
+      malware_type        = "Loader"
+      malware_notes       = ""
+
+      signer              = "Raastuff Holding ApS"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "7e:24:c2:75:99:d0:bc:eb:a3:cc:12:b9:34:7a:86:d1"
+      cert_thumbprint     = "48BD9CC83CBB844CDBC911C14A3C6D2C2BF9DA6A"
+      cert_valid_from     = "2025-06-28"
+      cert_valid_to       = "2026-06-28"
+
+      country             = "DK"
+      state               = "Region of Southern Denmark"
+      locality            = "Odense"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "7e:24:c2:75:99:d0:bc:eb:a3:cc:12:b9:34:7a:86:d1"
+      )
+}
+
+rule MAL_Compromised_Cert_HijackLoader_Sectigo_1C994A9835179192411AA84E612605E2 {
+   meta:
+      description         = "Detects HijackLoader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-09-10"
+      version             = "1.0"
+
+      hash                = "0ebeaff5e5d71ca949825a421d8a0c4f1459548a17c27ab0698a6393939b4f64"
+      malware             = "HijackLoader"
+      malware_type        = "Loader"
+      malware_notes       = ""
+
+      signer              = "Taiyuan Jingqu Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "1c:99:4a:98:35:17:91:92:41:1a:a8:4e:61:26:05:e2"
+      cert_thumbprint     = "F0C31342637ABC28D0C4621F6D9C7884B2B10C67"
+      cert_valid_from     = "2025-09-10"
+      cert_valid_to       = "2026-09-10"
+
+      country             = "CN"
+      state               = "Shanxi Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "???"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "1c:99:4a:98:35:17:91:92:41:1a:a8:4e:61:26:05:e2"
       )
 }
 

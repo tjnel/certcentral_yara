@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_HijackLoader_GlobalSign_0632BF3A5F5E1456FECBA3F3 {
 
       hash                = "60972229523eb137860bae114a667ace6d6109ebeec4f219628cdfe00e88d145"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "LLC Stroy-Klining"

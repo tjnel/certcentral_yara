@@ -1,36 +1,36 @@
 import "pe"
 
-rule MAL_Compromised_Cert_HijackLoader_GlobalSign_16607BC50DD6E4871BEEE868 {
+rule MAL_Compromised_Cert_HijackLoader_GlobalSign_3DE729C7BD3B36B013DC7AF1 {
    meta:
       description         = "Detects HijackLoader with compromised cert (GlobalSign)"
       author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
       reference           = "https://certgraveyard.org"
-      date                = "2025-08-13"
+      date                = "2025-05-30"
       version             = "1.0"
 
-      hash                = "cd592cf511b18181bbc9b6cde8dc12c153e8382200ff3194f2ece1bbb328b3ab"
+      hash                = "42840d9af32e3fa50208aed35792195d2094d7c9126b90152df2cb76e296f272"
       malware             = "HijackLoader"
       malware_type        = "Loader"
       malware_notes       = ""
 
-      signer              = "OOO SID"
+      signer              = "LLC Exit"
       cert_issuer_short   = "GlobalSign"
       cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
-      cert_serial         = "16:60:7b:c5:0d:d6:e4:87:1b:ee:e8:68"
-      cert_thumbprint     = "BA6BEDE1291C76388B55A5084A73A2CBBAA3404C"
-      cert_valid_from     = "2025-08-13"
-      cert_valid_to       = "2026-08-14"
+      cert_serial         = "3d:e7:29:c7:bd:3b:36:b0:13:dc:7a:f1"
+      cert_thumbprint     = "468FCFCD44141432A60927AAC4ABEFBB4312C6A6"
+      cert_valid_from     = "2025-05-30"
+      cert_valid_to       = "2026-05-31"
 
       country             = "RU"
-      state               = "Saint Petersburg"
-      locality            = "Saint Petersburg"
+      state               = "Novosibirsk Oblast"
+      locality            = "Novosibirsk"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "1185476007133"
 
    condition:
       uint16(0) == 0x5a4d and
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
-         sig.serial == "16:60:7b:c5:0d:d6:e4:87:1b:ee:e8:68"
+         sig.serial == "3d:e7:29:c7:bd:3b:36:b0:13:dc:7a:f1"
       )
 }

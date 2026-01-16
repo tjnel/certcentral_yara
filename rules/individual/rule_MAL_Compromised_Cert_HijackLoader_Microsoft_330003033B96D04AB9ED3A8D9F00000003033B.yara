@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_HijackLoader_Microsoft_330003033B96D04AB9ED3A8D9F00000
 
       hash                = "1da6fb17f4c9d8b5e5fa54cc2f17ef038cd2be1fae73d16b6805567f952d0312"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "NIGHT OWL CREATIVE INC."

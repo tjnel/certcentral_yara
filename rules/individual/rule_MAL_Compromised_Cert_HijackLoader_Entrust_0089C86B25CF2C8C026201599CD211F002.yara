@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_HijackLoader_Entrust_0089C86B25CF2C8C026201599CD211F00
 
       hash                = "5c1917c63fc09983d5f31cb7278122405f28364b93956a96cf635e52f7381f2a"
       malware             = "HijackLoader"
-      malware_type        = "Unknown"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "Software Support ApS"

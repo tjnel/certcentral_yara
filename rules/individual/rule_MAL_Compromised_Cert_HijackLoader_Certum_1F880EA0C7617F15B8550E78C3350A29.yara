@@ -10,7 +10,7 @@ rule MAL_Compromised_Cert_HijackLoader_Certum_1F880EA0C7617F15B8550E78C3350A29 {
 
       hash                = "ede6d11f1c8e2613674de05d20ec52a9931d33dfc04d8b5c0f1ff0243fc982a8"
       malware             = "HijackLoader"
-      malware_type        = "Initial access tool"
+      malware_type        = "Loader"
       malware_notes       = ""
 
       signer              = "Jinan Lu'an Information Technology Co., Ltd."
