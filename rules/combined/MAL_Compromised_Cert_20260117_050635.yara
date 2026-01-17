@@ -43435,6 +43435,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Certum_0FF41D3867F0498A308AB24792F
       )
 }
 
+rule MAL_Compromised_Cert_ScreenConnectLoader_DigiCert_029C936B150B5C3588B661A870BEB57B {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-08"
+      version             = "1.0"
+
+      hash                = "35e2c85aace30e80ac51e3aecc5a9652b2a514c6d6e90e96b9b9f3b6bea06835"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "STEWART DIXON AQUATIC SERVICES LLC"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "02:9c:93:6b:15:0b:5c:35:88:b6:61:a8:70:be:b5:7b"
+      cert_thumbprint     = "BEB331DE367D2478EF638FD0E29C55E037E7AF2B"
+      cert_valid_from     = "2026-01-08"
+      cert_valid_to       = "2029-01-10"
+
+      country             = "US"
+      state               = "Indiana"
+      locality            = "GREENWOOD"
+      email               = "???"
+      rdn_serial_number   = "2012031900678"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "02:9c:93:6b:15:0b:5c:35:88:b6:61:a8:70:be:b5:7b"
+      )
+}
+
 rule MAL_Compromised_Cert_ScreenConnectLoader_DigiCert_08FA393DD84ABD186267BF979A4F2690 {
    meta:
       description         = "Detects ScreenConnectLoader with compromised cert (DigiCert)"
@@ -43642,6 +43677,41 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_GoGetSSL_04AE390F73E5981D11D127316
       for any sig in pe.signatures : (
          sig.issuer contains "GoGetSSL G4 CS RSA4096 SHA256 2022 CA-1" and
          sig.serial == "04:ae:39:0f:73:e5:98:1d:11:d1:27:31:6f:62:bd:4b"
+      )
+}
+
+rule MAL_Compromised_Cert_ScreenConnectLoader_GoGetSSL_0C7368921398F9E38DBDA6AB2CDF6496 {
+   meta:
+      description         = "Detects ScreenConnectLoader with compromised cert (GoGetSSL)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-24"
+      version             = "1.0"
+
+      hash                = "971be21308a52f1eb40954376dd7b2165a52f4b6ade5996e531ca087f44dec78"
+      malware             = "ScreenConnectLoader"
+      malware_type        = "Remote access tool"
+      malware_notes       = "Malware installs ScreenConnect remote access tool."
+
+      signer              = "COD3INC"
+      cert_issuer_short   = "GoGetSSL"
+      cert_issuer         = "GoGetSSL G4 CS RSA4096 SHA256 2022 CA-1"
+      cert_serial         = "0c:73:68:92:13:98:f9:e3:8d:bd:a6:ab:2c:df:64:96"
+      cert_thumbprint     = "DC1BD289538675C832D5166C02041F3A6361FBFC"
+      cert_valid_from     = "2025-12-24"
+      cert_valid_to       = "2026-12-23"
+
+      country             = "IN"
+      state               = "Maharashtra"
+      locality            = "MUMBAI"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GoGetSSL G4 CS RSA4096 SHA256 2022 CA-1" and
+         sig.serial == "0c:73:68:92:13:98:f9:e3:8d:bd:a6:ab:2c:df:64:96"
       )
 }
 
@@ -50715,6 +50785,391 @@ rule MAL_Compromised_Cert_TA505_Sectigo_51AEAD5A9AB2D841B449FA82DE3A8A00 {
       )
 }
 
+rule MAL_Compromised_Cert_T_21_Microsoft_3300055959E165A7CCADCABCCA000000055959 {
+   meta:
+      description         = "Detects T-21 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-18"
+      version             = "1.0"
+
+      hash                = "816d26e9aa530ad4b82bee56502bb158ab899b55b7056ef7f728d0def8f6432c"
+      malware             = "T-21"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake Webex Meeting Launchers spread by a traffer group, involved in a malware campaign around a compromised LinkedIn company account, targeting job-seekers with fake crypto-related job offers"
+
+      signer              = "LAKESIDE TRANSMISSION INC."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:05:59:59:e1:65:a7:cc:ad:ca:bc:ca:00:00:00:05:59:59"
+      cert_thumbprint     = "C379089F05BFAF060D83491956BCF59896591BF8"
+      cert_valid_from     = "2025-11-18"
+      cert_valid_to       = "2025-11-21"
+
+      country             = "US"
+      state               = "Michigan"
+      locality            = "MT CLEMENS"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:05:59:59:e1:65:a7:cc:ad:ca:bc:ca:00:00:00:05:59:59"
+      )
+}
+
+rule MAL_Compromised_Cert_T_21_Microsoft_330005BC0A371369808050410500000005BC0A {
+   meta:
+      description         = "Detects T-21 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-10-20"
+      version             = "1.0"
+
+      hash                = "68a8e1a695cd9c9833977762a8b2fab34ff66c4b8bc23194fdf2a87a7ae30b2d"
+      malware             = "T-21"
+      malware_type        = "Unknown"
+      malware_notes       = "Traffer activities around a compromised LinkedIn around, targeting job-seekers with crypto related jobs and spreading fake malicious interview launchers"
+
+      signer              = "LAKESIDE TRANSMISSION INC."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 02"
+      cert_serial         = "33:00:05:bc:0a:37:13:69:80:80:50:41:05:00:00:00:05:bc:0a"
+      cert_thumbprint     = "C66BD27CDAD22C48F88A5A7E41B2CFFC68A88256"
+      cert_valid_from     = "2025-10-20"
+      cert_valid_to       = "2025-10-23"
+
+      country             = "US"
+      state               = "Michigan"
+      locality            = "MT CLEMENS"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
+         sig.serial == "33:00:05:bc:0a:37:13:69:80:80:50:41:05:00:00:00:05:bc:0a"
+      )
+}
+
+rule MAL_Compromised_Cert_T_21_Microsoft_330005EC0C5BC85E2CC73A0ADA00000005EC0C {
+   meta:
+      description         = "Detects T-21 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-22"
+      version             = "1.0"
+
+      hash                = "fa149dee38b5002946cafb025873fdf5a377b52d0a9e971222d4044a36f02232"
+      malware             = "T-21"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake Webex Meeting Launchers spread by a traffer group, involved in a malware campaign around a compromised LinkedIn company account, targeting job-seekers with fake crypto-related job offers"
+
+      signer              = "LAKESIDE TRANSMISSION INC."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:05:ec:0c:5b:c8:5e:2c:c7:3a:0a:da:00:00:00:05:ec:0c"
+      cert_thumbprint     = "01DB880607C28EFAD003AC732ABF6942B481B416"
+      cert_valid_from     = "2025-12-22"
+      cert_valid_to       = "2025-12-25"
+
+      country             = "US"
+      state               = "Michigan"
+      locality            = "MT CLEMENS"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:05:ec:0c:5b:c8:5e:2c:c7:3a:0a:da:00:00:00:05:ec:0c"
+      )
+}
+
+rule MAL_Compromised_Cert_T_21_Microsoft_330005ED05391BAF29D28EC31B00000005ED05 {
+   meta:
+      description         = "Detects T-21 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-03"
+      version             = "1.0"
+
+      hash                = "9d385e9d3306b65420172a20b3baf7097b3ca5ee0110c03d1ec8a0014532dd9d"
+      malware             = "T-21"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake Webex Meeting Launchers spread by a traffer group, involved in a malware campaign around a compromised LinkedIn company account, targeting job-seekers with fake crypto-related job offers"
+
+      signer              = "LAKESIDE TRANSMISSION INC."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 02"
+      cert_serial         = "33:00:05:ed:05:39:1b:af:29:d2:8e:c3:1b:00:00:00:05:ed:05"
+      cert_thumbprint     = "24EFD9EFFED319CE3FC03FFBF2F89D98BD3E70CE"
+      cert_valid_from     = "2025-11-03"
+      cert_valid_to       = "2025-11-06"
+
+      country             = "US"
+      state               = "Michigan"
+      locality            = "MT CLEMENS"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
+         sig.serial == "33:00:05:ed:05:39:1b:af:29:d2:8e:c3:1b:00:00:00:05:ed:05"
+      )
+}
+
+rule MAL_Compromised_Cert_T_21_Microsoft_330005F15669E0277C63B7B93100000005F156 {
+   meta:
+      description         = "Detects T-21 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-10-25"
+      version             = "1.0"
+
+      hash                = "5506af207cbaa7f121b54bcb361e88bed172d16dadd329f19141ac157ed576b0"
+      malware             = "T-21"
+      malware_type        = "Unknown"
+      malware_notes       = "Traffer activities around a compromised LinkedIn around, targeting job-seekers with crypto related jobs and spreading fake malicious interview launchers"
+
+      signer              = "LAKESIDE TRANSMISSION INC."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:05:f1:56:69:e0:27:7c:63:b7:b9:31:00:00:00:05:f1:56"
+      cert_thumbprint     = "301B4EA181537E8F8E1C9BB016BC8EB00C70AFD1"
+      cert_valid_from     = "2025-10-25"
+      cert_valid_to       = "2025-10-28"
+
+      country             = "US"
+      state               = "Michigan"
+      locality            = "MT CLEMENS"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:05:f1:56:69:e0:27:7c:63:b7:b9:31:00:00:00:05:f1:56"
+      )
+}
+
+rule MAL_Compromised_Cert_T_21_Microsoft_330006050CB24871B5CD06D64200000006050C {
+   meta:
+      description         = "Detects T-21 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-27"
+      version             = "1.0"
+
+      hash                = "0238ae476ae6283dfa4f55169aba66e5bd8352f504bde249d8550234a0dadf9b"
+      malware             = "T-21"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake Webex Meeting Launchers spread by a traffer group, involved in a malware campaign around a compromised LinkedIn company account, targeting job-seekers with fake crypto-related job offers"
+
+      signer              = "LAKESIDE TRANSMISSION INC."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 02"
+      cert_serial         = "33:00:06:05:0c:b2:48:71:b5:cd:06:d6:42:00:00:00:06:05:0c"
+      cert_thumbprint     = "275CF8C328D8FB242E1C75E72721BD8C25A485E2"
+      cert_valid_from     = "2025-12-27"
+      cert_valid_to       = "2025-12-30"
+
+      country             = "US"
+      state               = "Michigan"
+      locality            = "MT CLEMENS"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 02" and
+         sig.serial == "33:00:06:05:0c:b2:48:71:b5:cd:06:d6:42:00:00:00:06:05:0c"
+      )
+}
+
+rule MAL_Compromised_Cert_T_21_Microsoft_3300064BD6D7CA610950AFC4D9000000064BD6 {
+   meta:
+      description         = "Detects T-21 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-12"
+      version             = "1.0"
+
+      hash                = "5c07a238b8f0a4f13309663e52bb900d8cfbd7fb2a4ddaff9ab6197ee89e1c34"
+      malware             = "T-21"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake Webex Meeting Launchers spread by a traffer group, involved in a malware campaign around a compromised LinkedIn company account, targeting job-seekers with fake crypto-related job offers"
+
+      signer              = "LAKESIDE TRANSMISSION INC."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:06:4b:d6:d7:ca:61:09:50:af:c4:d9:00:00:00:06:4b:d6"
+      cert_thumbprint     = "60FF9C7541D3DFA2F35A327C16E5EF1AE2A93765"
+      cert_valid_from     = "2025-11-12"
+      cert_valid_to       = "2025-11-15"
+
+      country             = "US"
+      state               = "Michigan"
+      locality            = "MT CLEMENS"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:06:4b:d6:d7:ca:61:09:50:af:c4:d9:00:00:00:06:4b:d6"
+      )
+}
+
+rule MAL_Compromised_Cert_T_21_Microsoft_3300068281A2EB372E8FC4A340000000068281 {
+   meta:
+      description         = "Detects T-21 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-01"
+      version             = "1.0"
+
+      hash                = "28e52510f4798285b97afc894902d66ee02366b3e7fddd49dbee600bc1fbd16f"
+      malware             = "T-21"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake Webex Meeting Launchers spread by a traffer group, involved in a malware campaign around a compromised LinkedIn company account, targeting job-seekers with fake crypto-related job offers"
+
+      signer              = "LAKESIDE TRANSMISSION INC."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:06:82:81:a2:eb:37:2e:8f:c4:a3:40:00:00:00:06:82:81"
+      cert_thumbprint     = "97D4734EFAC5BF08DADA67876393F84347F1C40B"
+      cert_valid_from     = "2025-12-01"
+      cert_valid_to       = "2025-12-04"
+
+      country             = "US"
+      state               = "Michigan"
+      locality            = "MT CLEMENS"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:06:82:81:a2:eb:37:2e:8f:c4:a3:40:00:00:00:06:82:81"
+      )
+}
+
+rule MAL_Compromised_Cert_T_21_Microsoft_330006866C33EE57246AEE63DC00000006866C {
+   meta:
+      description         = "Detects T-21 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-14"
+      version             = "1.0"
+
+      hash                = "01c1c9287cc4479266bf5e0ea61c39ab0184a015e147b1ead54bb2c1b3e96e58"
+      malware             = "T-21"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake Webex Meeting Launchers spread by a traffer group, involved in a malware campaign around a compromised LinkedIn company account, targeting job-seekers with fake crypto-related job offers"
+
+      signer              = "LAKESIDE TRANSMISSION INC."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 02"
+      cert_serial         = "33:00:06:86:6c:33:ee:57:24:6a:ee:63:dc:00:00:00:06:86:6c"
+      cert_thumbprint     = "676916D1CFC094862D83C969C81DAD3CADB86785"
+      cert_valid_from     = "2025-12-14"
+      cert_valid_to       = "2025-12-17"
+
+      country             = "US"
+      state               = "Michigan"
+      locality            = "MT CLEMENS"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
+         sig.serial == "33:00:06:86:6c:33:ee:57:24:6a:ee:63:dc:00:00:00:06:86:6c"
+      )
+}
+
+rule MAL_Compromised_Cert_T_21_Microsoft_330006C90E1E4B1032EB97B8CF00000006C90E {
+   meta:
+      description         = "Detects T-21 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-05"
+      version             = "1.0"
+
+      hash                = "c1749ecadfe876c98b403b86db0004ee3201620cf0c070cdf7293baff6ce1367"
+      malware             = "T-21"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake Webex Meeting Launchers spread by a traffer group, involved in a malware campaign around a compromised LinkedIn company account, targeting job-seekers with fake crypto-related job offers"
+
+      signer              = "LAKESIDE TRANSMISSION INC."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 02"
+      cert_serial         = "33:00:06:c9:0e:1e:4b:10:32:eb:97:b8:cf:00:00:00:06:c9:0e"
+      cert_thumbprint     = "B814580D5DBF1AC0326AAEAF5CBC9389FB32F488"
+      cert_valid_from     = "2026-01-05"
+      cert_valid_to       = "2026-01-08"
+
+      country             = "US"
+      state               = "Michigan"
+      locality            = "MT CLEMENS"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
+         sig.serial == "33:00:06:c9:0e:1e:4b:10:32:eb:97:b8:cf:00:00:00:06:c9:0e"
+      )
+}
+
+rule MAL_Compromised_Cert_T_21_Microsoft_330006D18A37899D7C1808ED4D00000006D18A {
+   meta:
+      description         = "Detects T-21 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-07"
+      version             = "1.0"
+
+      hash                = "10b419bea17f6046d86b60b73561469714f5ba93a9e6efaa9607efe50d83f543"
+      malware             = "T-21"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake Webex Meeting Launchers spread by a traffer group, involved in a malware campaign around a compromised LinkedIn company account, targeting job-seekers with fake crypto-related job offers"
+
+      signer              = "LAKESIDE TRANSMISSION INC."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 02"
+      cert_serial         = "33:00:06:d1:8a:37:89:9d:7c:18:08:ed:4d:00:00:00:06:d1:8a"
+      cert_thumbprint     = "A3FE677A0A943E92F73611C1B72021E56B70A765"
+      cert_valid_from     = "2026-01-07"
+      cert_valid_to       = "2026-01-10"
+
+      country             = "US"
+      state               = "Michigan"
+      locality            = "MT CLEMENS"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 02" and
+         sig.serial == "33:00:06:d1:8a:37:89:9d:7c:18:08:ed:4d:00:00:00:06:d1:8a"
+      )
+}
+
 rule MAL_Compromised_Cert_TamperedChef_GlobalSign_4BC8E9DA91CB67F9EA1B6079 {
    meta:
       description         = "Detects TamperedChef with compromised cert (GlobalSign)"
@@ -52182,6 +52637,41 @@ rule MAL_Compromised_Cert_TurboFixPDF_Sectigo_00AF1989410F0529DD265B60481F4A1405
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "00:af:19:89:41:0f:05:29:dd:26:5b:60:48:1f:4a:14:05"
+      )
+}
+
+rule MAL_Compromised_Cert_UNK_50_GlobalSign_1CE0BB709AA5DA42CA7D576B {
+   meta:
+      description         = "Detects UNK-50 with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-04-14"
+      version             = "1.0"
+
+      hash                = "cc7e8f6e02d796a8f7bc2bb8dc8d96dfb0debb478d1adf40959a1870be36e6c7"
+      malware             = "UNK-50"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "CENTRUM LLC"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "1c:e0:bb:70:9a:a5:da:42:ca:7d:57:6b"
+      cert_thumbprint     = "066265F1A9CBF90F507B61A216AD945E314717D7"
+      cert_valid_from     = "2025-04-14"
+      cert_valid_to       = "2026-04-15"
+
+      country             = "RU"
+      state               = "Moscow"
+      locality            = "Moscow"
+      email               = "???"
+      rdn_serial_number   = "1237700505240"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "1c:e0:bb:70:9a:a5:da:42:ca:7d:57:6b"
       )
 }
 
@@ -53663,7 +54153,7 @@ rule MAL_Compromised_Cert_UNK_50_Microsoft_330007058C9AC84237BBAFF51F00000007058
       date                = "2026-01-09"
       version             = "1.0"
 
-      hash                = "dad515ffd0ed9d6181220893edb32245e9477a1c297b4084590986f126818b5f"
+      hash                = "825d61b1fe96f475ae944b43d34ace7841456fbef5c577441b034b1fbb5334a9"
       malware             = "UNK-50"
       malware_type        = "Unknown"
       malware_notes       = ""
@@ -57082,6 +57572,41 @@ rule MAL_Compromised_Cert_Unknown_GlobalSign_379B58DB24828EE1E0E4E692 {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "37:9b:58:db:24:82:8e:e1:e0:e4:e6:92"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_GlobalSign_3D1ED9CE0D8A81789EF479DE {
+   meta:
+      description         = "Detects Unknown with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-06-17"
+      version             = "1.0"
+
+      hash                = "5ea9507196400edee8e287f66dd84e9345908d9dc5757e625ed18e89cfb2d40c"
+      malware             = "Unknown"
+      malware_type        = "Infostealer"
+      malware_notes       = "Fake WeChat Installer that launches the Windows App store as a decoy."
+
+      signer              = "ООО СТРОЙСЕРВИС"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "3d:1e:d9:ce:0d:8a:81:78:9e:f4:79:de"
+      cert_thumbprint     = "F6ECE321CDBBE3EA598A53C473D76D6F59ED1C60"
+      cert_valid_from     = "2025-06-17"
+      cert_valid_to       = "2026-03-25"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "3d:1e:d9:ce:0d:8a:81:78:9e:f4:79:de"
       )
 }
 
@@ -63630,6 +64155,41 @@ rule MAL_Compromised_Cert_ValleyRAT_GlobalSign_54920428011B1572DC58F84D {
       )
 }
 
+rule MAL_Compromised_Cert_ValleyRAT_S2_DigiCert_0DB8378E7C5F330A988848572F290434 {
+   meta:
+      description         = "Detects ValleyRAT S2 with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2024-06-06"
+      version             = "1.0"
+
+      hash                = "a8a42814c253ca5e93e81be5bd69149ff71b9ac3024420614fba37fb0834b3c0"
+      malware             = "ValleyRAT S2"
+      malware_type        = "Unknown"
+      malware_notes       = "Second-stage payloads of ValleyRAT. Context: https://apophis133.medium.com/valleyrat-s2-chinese-campaign-4504b890f416"
+
+      signer              = "Hangzhou Saifan Technology Co., Ltd."
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "0d:b8:37:8e:7c:5f:33:0a:98:88:48:57:2f:29:04:34"
+      cert_thumbprint     = "E16902882C4386CE2B7043513ADECC5E95D5F07C"
+      cert_valid_from     = "2024-06-06"
+      cert_valid_to       = "2026-07-07"
+
+      country             = "CN"
+      state               = "Zhejiang"
+      locality            = "Hangzhou"
+      email               = "???"
+      rdn_serial_number   = "913301045773160340"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "0d:b8:37:8e:7c:5f:33:0a:98:88:48:57:2f:29:04:34"
+      )
+}
+
 rule MAL_Compromised_Cert_ValleyRAT_Sectigo_009CF337C12EFC4445ECAFCB35D02D64BE {
    meta:
       description         = "Detects ValleyRAT with compromised cert (Sectigo)"
@@ -65727,6 +66287,41 @@ rule MAL_Compromised_Cert_XRed_GlobalSign_7E67FCC70CFA4989670E6D23 {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "7e:67:fc:c7:0c:fa:49:89:67:0e:6d:23"
+      )
+}
+
+rule MAL_Compromised_Cert_XRed_SSL_com_28296E139B8B608FEA6FD820F54BABDD {
+   meta:
+      description         = "Detects XRed with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-02-24"
+      version             = "1.0"
+
+      hash                = "64d0fd6a5a62640f3ff0248c11ec8cb47e567964b717492b3da6d7135f4b6938"
+      malware             = "XRed"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Learnos LLC"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "28:29:6e:13:9b:8b:60:8f:ea:6f:d8:20:f5:4b:ab:dd"
+      cert_thumbprint     = "BC4DCD10F68D24C490CD0C68D764A90BD3FC0799"
+      cert_valid_from     = "2025-02-24"
+      cert_valid_to       = "2026-02-22"
+
+      country             = "US"
+      state               = "Wyoming"
+      locality            = "Sheridan"
+      email               = "???"
+      rdn_serial_number   = "2025-001597211"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "28:29:6e:13:9b:8b:60:8f:ea:6f:d8:20:f5:4b:ab:dd"
       )
 }
 

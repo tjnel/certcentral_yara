@@ -4,6 +4,30 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.01.17] - 2026-01-17
+
+### Added
+- MAL_Compromised_Cert_T_21_Microsoft_330005EC0C5BC85E2CC73A0ADA00000005EC0C (T-21 - Microsoft)
+- MAL_Compromised_Cert_T_21_Microsoft_330006866C33EE57246AEE63DC00000006866C (T-21 - Microsoft)
+- MAL_Compromised_Cert_T_21_Microsoft_330006C90E1E4B1032EB97B8CF00000006C90E (T-21 - Microsoft)
+- MAL_Compromised_Cert_T_21_Microsoft_3300064BD6D7CA610950AFC4D9000000064BD6 (T-21 - Microsoft)
+- MAL_Compromised_Cert_T_21_Microsoft_3300068281A2EB372E8FC4A340000000068281 (T-21 - Microsoft)
+- MAL_Compromised_Cert_Unknown_GlobalSign_3D1ED9CE0D8A81789EF479DE (Unknown - GlobalSign)
+- MAL_Compromised_Cert_T_21_Microsoft_330006050CB24871B5CD06D64200000006050C (T-21 - Microsoft)
+- MAL_Compromised_Cert_ScreenConnectLoader_DigiCert_029C936B150B5C3588B661A870BEB57B (ScreenConnectLoader - DigiCert)
+- MAL_Compromised_Cert_T_21_Microsoft_330005BC0A371369808050410500000005BC0A (T-21 - Microsoft)
+- MAL_Compromised_Cert_XRed_SSL_com_28296E139B8B608FEA6FD820F54BABDD (XRed - SSL.com)
+- MAL_Compromised_Cert_UNK_50_Microsoft_330007058C9AC84237BBAFF51F00000007058C (UNK-50 - Microsoft)
+- MAL_Compromised_Cert_ValleyRAT_S2_DigiCert_0DB8378E7C5F330A988848572F290434 (ValleyRAT S2 - DigiCert)
+- MAL_Compromised_Cert_T_21_Microsoft_330005ED05391BAF29D28EC31B00000005ED05 (T-21 - Microsoft)
+- MAL_Compromised_Cert_UNK_50_GlobalSign_1CE0BB709AA5DA42CA7D576B (UNK-50 - GlobalSign)
+- MAL_Compromised_Cert_ScreenConnectLoader_GoGetSSL_0C7368921398F9E38DBDA6AB2CDF6496 (ScreenConnectLoader - GoGetSSL)
+- MAL_Compromised_Cert_T_21_Microsoft_3300055959E165A7CCADCABCCA000000055959 (T-21 - Microsoft)
+- MAL_Compromised_Cert_T_21_Microsoft_330005F15669E0277C63B7B93100000005F156 (T-21 - Microsoft)
+
+### Modified
+- MAL_Compromised_Cert_T_21_Microsoft_330006D18A37899D7C1808ED4D00000006D18A (Updated metadata for T-21)
+
 ## [2026.01.16] - 2026-01-16
 
 ### Added

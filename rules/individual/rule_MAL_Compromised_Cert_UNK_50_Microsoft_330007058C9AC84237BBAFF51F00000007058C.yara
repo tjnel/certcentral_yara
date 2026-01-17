@@ -8,7 +8,7 @@ rule MAL_Compromised_Cert_UNK_50_Microsoft_330007058C9AC84237BBAFF51F00000007058
       date                = "2026-01-09"
       version             = "1.0"
 
-      hash                = "dad515ffd0ed9d6181220893edb32245e9477a1c297b4084590986f126818b5f"
+      hash                = "825d61b1fe96f475ae944b43d34ace7841456fbef5c577441b034b1fbb5334a9"
       malware             = "UNK-50"
       malware_type        = "Unknown"
       malware_notes       = ""
