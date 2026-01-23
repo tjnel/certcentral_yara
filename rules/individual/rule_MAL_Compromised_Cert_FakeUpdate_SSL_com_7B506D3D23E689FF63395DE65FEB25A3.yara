@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FakeUpdate_SSL_com_7B506D3D23E689FF63395DE65FEB25A3 {
       cert_valid_from     = "2025-05-07"
       cert_valid_to       = "2026-05-07"
 
-      country             = "???"
+      country             = "GB"
       state               = "???"
-      locality            = "???"
+      locality            = "Maidstone"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "10166016"
 
    condition:
       uint16(0) == 0x5a4d and
