@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_Traffer_GlobalSign_3E6CC95AF2CD4010280CA6DD {
       cert_valid_from     = "2026-01-15"
       cert_valid_to       = "2027-01-16"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
-      rdn_serial_number   = ""
+      country             = "US"
+      state               = "California"
+      locality            = "Glendale"
+      email               = "info@aliglobalsolutions.site"
+      rdn_serial_number   = "202463513982"
 
    condition:
       uint16(0) == 0x5a4d and

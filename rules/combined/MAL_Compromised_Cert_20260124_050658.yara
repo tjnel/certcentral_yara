@@ -11445,6 +11445,41 @@ rule MAL_Compromised_Cert_FEEDFACE_GlobalSign_319A56CABCD2B8E24FAC13F2 {
       )
 }
 
+rule MAL_Compromised_Cert_Fake7zip_GlobalSign_7CC72BF80DFDC184E66C93A1 {
+   meta:
+      description         = "Detects Fake7zip with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2023-04-18"
+      version             = "1.0"
+
+      hash                = "408a89bc9966e76f3a192ecbf47b36fdc8ddaa4067aaee753c0bd6ae502f5cea"
+      malware             = "Fake7zip"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake 7zip installer from unofficial site. Ref: https://wizsafe.iij.ad.jp/2026/01/2075/"
+
+      signer              = "JOZEAL NETWORK TECHNOLOGY CO., LIMITED"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "7c:c7:2b:f8:0d:fd:c1:84:e6:6c:93:a1"
+      cert_thumbprint     = "EBC8B1DE7ADAF53A0E9E1E1553D5018C014C5B64"
+      cert_valid_from     = "2023-04-18"
+      cert_valid_to       = "2026-04-18"
+
+      country             = "HK"
+      state               = "Kowloon"
+      locality            = "Kwun Tong"
+      email               = "???"
+      rdn_serial_number   = "2940285"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "7c:c7:2b:f8:0d:fd:c1:84:e6:6c:93:a1"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeAIApp_Sectigo_59794F360FE3921612C9697D5E7D0756 {
    meta:
       description         = "Detects FakeAIApp with compromised cert (Sectigo)"
@@ -15677,6 +15712,41 @@ rule MAL_Compromised_Cert_FakeWallet_GlobalSign_4345DF897AA6792193B2F67A {
       for any sig in pe.signatures : (
          sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
          sig.serial == "43:45:df:89:7a:a6:79:21:93:b2:f6:7a"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeWallet_GlobalSign_47EAB6E1707F977CCCB39031 {
+   meta:
+      description         = "Detects FakeWallet with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-07-15"
+      version             = "1.0"
+
+      hash                = "c1ec42abf050d35a25129b0366346f1871d7bbc720af06547f5fdde6d35e6868"
+      malware             = "FakeWallet"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake installer impersonating MultiBIt wallet"
+
+      signer              = "AGRA GYMKHANA CLUB LLP"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "47:ea:b6:e1:70:7f:97:7c:cc:b3:90:31"
+      cert_thumbprint     = "1A6EFAFCB4FA61A9FFBB23A544F50D14A94C86AA"
+      cert_valid_from     = "2025-07-15"
+      cert_valid_to       = "2026-07-16"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "47:ea:b6:e1:70:7f:97:7c:cc:b3:90:31"
       )
 }
 
@@ -51485,6 +51555,41 @@ rule MAL_Compromised_Cert_T_21_Microsoft_330006866C33EE57246AEE63DC00000006866C 
       )
 }
 
+rule MAL_Compromised_Cert_T_21_Microsoft_3300069089C04468A191B5EEB0000000069089 {
+   meta:
+      description         = "Detects T-21 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-20"
+      version             = "1.0"
+
+      hash                = "76172e368def55cfa8be830b8ed587cd59779f899ccc577c24f953b13cf6d591"
+      malware             = "T-21"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "LAKESIDE TRANSMISSION INC."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:06:90:89:c0:44:68:a1:91:b5:ee:b0:00:00:00:06:90:89"
+      cert_thumbprint     = "6F63322DE5A281D6D8FDDCFD396B03BFE129C466"
+      cert_valid_from     = "2026-01-20"
+      cert_valid_to       = "2026-01-23"
+
+      country             = "US"
+      state               = "Michigan"
+      locality            = "MT CLEMENS"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:06:90:89:c0:44:68:a1:91:b5:ee:b0:00:00:00:06:90:89"
+      )
+}
+
 rule MAL_Compromised_Cert_T_21_Microsoft_330006C90E1E4B1032EB97B8CF00000006C90E {
    meta:
       description         = "Detects T-21 with compromised cert (Microsoft)"
@@ -51730,6 +51835,41 @@ rule MAL_Compromised_Cert_TerraStealer_SSL_com_343C7C502BDCE06C9F3C6551C9D0A451 
       )
 }
 
+rule MAL_Compromised_Cert_Traffer_Certum_02C051F69D1FF9A0B7D8614772634B90 {
+   meta:
+      description         = "Detects Traffer with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-21"
+      version             = "1.0"
+
+      hash                = "bf93c8ec25cc6d40a2803bf3f72aa8c59d52f56db03f9ab37d187bdbc7bd82c3"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Shanghai Xizetai Network Technology Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "02:c0:51:f6:9d:1f:f9:a0:b7:d8:61:47:72:63:4b:90"
+      cert_thumbprint     = "268ACBF84CA0E15459BD4ED4274E6974D7A1714F"
+      cert_valid_from     = "2025-11-21"
+      cert_valid_to       = "2026-11-21"
+
+      country             = "CN"
+      state               = "Shanghai"
+      locality            = "Shanghai"
+      email               = "???"
+      rdn_serial_number   = "91310000MABXBL2X7J"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "02:c0:51:f6:9d:1f:f9:a0:b7:d8:61:47:72:63:4b:90"
+      )
+}
+
 rule MAL_Compromised_Cert_Traffer_Certum_4B1DE55AF5EE5E01FBC56E094F8959AD {
    meta:
       description         = "Detects Traffer with compromised cert (Certum)"
@@ -51856,11 +51996,11 @@ rule MAL_Compromised_Cert_Traffer_GlobalSign_3E6CC95AF2CD4010280CA6DD {
       cert_valid_from     = "2026-01-15"
       cert_valid_to       = "2027-01-16"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
-      rdn_serial_number   = ""
+      country             = "US"
+      state               = "California"
+      locality            = "Glendale"
+      email               = "info@aliglobalsolutions.site"
+      rdn_serial_number   = "202463513982"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -52322,6 +52462,41 @@ rule MAL_Compromised_Cert_TransferLoader_Sectigo_2D1DC3C2E0B0682AB3594E5237DD7C2
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "2d:1d:c3:c2:e0:b0:68:2a:b3:59:4e:52:37:dd:7c:23"
+      )
+}
+
+rule MAL_Compromised_Cert_Transferloader_Sectigo_227563ECCF59CBD7E3E7C8731B666194 {
+   meta:
+      description         = "Detects Transferloader with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-05"
+      version             = "1.0"
+
+      hash                = "a4380e9ac13668d4ff6fc30fdc1efcbfba9e6c1d73bbc994dba34bef605086fc"
+      malware             = "Transferloader"
+      malware_type        = "Loader"
+      malware_notes       = "Malware was distributed disguised as a resume."
+
+      signer              = "Xiamen Jialan Guang Information Technology Service Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "22:75:63:ec:cf:59:cb:d7:e3:e7:c8:73:1b:66:61:94"
+      cert_thumbprint     = "A759B97E4F156E1E9D51C0C3121D0C65C2A2D05E"
+      cert_valid_from     = "2025-12-05"
+      cert_valid_to       = "2026-12-05"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "22:75:63:ec:cf:59:cb:d7:e3:e7:c8:73:1b:66:61:94"
       )
 }
 
