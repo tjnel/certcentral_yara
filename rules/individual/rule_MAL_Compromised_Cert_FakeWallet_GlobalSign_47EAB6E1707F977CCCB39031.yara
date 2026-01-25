@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FakeWallet_GlobalSign_47EAB6E1707F977CCCB39031 {
       cert_valid_from     = "2025-07-15"
       cert_valid_to       = "2026-07-16"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
-      rdn_serial_number   = ""
+      country             = "IN"
+      state               = "Delhi"
+      locality            = "New Delhi"
+      email               = "baiju.agragym@gmail.com"
+      rdn_serial_number   = "AAI-9311"
 
    condition:
       uint16(0) == 0x5a4d and

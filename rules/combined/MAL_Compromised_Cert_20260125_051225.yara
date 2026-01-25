@@ -15736,11 +15736,11 @@ rule MAL_Compromised_Cert_FakeWallet_GlobalSign_47EAB6E1707F977CCCB39031 {
       cert_valid_from     = "2025-07-15"
       cert_valid_to       = "2026-07-16"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
-      rdn_serial_number   = ""
+      country             = "IN"
+      state               = "Delhi"
+      locality            = "New Delhi"
+      email               = "baiju.agragym@gmail.com"
+      rdn_serial_number   = "AAI-9311"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -51660,6 +51660,41 @@ rule MAL_Compromised_Cert_T_21_Microsoft_330006D18A37899D7C1808ED4D00000006D18A 
       )
 }
 
+rule MAL_Compromised_Cert_T_21_Microsoft_3300072F066B9375526382C9F6000000072F06 {
+   meta:
+      description         = "Detects T-21 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-23"
+      version             = "1.0"
+
+      hash                = "7bf13bc616fcc830b7ff20d505d1a1fb2e0fe0a5d8831d3ea8d9d19ca397e8ca"
+      malware             = "T-21"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake Webex builds delivered from fake meeting websites impersonating companies worldwide"
+
+      signer              = "LAKESIDE TRANSMISSION INC."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS AOC CA 01"
+      cert_serial         = "33:00:07:2f:06:6b:93:75:52:63:82:c9:f6:00:00:00:07:2f:06"
+      cert_thumbprint     = "D2ECF3FA3F3279FDDCBE91B514B792D4C9890A88"
+      cert_valid_from     = "2026-01-23"
+      cert_valid_to       = "2026-01-26"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS AOC CA 01" and
+         sig.serial == "33:00:07:2f:06:6b:93:75:52:63:82:c9:f6:00:00:00:07:2f:06"
+      )
+}
+
 rule MAL_Compromised_Cert_TamperedChef_GlobalSign_4BC8E9DA91CB67F9EA1B6079 {
    meta:
       description         = "Detects TamperedChef with compromised cert (GlobalSign)"
@@ -51867,6 +51902,41 @@ rule MAL_Compromised_Cert_Traffer_Certum_02C051F69D1FF9A0B7D8614772634B90 {
       for any sig in pe.signatures : (
          sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
          sig.serial == "02:c0:51:f6:9d:1f:f9:a0:b7:d8:61:47:72:63:4b:90"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Certum_068403F633568879E1E7CBB5F64E130B {
+   meta:
+      description         = "Detects Traffer with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-11-13"
+      version             = "1.0"
+
+      hash                = "e94ed7457376352421a70929bd1e92161101e0693d713eeb0de57b45f8e18a3f"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake meeting software targeting jobseekers. Ref: https://cybersecuritynews.com/web3-developer-environments-targeted-by-social-engineering-campaign/"
+
+      signer              = "Shaanxi Shaogekaifei Information Technology Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "06:84:03:f6:33:56:88:79:e1:e7:cb:b5:f6:4e:13:0b"
+      cert_thumbprint     = "B77B04BD3E2B744C19E238D0B76312B97DA8B048"
+      cert_valid_from     = "2025-11-13"
+      cert_valid_to       = "2026-11-13"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "06:84:03:f6:33:56:88:79:e1:e7:cb:b5:f6:4e:13:0b"
       )
 }
 
@@ -52486,11 +52556,11 @@ rule MAL_Compromised_Cert_Transferloader_Sectigo_227563ECCF59CBD7E3E7C8731B66619
       cert_valid_from     = "2025-12-05"
       cert_valid_to       = "2026-12-05"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Fujian Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91350203MA34M9LF7C"
 
    condition:
       uint16(0) == 0x5a4d and

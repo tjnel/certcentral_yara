@@ -4,6 +4,16 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.01.25] - 2026-01-25
+
+### Added
+- MAL_Compromised_Cert_T_21_Microsoft_3300072F066B9375526382C9F6000000072F06 (T-21 - Microsoft)
+- MAL_Compromised_Cert_Traffer_Certum_068403F633568879E1E7CBB5F64E130B (Traffer - Certum)
+
+### Modified
+- MAL_Compromised_Cert_Transferloader_Sectigo_227563ECCF59CBD7E3E7C8731B666194 (Updated metadata for Transferloader)
+- MAL_Compromised_Cert_FakeWallet_GlobalSign_47EAB6E1707F977CCCB39031 (Updated metadata for FakeWallet)
+
 ## [2026.01.24] - 2026-01-24
 
 ### Added
