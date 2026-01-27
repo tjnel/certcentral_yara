@@ -4,6 +4,17 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.01.27] - 2026-01-27
+
+### Added
+- MAL_Compromised_Cert_FakeWallet_Sectigo_0094F5923990A86F83CDE9B6FABC70DF10 (FakeWallet - Sectigo)
+- MAL_Compromised_Cert_Unknown_Fake_Browser_update_DigiCert_0C0999179801B46B92911B8B671018A8 (Unknown, Fake Browser update - DigiCert)
+- MAL_Compromised_Cert_HijackLoader_Certum_784FA62F1A8D4BED25C508D6FF192B6D (HijackLoader - Certum)
+- MAL_Compromised_Cert_Unknown_DigiCert_0D3EEC6D46A8626501C413B6717FBBD7 (Unknown - DigiCert)
+- MAL_Compromised_Cert_T_21_Microsoft_330006A9285C25C17FF5B5FFB900000006A928 (T-21 - Microsoft)
+- MAL_Compromised_Cert_FakeDocument_Sectigo_00A3540AB61DDF24E949A9A40229A044EA (FakeDocument - Sectigo)
+- MAL_Compromised_Cert_Xworm_Sectigo_56A83022F71F3C701CD3BFEA1D8202DF (Xworm - Sectigo)
+
 ## [2026.01.26] - 2026-01-26
 
 ### Modified

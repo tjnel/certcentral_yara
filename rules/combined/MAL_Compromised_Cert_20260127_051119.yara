@@ -14000,6 +14000,41 @@ rule MAL_Compromised_Cert_FakeDocument_SSL_com_700B215E33D4D6E0613324E8DCEFE4FF 
       )
 }
 
+rule MAL_Compromised_Cert_FakeDocument_Sectigo_00A3540AB61DDF24E949A9A40229A044EA {
+   meta:
+      description         = "Detects FakeDocument with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-09"
+      version             = "1.0"
+
+      hash                = "37d154eb57de4a123528d53a6cc829da2ddf64532e52048a07fc569076ec6783"
+      malware             = "FakeDocument"
+      malware_type        = "Unknown"
+      malware_notes       = "Malicious executables posing as fake documents targeting Brazilian individuals"
+
+      signer              = "Auto Posto Silvestre Comercio de Combustiveis LTDA"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:a3:54:0a:b6:1d:df:24:e9:49:a9:a4:02:29:a0:44:ea"
+      cert_thumbprint     = "1118EF0260D158A0B4F787F714CFB21AA354882C"
+      cert_valid_from     = "2025-12-09"
+      cert_valid_to       = "2026-12-09"
+
+      country             = "BR"
+      state               = "Rondônia"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "07.939.258/0001-05"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:a3:54:0a:b6:1d:df:24:e9:49:a9:a4:02:29:a0:44:ea"
+      )
+}
+
 rule MAL_Compromised_Cert_FakeDocument_Sectigo_75F97FA8095F9167F552859E01DBFF77 {
    meta:
       description         = "Detects FakeDocument with compromised cert (Sectigo)"
@@ -15782,6 +15817,41 @@ rule MAL_Compromised_Cert_FakeWallet_SSL_com_74CC097BCA0EBAE54EC126E526AC20DC {
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "74:cc:09:7b:ca:0e:ba:e5:4e:c1:26:e5:26:ac:20:dc"
+      )
+}
+
+rule MAL_Compromised_Cert_FakeWallet_Sectigo_0094F5923990A86F83CDE9B6FABC70DF10 {
+   meta:
+      description         = "Detects FakeWallet with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-23"
+      version             = "1.0"
+
+      hash                = "4f55c34f37b1881ff46a27354262a657a7edfed898852974fc6b42aad6190028"
+      malware             = "FakeWallet"
+      malware_type        = "Unknown"
+      malware_notes       = "Malicious installer impersonating Neon Wallet"
+
+      signer              = "Wuhan Handing Intelligent Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "00:94:f5:92:39:90:a8:6f:83:cd:e9:b6:fa:bc:70:df:10"
+      cert_thumbprint     = "DACD90BF4D4D77F7A74C21993BFB4C828BB12699"
+      cert_valid_from     = "2025-12-23"
+      cert_valid_to       = "2026-12-23"
+
+      country             = "CN"
+      state               = "Hubei Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91420106MA49BE5D9M"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "00:94:f5:92:39:90:a8:6f:83:cd:e9:b6:fa:bc:70:df:10"
       )
 }
 
@@ -18127,6 +18197,41 @@ rule MAL_Compromised_Cert_HijackLoader_Certum_1F880EA0C7617F15B8550E78C3350A29 {
       for any sig in pe.signatures : (
          sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
          sig.serial == "1f:88:0e:a0:c7:61:7f:15:b8:55:0e:78:c3:35:0a:29"
+      )
+}
+
+rule MAL_Compromised_Cert_HijackLoader_Certum_784FA62F1A8D4BED25C508D6FF192B6D {
+   meta:
+      description         = "Detects HijackLoader with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-23"
+      version             = "1.0"
+
+      hash                = "f7ac622a5d22df58331a0b10605fd7c408fdf3b28641522c5ccc117da69c4bc3"
+      malware             = "HijackLoader"
+      malware_type        = "Unknown"
+      malware_notes       = "Ref: https://app.any.run/tasks/835b2031-e64b-47df-be5a-12bc7150ea1a"
+
+      signer              = "池州辰苼贸易有限公司"
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "78:4f:a6:2f:1a:8d:4b:ed:25:c5:08:d6:ff:19:2b:6d"
+      cert_thumbprint     = "34174E86794A12235BC628BA2D641A33D89CF5C0"
+      cert_valid_from     = "2026-01-23"
+      cert_valid_to       = "2027-01-23"
+
+      country             = "CN"
+      state               = "安徽"
+      locality            = "池州"
+      email               = "???"
+      rdn_serial_number   = "91341700MAEC6EF50F"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "78:4f:a6:2f:1a:8d:4b:ed:25:c5:08:d6:ff:19:2b:6d"
       )
 }
 
@@ -51590,6 +51695,41 @@ rule MAL_Compromised_Cert_T_21_Microsoft_3300069089C04468A191B5EEB0000000069089 
       )
 }
 
+rule MAL_Compromised_Cert_T_21_Microsoft_330006A9285C25C17FF5B5FFB900000006A928 {
+   meta:
+      description         = "Detects T-21 with compromised cert (Microsoft)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-24"
+      version             = "1.0"
+
+      hash                = "40adf1aaa86dbe99cafa24fcfc7847fac976fc3d01d07cc6a774970028bbffdd"
+      malware             = "T-21"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake Webex builds delivered from fake meeting websites impersonating companies worldwide"
+
+      signer              = "LAKESIDE TRANSMISSION INC."
+      cert_issuer_short   = "Microsoft"
+      cert_issuer         = "Microsoft ID Verified CS EOC CA 01"
+      cert_serial         = "33:00:06:a9:28:5c:25:c1:7f:f5:b5:ff:b9:00:00:00:06:a9:28"
+      cert_thumbprint     = "6F078EA198DA76F63B219F65588DD49CD3B5B4B4"
+      cert_valid_from     = "2026-01-24"
+      cert_valid_to       = "2026-01-27"
+
+      country             = "US"
+      state               = "Michigan"
+      locality            = "MT CLEMENS"
+      email               = "???"
+      rdn_serial_number   = "Not Specified"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Microsoft ID Verified CS EOC CA 01" and
+         sig.serial == "33:00:06:a9:28:5c:25:c1:7f:f5:b5:ff:b9:00:00:00:06:a9:28"
+      )
+}
+
 rule MAL_Compromised_Cert_T_21_Microsoft_330006C90E1E4B1032EB97B8CF00000006C90E {
    meta:
       description         = "Detects T-21 with compromised cert (Microsoft)"
@@ -56945,6 +57085,41 @@ rule MAL_Compromised_Cert_Unknown_DigiCert_0D3D99867126E38775D7170E7F0CC571 {
       )
 }
 
+rule MAL_Compromised_Cert_Unknown_DigiCert_0D3EEC6D46A8626501C413B6717FBBD7 {
+   meta:
+      description         = "Detects Unknown with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-02-04"
+      version             = "1.0"
+
+      hash                = "08ac704a57afdbad398ff68afc9bbd55e23d160dc82589fcd35c6eef8968df04"
+      malware             = "Unknown"
+      malware_type        = "Loader"
+      malware_notes       = "Executable was named DocSigning and DocFastSign. This revoked certificate was identified due to the signer being leveraged in a campaign from another certificate issuer."
+
+      signer              = "SOFT CURLS LIMITED"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1"
+      cert_serial         = "0d:3e:ec:6d:46:a8:62:65:01:c4:13:b6:71:7f:bb:d7"
+      cert_thumbprint     = "E2A565034DFF5EDB2116CDC3EC4C2109FD8D0C8F"
+      cert_valid_from     = "2025-02-04"
+      cert_valid_to       = "2026-01-14"
+
+      country             = "GB"
+      state               = "???"
+      locality            = "Tilbury"
+      email               = "???"
+      rdn_serial_number   = "10918381"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1" and
+         sig.serial == "0d:3e:ec:6d:46:a8:62:65:01:c4:13:b6:71:7f:bb:d7"
+      )
+}
+
 rule MAL_Compromised_Cert_Unknown_DigiCert_0E15E5500631C4E3A92EF50200E5031B {
    meta:
       description         = "Detects Unknown with compromised cert (DigiCert)"
@@ -57012,6 +57187,41 @@ rule MAL_Compromised_Cert_Unknown_EE_0452205181790702B219BCE761B5C52C {
       for any sig in pe.signatures : (
          sig.issuer contains "Encryption Everywhere DV TLS CA - G2" and
          sig.serial == "04:52:20:51:81:79:07:02:b2:19:bc:e7:61:b5:c5:2c"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_Fake_Browser_update_DigiCert_0C0999179801B46B92911B8B671018A8 {
+   meta:
+      description         = "Detects Unknown, Fake Browser update with compromised cert (DigiCert)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-05-22"
+      version             = "1.0"
+
+      hash                = "22014e2d31197dddc2c451ed475aede3d21ca99784973bdcfd9c3a7d9aaa1999"
+      malware             = "Unknown, Fake Browser update"
+      malware_type        = "Initial access tool"
+      malware_notes       = "File was disguised as a browser update but also used Adobe logos. The full behavior isn't understood at this time."
+
+      signer              = "山西荣升源科贸有限公司"
+      cert_issuer_short   = "DigiCert"
+      cert_issuer         = "DigiCert Trusted G4 Code Signing RSA4096 SHA256 2021 CA1"
+      cert_serial         = "0c:09:99:17:98:01:b4:6b:92:91:1b:8b:67:10:18:a8"
+      cert_thumbprint     = "FF6B134559A6D51E99A294242748B05D4222BCF8"
+      cert_valid_from     = "2025-05-22"
+      cert_valid_to       = "2028-08-17"
+
+      country             = "CN"
+      state               = "山西省"
+      locality            = "太原市"
+      email               = "???"
+      rdn_serial_number   = "91140105MA0LK0WH8B"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "DigiCert Trusted G4 Code Signing RSA4096 SHA256 2021 CA1" and
+         sig.serial == "0c:09:99:17:98:01:b4:6b:92:91:1b:8b:67:10:18:a8"
       )
 }
 
@@ -67477,6 +67687,41 @@ rule MAL_Compromised_Cert_Xworm_SSL_com_1C26AAC9A6E9385EDCBFE1CF495409FC {
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "1c:26:aa:c9:a6:e9:38:5e:dc:bf:e1:cf:49:54:09:fc"
+      )
+}
+
+rule MAL_Compromised_Cert_Xworm_Sectigo_56A83022F71F3C701CD3BFEA1D8202DF {
+   meta:
+      description         = "Detects Xworm with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-16"
+      version             = "1.0"
+
+      hash                = "86cdddef536b2d56b43e91095abd41a465db9baffedb1aae557eac1bef7b7439"
+      malware             = "Xworm"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake document posing as a receipt, connecting to Xworm-style C2. Ref: https://app.any.run/tasks/7e4e6698-71c1-4af1-a019-628ee7520bad"
+
+      signer              = "ATF TEXTİLE DIŞ TİCARET SANAYİ LİMİTED ŞİRKETİ"
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "56:a8:30:22:f7:1f:3c:70:1c:d3:bf:ea:1d:82:02:df"
+      cert_thumbprint     = "6B5C88EBF21962A0BC23713385A75A52913AE31A"
+      cert_valid_from     = "2026-01-16"
+      cert_valid_to       = "2027-01-16"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "56:a8:30:22:f7:1f:3c:70:1c:d3:bf:ea:1d:82:02:df"
       )
 }
 
