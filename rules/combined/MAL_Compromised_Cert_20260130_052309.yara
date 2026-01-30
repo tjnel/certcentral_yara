@@ -28735,6 +28735,41 @@ rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_1D84AEF0C4EF73EEC7B2794EE51BD73
       )
 }
 
+rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_1E5B7FB3E10C9141512CECB24D56D4FF {
+   meta:
+      description         = "Detects NetSupport RAT with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-22"
+      version             = "1.0"
+
+      hash                = "e5315d0b7e068b6e3130725a074e67bc3c9ae0f778562816475c8e54c256ca0c"
+      malware             = "NetSupport RAT"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Flagship Promotion s. r. o."
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "1e:5b:7f:b3:e1:0c:91:41:51:2c:ec:b2:4d:56:d4:ff"
+      cert_thumbprint     = "B64366A3BE9FF011D5AEE1FC56CAC3FFF4D87827"
+      cert_valid_from     = "2026-01-22"
+      cert_valid_to       = "2027-01-22"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "1e:5b:7f:b3:e1:0c:91:41:51:2c:ec:b2:4d:56:d4:ff"
+      )
+}
+
 rule MAL_Compromised_Cert_NetSupport_RAT_SSL_com_24991F9305780821FB0326248BCBB0EE {
    meta:
       description         = "Detects NetSupport RAT with compromised cert (SSL.com)"
@@ -51415,6 +51450,76 @@ rule MAL_Compromised_Cert_SystemBC_SSL_com_53E1F226CB77574F8FBEB5682DA091BB {
       )
 }
 
+rule MAL_Compromised_Cert_System_Utilities_Trojan_GlobalSign_0D97B2C63AB1BC009882662B {
+   meta:
+      description         = "Detects System Utilities Trojan with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-07-24"
+      version             = "1.0"
+
+      hash                = "bf3c0ed9b5b1556390c0aed77796dc4f0392103bbdf91303f0a149619b5786a6"
+      malware             = "System Utilities Trojan"
+      malware_type        = "Backdoor"
+      malware_notes       = "The malware exhibits the same behavior as anyPDF: https://rifteyy.org/report/system-utilities-malware-analysis"
+
+      signer              = "Centaurus Media Limited"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "0d:97:b2:c6:3a:b1:bc:00:98:82:66:2b"
+      cert_thumbprint     = "C4062D4A100EAEB57D624B1F4C2D8201C1CB6FD9"
+      cert_valid_from     = "2025-07-24"
+      cert_valid_to       = "2028-08-23"
+
+      country             = "GB"
+      state               = "Surrey"
+      locality            = "Egham"
+      email               = "mail@centaurus-media.com"
+      rdn_serial_number   = "12984436"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "0d:97:b2:c6:3a:b1:bc:00:98:82:66:2b"
+      )
+}
+
+rule MAL_Compromised_Cert_System_Utilities_Trojan_GlobalSign_44CDCA81397DEAAFFD2D052A {
+   meta:
+      description         = "Detects System Utilities Trojan with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2022-07-14"
+      version             = "1.0"
+
+      hash                = "0420aa80686bd196c4c3a0d2df4cadbf25d1a2b0ba5e64c0cfede9815b645c62"
+      malware             = "System Utilities Trojan"
+      malware_type        = "Backdoor"
+      malware_notes       = "This malware exhibits the same behaviors as anyPDF, see analysis here: https://rifteyy.org/report/system-utilities-malware-analysis"
+
+      signer              = "Sol Digital Solutions Limited"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "44:cd:ca:81:39:7d:ea:af:fd:2d:05:2a"
+      cert_thumbprint     = "B9FFBC26AB1402DEEE8A5A17DD77752FD9D8E0E1"
+      cert_valid_from     = "2022-07-14"
+      cert_valid_to       = "2025-07-14"
+
+      country             = "GB"
+      state               = "Greater London"
+      locality            = "London"
+      email               = "mail@sol-digital-solutions.com"
+      rdn_serial_number   = "12577470"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "44:cd:ca:81:39:7d:ea:af:fd:2d:05:2a"
+      )
+}
+
 rule MAL_Compromised_Cert_TA455_SSL_com_2848CDE84DCF101BBF54EAB1D5F3C55E {
    meta:
       description         = "Detects TA455 with compromised cert (SSL.com)"
@@ -53057,6 +53162,41 @@ rule MAL_Compromised_Cert_Traffer_SSL_com_7BC02CACE5CED69F028420070DE45873 {
       for any sig in pe.signatures : (
          sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
          sig.serial == "7b:c0:2c:ac:e5:ce:d6:9f:02:84:20:07:0d:e4:58:73"
+      )
+}
+
+rule MAL_Compromised_Cert_Traffer_Sectigo_2F37E50A49A2DDE0ED3590E0EFCD97E1 {
+   meta:
+      description         = "Detects Traffer with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-10-03"
+      version             = "1.0"
+
+      hash                = "39db9d449c0222f0b2f2ca058bf901de6ddfb09ac7663540c84df92860bb5ad4"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = "Malicious fake meeting installers  targeting crypto users worldwide"
+
+      signer              = "Canton Pure Jonna Network Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "2f:37:e5:0a:49:a2:dd:e0:ed:35:90:e0:ef:cd:97:e1"
+      cert_thumbprint     = "7DBD12B7913FB91CBF9E5C1FD894BF09513714A3"
+      cert_valid_from     = "2025-10-03"
+      cert_valid_to       = "2026-10-03"
+
+      country             = "CN"
+      state               = "Guangdong Sheng"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = "91440114MACL0TN54Q"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "2f:37:e5:0a:49:a2:dd:e0:ed:35:90:e0:ef:cd:97:e1"
       )
 }
 

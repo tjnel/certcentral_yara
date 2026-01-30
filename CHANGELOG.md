@@ -4,6 +4,14 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.01.30] - 2026-01-30
+
+### Added
+- MAL_Compromised_Cert_System_Utilities_Trojan_GlobalSign_44CDCA81397DEAAFFD2D052A (System Utilities Trojan - GlobalSign)
+- MAL_Compromised_Cert_Traffer_Sectigo_2F37E50A49A2DDE0ED3590E0EFCD97E1 (Traffer - Sectigo)
+- MAL_Compromised_Cert_NetSupport_RAT_SSL_com_1E5B7FB3E10C9141512CECB24D56D4FF (NetSupport RAT - SSL.com)
+- MAL_Compromised_Cert_System_Utilities_Trojan_GlobalSign_0D97B2C63AB1BC009882662B (System Utilities Trojan - GlobalSign)
+
 ## [2026.01.29] - 2026-01-29
 
 ### Added
