@@ -4,6 +4,11 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.02.06] - 2026-02-06
+
+### Added
+- MAL_Compromised_Cert_TrustConnectRMM_Certum_055A00A5DC820FDA8DBB754490B4BACF (TrustConnectRMM - Certum)
+
 ## [2026.02.05] - 2026-02-05
 
 ### Added
