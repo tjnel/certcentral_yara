@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_HijackLoader_Sectigo_256039FE43338724270197A2C048EC15 
       cert_valid_from     = "2026-01-23"
       cert_valid_to       = "2027-01-23"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Shanxi Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91141121MA0KMRHP1G"
 
    condition:
       uint16(0) == 0x5a4d and

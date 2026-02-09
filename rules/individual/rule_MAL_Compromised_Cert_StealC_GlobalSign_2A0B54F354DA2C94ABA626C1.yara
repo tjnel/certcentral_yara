@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_StealC_GlobalSign_2A0B54F354DA2C94ABA626C1 {
       cert_valid_from     = "2025-02-20"
       cert_valid_to       = "2026-02-21"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
-      rdn_serial_number   = ""
+      country             = "RU"
+      state               = "Sankt-Peterburg"
+      locality            = "Sankt-Peterburg"
+      email               = "dev@safeconvpn.com"
+      rdn_serial_number   = "1197847084687"
 
    condition:
       uint16(0) == 0x5a4d and

@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_TrustConnectRMM_Certum_055A00A5DC820FDA8DBB754490B4BAC
       cert_valid_from     = "2026-01-27"
       cert_valid_to       = "2027-01-27"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "ZA"
+      state               = "Gauteng"
+      locality            = "Alexandra"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "2026/029661/07"
 
    condition:
       uint16(0) == 0x5a4d and

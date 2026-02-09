@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FakeZabbix_Sectigo_00FEA7AAE8DAD9370F4E82DBC2EBB0F916 
       cert_valid_from     = "2025-12-17"
       cert_valid_to       = "2026-12-17"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Fujian Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91350206MACT06NY6P"
 
    condition:
       uint16(0) == 0x5a4d and

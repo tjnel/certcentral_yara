@@ -4,6 +4,20 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.02.09] - 2026-02-09
+
+### Added
+- MAL_Compromised_Cert_Donut_Certum_1732215D6B96071060E7551FFD98D6C7 (Donut - Certum)
+- MAL_Compromised_Cert_Traffer_Certum_675C35F927E99898778AA81BC0A9104A (Traffer - Certum)
+
+### Modified
+- MAL_Compromised_Cert_ScreenConnectLoader_Certum_6002EF4359609E6BE08215CC40F9B377 (Updated metadata for ScreenConnectLoader)
+- MAL_Compromised_Cert_FakeZabbix_Sectigo_00FEA7AAE8DAD9370F4E82DBC2EBB0F916 (Updated metadata for FakeZabbix)
+- MAL_Compromised_Cert_HijackLoader_Sectigo_256039FE43338724270197A2C048EC15 (Updated metadata for HijackLoader)
+- MAL_Compromised_Cert_Unknown_Sectigo_34D56E27C24CA3EDD5431BC93E9F3DB2 (Updated metadata for Unknown)
+- MAL_Compromised_Cert_StealC_GlobalSign_2A0B54F354DA2C94ABA626C1 (Updated metadata for StealC)
+- MAL_Compromised_Cert_TrustConnectRMM_Certum_055A00A5DC820FDA8DBB754490B4BACF (Updated metadata for TrustConnectRMM)
+
 ## [2026.02.07] - 2026-02-07
 
 ### Added

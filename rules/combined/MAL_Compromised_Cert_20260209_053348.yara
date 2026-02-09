@@ -11340,6 +11340,41 @@ rule MAL_Compromised_Cert_Donot_SSL_com_26CCC279DBF534B4D7B205B1A849B8EC {
       )
 }
 
+rule MAL_Compromised_Cert_Donut_Certum_1732215D6B96071060E7551FFD98D6C7 {
+   meta:
+      description         = "Detects Donut with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2026-01-13"
+      version             = "1.0"
+
+      hash                = "c901f1ea493e4d36d9c3ff7b1be05f62988e6613b8105dd6e238383b88c2303d"
+      malware             = "Donut"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Xi'an Weijian Yangyue Trading Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "17:32:21:5d:6b:96:07:10:60:e7:55:1f:fd:98:d6:c7"
+      cert_thumbprint     = "859EE087FDA779B9FAACA4CB7B63D51DA3DFB011"
+      cert_valid_from     = "2026-01-13"
+      cert_valid_to       = "2027-01-13"
+
+      country             = "CN"
+      state               = "Shaanxi"
+      locality            = "Xi'an"
+      email               = "???"
+      rdn_serial_number   = "91610132MADG6C6Q1G"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "17:32:21:5d:6b:96:07:10:60:e7:55:1f:fd:98:d6:c7"
+      )
+}
+
 rule MAL_Compromised_Cert_Donut_Certum_5F0C0D982DA361C93487CC8CC0B806AD {
    meta:
       description         = "Detects Donut with compromised cert (Certum)"
@@ -16331,11 +16366,11 @@ rule MAL_Compromised_Cert_FakeZabbix_Sectigo_00FEA7AAE8DAD9370F4E82DBC2EBB0F916 
       cert_valid_from     = "2025-12-17"
       cert_valid_to       = "2026-12-17"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Fujian Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91350206MACT06NY6P"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -19516,11 +19551,11 @@ rule MAL_Compromised_Cert_HijackLoader_Sectigo_256039FE43338724270197A2C048EC15 
       cert_valid_from     = "2026-01-23"
       cert_valid_to       = "2027-01-23"
 
-      country             = "???"
-      state               = "???"
+      country             = "CN"
+      state               = "Shanxi Sheng"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "91141121MA0KMRHP1G"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -44541,11 +44576,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Certum_6002EF4359609E6BE08215CC40F
       cert_valid_from     = "2025-12-23"
       cert_valid_to       = "2026-12-23"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Minnesota"
+      locality            = "Wabasha"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -51331,11 +51366,11 @@ rule MAL_Compromised_Cert_StealC_GlobalSign_2A0B54F354DA2C94ABA626C1 {
       cert_valid_from     = "2025-02-20"
       cert_valid_to       = "2026-02-21"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
-      email               = "???"
-      rdn_serial_number   = ""
+      country             = "RU"
+      state               = "Sankt-Peterburg"
+      locality            = "Sankt-Peterburg"
+      email               = "dev@safeconvpn.com"
+      rdn_serial_number   = "1197847084687"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -52955,6 +52990,41 @@ rule MAL_Compromised_Cert_Traffer_Certum_53FDE4C245E86ABDF6194CA2EBBFB35F {
       )
 }
 
+rule MAL_Compromised_Cert_Traffer_Certum_675C35F927E99898778AA81BC0A9104A {
+   meta:
+      description         = "Detects Traffer with compromised cert (Certum)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-06"
+      version             = "1.0"
+
+      hash                = "71105ac7ede3c17828968a11af58ddfcebc3b2f0134765b67ca831c53a82f01a"
+      malware             = "Traffer"
+      malware_type        = "Unknown"
+      malware_notes       = "Fake Kakao Talk meeting installer targeting crypto users worldwide"
+
+      signer              = "Heze Qinfei Network Technology Co., Ltd."
+      cert_issuer_short   = "Certum"
+      cert_issuer         = "Certum Extended Validation Code Signing 2021 CA"
+      cert_serial         = "67:5c:35:f9:27:e9:98:98:77:8a:a8:1b:c0:a9:10:4a"
+      cert_thumbprint     = "CD0F47F474DC853B12468853453DC44BA0D00360"
+      cert_valid_from     = "2025-12-06"
+      cert_valid_to       = "2026-12-06"
+
+      country             = "CN"
+      state               = "Shandong"
+      locality            = "Heze"
+      email               = "???"
+      rdn_serial_number   = "91371702MAC81U8R5M"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Certum Extended Validation Code Signing 2021 CA" and
+         sig.serial == "67:5c:35:f9:27:e9:98:98:77:8a:a8:1b:c0:a9:10:4a"
+      )
+}
+
 rule MAL_Compromised_Cert_Traffer_GlobalSign_3A352958B8D4FDAFE1C6B8E8 {
    meta:
       description         = "Detects Traffer with compromised cert (GlobalSign)"
@@ -54341,11 +54411,11 @@ rule MAL_Compromised_Cert_TrustConnectRMM_Certum_055A00A5DC820FDA8DBB754490B4BAC
       cert_valid_from     = "2026-01-27"
       cert_valid_to       = "2027-01-27"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "ZA"
+      state               = "Gauteng"
+      locality            = "Alexandra"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "2026/029661/07"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -65051,11 +65121,11 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_34D56E27C24CA3EDD5431BC93E9F3DB2 {
       cert_valid_from     = "2025-10-01"
       cert_valid_to       = "2026-10-01"
 
-      country             = "???"
-      state               = "???"
+      country             = "US"
+      state               = "Missouri"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "LC1788569"
 
    condition:
       uint16(0) == 0x5a4d and

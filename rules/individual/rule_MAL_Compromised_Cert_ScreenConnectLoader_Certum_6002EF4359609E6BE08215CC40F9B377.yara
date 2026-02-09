@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_ScreenConnectLoader_Certum_6002EF4359609E6BE08215CC40F
       cert_valid_from     = "2025-12-23"
       cert_valid_to       = "2026-12-23"
 
-      country             = "???"
-      state               = "???"
-      locality            = "???"
+      country             = "US"
+      state               = "Minnesota"
+      locality            = "Wabasha"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "Not Specified"
 
    condition:
       uint16(0) == 0x5a4d and
