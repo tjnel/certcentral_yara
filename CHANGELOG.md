@@ -4,6 +4,11 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.02.10] - 2026-02-10
+
+### Added
+- MAL_Compromised_Cert_RuRat_Sectigo_1A88479AE02BEC4FB5F67E44BD6C83EE (RuRat - Sectigo)
+
 ## [2026.02.09] - 2026-02-09
 
 ### Added
