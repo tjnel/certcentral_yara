@@ -4,6 +4,18 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.02.12] - 2026-02-12
+
+### Added
+- MAL_Compromised_Cert_StealC_Sectigo_00D32BDB629F7938BB42FC0D833FCFD1BE (StealC - Sectigo)
+- MAL_Compromised_Cert_RomCom_DigiCert_07B749F7C9E5021A1EF5B61AE96A6C46 (RomCom - DigiCert)
+- MAL_Compromised_Cert_Traffer_Sectigo_00DE34D4760FCACCE429A83C05E8167607 (Traffer - Sectigo)
+- MAL_Compromised_Cert_MeshAgent_Certum_546256D12BE056C7089A2BA1908762E1 (MeshAgent - Certum)
+- MAL_Compromised_Cert_ScreenConnectLoader_DigiCert_0D81D7DA42E51386CC146E9C255D942B (ScreenConnectLoader - DigiCert)
+
+### Modified
+- MAL_Compromised_Cert_ScreenConnectLoader_Sectigo_2423453A99B347263BBBA607F4F55FAB (Updated metadata for ScreenConnectLoader)
+
 ## [2026.02.11] - 2026-02-11
 
 ### Added
