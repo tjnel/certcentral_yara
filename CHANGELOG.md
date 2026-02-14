@@ -4,6 +4,17 @@ All notable changes to the CertGraveyard YARA rules will be documented in this f
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [2026.02.14] - 2026-02-14
+
+### Added
+- MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_4C1CC72FD82F65C0089C202D (Crazy Evil Traffer Team - GlobalSign)
+- MAL_Compromised_Cert_AnyDeskLoader_SSL_com_01D3213740978A51B2088FBAF257684C (AnyDeskLoader - SSL.com)
+- MAL_Compromised_Cert_Unknown_Sectigo_0E48AC7BECF392252A06748BE3C9A0EB (Unknown - Sectigo)
+
+### Modified
+- MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_Sectigo_250824C25A5D2BA93002CFAEDBFAF1BA (Updated metadata for Crazy Evil Traffer Team)
+- MAL_Compromised_Cert_FakeDropbox_Sectigo_00BCA75234F538C606EECBDD0C8646F774 (Updated metadata for FakeDropbox)
+
 ## [2026.02.13] - 2026-02-13
 
 ### Added

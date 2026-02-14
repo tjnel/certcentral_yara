@@ -595,6 +595,41 @@ rule MAL_Compromised_Cert_AntiemuleLoader_Certum_451062113F2D48D7D109C713A5F4CAE
       )
 }
 
+rule MAL_Compromised_Cert_AnyDeskLoader_SSL_com_01D3213740978A51B2088FBAF257684C {
+   meta:
+      description         = "Detects AnyDeskLoader with compromised cert (SSL.com)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-03-24"
+      version             = "1.0"
+
+      hash                = "14270df7f98777d0c23e0ec2f082eba5e6f7de361574420634edcdbae491f83a"
+      malware             = "AnyDeskLoader"
+      malware_type        = "Remote access tool"
+      malware_notes       = "The file is a loader that downloads a copy of AnyDesk from a shortened URL."
+
+      signer              = "TELESEC AFRICA LIMITED"
+      cert_issuer_short   = "SSL.com"
+      cert_issuer         = "SSL.com EV Code Signing Intermediate CA RSA R3"
+      cert_serial         = "01:d3:21:37:40:97:8a:51:b2:08:8f:ba:f2:57:68:4c"
+      cert_thumbprint     = "8D8A36959B6E29ED20F3147CF3F116779AAE796E"
+      cert_valid_from     = "2025-03-24"
+      cert_valid_to       = "2026-03-24"
+
+      country             = "KE"
+      state               = "???"
+      locality            = "Nairobi"
+      email               = "???"
+      rdn_serial_number   = "CPR/2010/25799"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "SSL.com EV Code Signing Intermediate CA RSA R3" and
+         sig.serial == "01:d3:21:37:40:97:8a:51:b2:08:8f:ba:f2:57:68:4c"
+      )
+}
+
 rule MAL_Compromised_Cert_AnyDesk_GlobalSign_15363337CE1FDC16444D8DF3 {
    meta:
       description         = "Detects AnyDesk with compromised cert (GlobalSign)"
@@ -8575,6 +8610,41 @@ rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_426CBFFCD566DBCEA46
       )
 }
 
+rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_4C1CC72FD82F65C0089C202D {
+   meta:
+      description         = "Detects Crazy Evil Traffer Team with compromised cert (GlobalSign)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-12-29"
+      version             = "1.0"
+
+      hash                = "45d177fb552f52d54c3f82aa9634e9af0ea4abf8939b70313989d1a7860818e9"
+      malware             = "Crazy Evil Traffer Team"
+      malware_type        = "Infostealer"
+      malware_notes       = "Fake ledger wallet installer."
+
+      signer              = "PAPER & COTTON LTD"
+      cert_issuer_short   = "GlobalSign"
+      cert_issuer         = "GlobalSign GCC R45 EV CodeSigning CA 2020"
+      cert_serial         = "4c:1c:c7:2f:d8:2f:65:c0:08:9c:20:2d"
+      cert_thumbprint     = "95EF120A21BCD680CA2E8F2A1ED3533753DF6A44"
+      cert_valid_from     = "2025-12-29"
+      cert_valid_to       = "2026-12-30"
+
+      country             = "GB"
+      state               = "Gloucestershire"
+      locality            = "Wotton-under-Edge"
+      email               = "???"
+      rdn_serial_number   = "06039818"
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "GlobalSign GCC R45 EV CodeSigning CA 2020" and
+         sig.serial == "4c:1c:c7:2f:d8:2f:65:c0:08:9c:20:2d"
+      )
+}
+
 rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_GlobalSign_50A57A36055177255C77BDC6 {
    meta:
       description         = "Detects Crazy Evil Traffer Team with compromised cert (GlobalSign)"
@@ -9335,7 +9405,7 @@ rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_Sectigo_250824C25A5D2BA93002CF
       state               = "Gloucestershire"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "06039818"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -14721,11 +14791,11 @@ rule MAL_Compromised_Cert_FakeDropbox_Sectigo_00BCA75234F538C606EECBDD0C8646F774
       cert_valid_from     = "2026-01-30"
       cert_valid_to       = "2027-01-30"
 
-      country             = "???"
-      state               = "???"
+      country             = "TR"
+      state               = "İstanbul"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "1017528"
 
    condition:
       uint16(0) == 0x5a4d and
@@ -65377,6 +65447,41 @@ rule MAL_Compromised_Cert_Unknown_Sectigo_059D20D33CD12FCFFDBBDA534FD1C675 {
       for any sig in pe.signatures : (
          sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
          sig.serial == "05:9d:20:d3:3c:d1:2f:cf:fd:bb:da:53:4f:d1:c6:75"
+      )
+}
+
+rule MAL_Compromised_Cert_Unknown_Sectigo_0E48AC7BECF392252A06748BE3C9A0EB {
+   meta:
+      description         = "Detects Unknown with compromised cert (Sectigo)"
+      author              = "TNEL (https://github.com/tjnel/certgraveyard_yara)"
+      reference           = "https://certgraveyard.org"
+      date                = "2025-10-20"
+      version             = "1.0"
+
+      hash                = "6384e81660b474e430857852fdc708173e76cdb4b11b972721b54dd99f071aa4"
+      malware             = "Unknown"
+      malware_type        = "Unknown"
+      malware_notes       = ""
+
+      signer              = "Shanghai Chuanjin Technology Co., Ltd."
+      cert_issuer_short   = "Sectigo"
+      cert_issuer         = "Sectigo Public Code Signing CA EV R36"
+      cert_serial         = "0e:48:ac:7b:ec:f3:92:25:2a:06:74:8b:e3:c9:a0:eb"
+      cert_thumbprint     = "85E39165D8EC322CEDFB41ADC4A04E76A14077B0"
+      cert_valid_from     = "2025-10-20"
+      cert_valid_to       = "2027-01-18"
+
+      country             = "???"
+      state               = "???"
+      locality            = "???"
+      email               = "???"
+      rdn_serial_number   = ""
+
+   condition:
+      uint16(0) == 0x5a4d and
+      for any sig in pe.signatures : (
+         sig.issuer contains "Sectigo Public Code Signing CA EV R36" and
+         sig.serial == "0e:48:ac:7b:ec:f3:92:25:2a:06:74:8b:e3:c9:a0:eb"
       )
 }
 

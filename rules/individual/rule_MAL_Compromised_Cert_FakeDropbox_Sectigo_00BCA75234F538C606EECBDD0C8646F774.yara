@@ -21,11 +21,11 @@ rule MAL_Compromised_Cert_FakeDropbox_Sectigo_00BCA75234F538C606EECBDD0C8646F774
       cert_valid_from     = "2026-01-30"
       cert_valid_to       = "2027-01-30"
 
-      country             = "???"
-      state               = "???"
+      country             = "TR"
+      state               = "İstanbul"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = ""
+      rdn_serial_number   = "1017528"
 
    condition:
       uint16(0) == 0x5a4d and

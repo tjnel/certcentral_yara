@@ -25,7 +25,7 @@ rule MAL_Compromised_Cert_Crazy_Evil_Traffer_Team_Sectigo_250824C25A5D2BA93002CF
       state               = "Gloucestershire"
       locality            = "???"
       email               = "???"
-      rdn_serial_number   = "???"
+      rdn_serial_number   = "06039818"
 
    condition:
       uint16(0) == 0x5a4d and
